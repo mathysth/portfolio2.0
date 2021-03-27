@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Parcours{% endblock %}
+
+{% block body %}
+    <h1>Create new Parcours</h1>
+
+    {{ include('parcours/_form.html.twig') }}
+
+    <a href="{{ path('parcours_index') }}">back to list</a>
+{% endblock %}

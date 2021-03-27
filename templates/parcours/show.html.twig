@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Parcours{% endblock %}
+
+{% block body %}
+    <h1>Parcours</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ parcour.id }}</td>
+            </tr>
+            <tr>
+                <th>Diplome</th>
+                <td>{{ parcour.diplome }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ parcour.annee }}</td>
+            </tr>
+            <tr>
+                <th>Etablissement</th>
+                <td>{{ parcour.etablissement }}</td>
+            </tr>
+            <tr>
+                <th>Commune</th>
+                <td>{{ parcour.commune }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('parcours_index') }}">back to list</a>
+
+    <a href="{{ path('parcours_edit', {'id': parcour.id}) }}">edit</a>
+
+    {{ include('parcours/_delete_form.html.twig') }}
+{% endblock %}

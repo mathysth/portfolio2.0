@@ -14,24 +14,33 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'c6199e088ef318abafd6dc8def18ac0787d13c34',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'c6199e088ef318abafd6dc8def18ac0787d13c34',
+    ),
+    'cocur/slugify' => 
+    array (
+      'pretty_version' => 'v4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3f1ffc300f164f23abe8b64ffb3f92d35cec8307',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -194,6 +203,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '121af47c9aee9c03031bdeca3fac0540f59aa5c3',
+    ),
+    'friendsofsymfony/ckeditor-bundle' => 
+    array (
+      'pretty_version' => '2.3.0',
+      'version' => '2.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '282c79b0d3eda68855ea4c8732ab8d249cd5fbd0',
+    ),
+    'jms/metadata' => 
+    array (
+      'pretty_version' => '2.5.0',
+      'version' => '2.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b5c52549807b2d855b3d7e36ec164c00eb547338',
     ),
     'laminas/laminas-code' => 
     array (
@@ -1066,6 +1093,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5',
+    ),
+    'vich/uploader-bundle' => 
+    array (
+      'pretty_version' => '1.17.0',
+      'version' => '1.17.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ac1d4d1d73fa89fe4cb1d00205f01dc7144434ca',
     ),
     'webmozart/assert' => 
     array (

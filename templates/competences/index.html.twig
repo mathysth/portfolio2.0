@@ -2,6 +2,7 @@
 
 {% block title %}Competences index{% endblock %}
 
+
 {% block body %}
     <h1>Competences index</h1>
 
@@ -20,7 +21,7 @@
             <tr>
                 <td>{{ competence.id }}</td>
                 <td>{{ competence.nom }}</td>
-                <td>{{ competence.image }}</td>
+                <td>{{ competence.filename }}</td>
                 <td>{{ competence.niveauCompetence }}</td>
                 <td>
                     <a href="{{ path('competences_show', {'id': competence.id}) }}">show</a>

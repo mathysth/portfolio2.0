@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New CompetencesCategories{% endblock %}
+
+{% block body %}
+    <h1>Create new CompetencesCategories</h1>
+
+    {{ include('competences_categories/_form.html.twig') }}
+
+    <a href="{{ path('competences_categories_index') }}">back to list</a>
+{% endblock %}

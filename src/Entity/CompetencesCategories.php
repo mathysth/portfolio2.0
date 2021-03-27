@@ -25,7 +25,7 @@ class CompetencesCategories
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity=Competences::class, mappedBy="competence_categories_id", orphanRemoval=true)
+     * @ORM\ManyToMany(targetEntity=Competences::class, mappedBy="competencesCategories")
      */
     private $competences;
 
@@ -33,6 +33,7 @@ class CompetencesCategories
     {
         $this->competences = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -63,7 +64,7 @@ class CompetencesCategories
     {
         if (!$this->competences->contains($competence)) {
             $this->competences[] = $competence;
-            $competence->setCompetenceCategoriesId($this);
+            $competence->addCompetencesCategory($this);
         }
 
         return $this;
@@ -72,12 +73,10 @@ class CompetencesCategories
     public function removeCompetence(Competences $competence): self
     {
         if ($this->competences->removeElement($competence)) {
-            // set the owning side to null (unless already changed)
-            if ($competence->getCompetenceCategoriesId() === $this) {
-                $competence->setCompetenceCategoriesId(null);
-            }
+            $competence->removeCompetencesCategory($this);
         }
 
         return $this;
     }
+
 }

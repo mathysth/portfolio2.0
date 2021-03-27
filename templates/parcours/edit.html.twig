@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Parcours{% endblock %}
+
+{% block body %}
+    <h1>Edit Parcours</h1>
+
+    {{ include('parcours/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('parcours_index') }}">back to list</a>
+
+    {{ include('parcours/_delete_form.html.twig') }}
+{% endblock %}

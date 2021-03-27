@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CompetencesCategories{% endblock %}
+
+{% block body %}
+    <h1>Edit CompetencesCategories</h1>
+
+    {{ include('competences_categories/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('competences_categories_index') }}">back to list</a>
+
+    {{ include('competences_categories/_delete_form.html.twig') }}
+{% endblock %}

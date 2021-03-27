@@ -3,7 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Competences;
+use App\Entity\CompetencesCategories;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,9 +18,21 @@ class CompetencesType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('image')
-            ->add('niveauCompetence')
-            ->add('competence_categories')
+            ->add('imageFile',FileType::class,[
+                'required' => false
+            ])
+            ->add('niveauCompetence',RangeType::class,[
+                "attr" => [
+                    "min" => 1,
+                    "max" => 100
+                ]
+            ])
+            ->add('competencesCategories',EntityType::class,[
+                "required" => true,
+                "multiple" => true,
+                "class" => CompetencesCategories::class,
+                "choice_label" => "nom"
+            ])
         ;
     }
 

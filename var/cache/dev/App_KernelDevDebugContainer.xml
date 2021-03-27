@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\xampp\htdocs\www\Ecole\PPE\mainSite</parameter>
+    <parameter key="kernel.project_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev</parameter>
-    <parameter key="kernel.cache_dir">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">C:\xampp\htdocs\www\Ecole\PPE\mainSite\var\log</parameter>
+    <parameter key="kernel.build_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
@@ -20,51 +20,61 @@
       <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
       <parameter key="TwigExtraBundle">Twig\Extra\TwigExtraBundle\TwigExtraBundle</parameter>
+      <parameter key="FOSCKEditorBundle">FOS\CKEditorBundle\FOSCKEditorBundle</parameter>
+      <parameter key="VichUploaderBundle">Vich\UploaderBundle\VichUploaderBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\debug-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\debug-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\twig\extra-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\twig\extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
+      </parameter>
+      <parameter key="FOSCKEditorBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\friendsofsymfony\ckeditor-bundle\src</parameter>
+        <parameter key="namespace">FOS\CKEditorBundle</parameter>
+      </parameter>
+      <parameter key="VichUploaderBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle</parameter>
+        <parameter key="namespace">Vich\UploaderBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -100,7 +110,7 @@
     <parameter key="kernel.default_locale">en</parameter>
     <parameter key="kernel.error_controller">error_controller</parameter>
     <parameter key="debug.file_link_format">null</parameter>
-    <parameter key="cache.prefix.seed">_C:\xampp\htdocs\www\Ecole\PPE\mainSite.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -109,32 +119,34 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
-    <parameter key="validator.mapping.cache.file">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\xampp\htdocs\www\Ecole\PPE\mainSite/translations</parameter>
+    <parameter key="translator.default_path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/serialization.php</parameter>
     <parameter key="twig.form.resources" type="collection">
+      <parameter>@VichUploader/Form/fields.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>@FOSCKEditor/Form/ckeditor_widget.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</parameter>
+    <parameter key="twig.default_path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -221,7 +233,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -236,6 +248,42 @@
       <parameter>main</parameter>
     </parameter>
     <parameter key="security.main._indexed_authenticators" type="collection"/>
+    <parameter key="vich_uploader.default_filename_attribute_suffix">_name</parameter>
+    <parameter key="vich_uploader.mappings" type="collection">
+      <parameter key="competences_image" type="collection">
+        <parameter key="uri_prefix">/build/upload/images/competences</parameter>
+        <parameter key="upload_destination">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/public/build/upload/images/competences</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">Vich\UploaderBundle\Naming\UniqidNamer.competences_image</parameter>
+          <parameter key="options" type="collection"/>
+        </parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
+      <parameter key="product_image" type="collection">
+        <parameter key="uri_prefix">/build/upload/images/products</parameter>
+        <parameter key="upload_destination">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/public/build/upload/images/products</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">Vich\UploaderBundle\Naming\UniqidNamer.product_image</parameter>
+          <parameter key="options" type="collection"/>
+        </parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -313,6 +361,10 @@
         <parameter>notifier</parameter>
         <parameter>@WebProfiler/Collector/notifier.html.twig</parameter>
       </parameter>
+      <parameter key="Vich\UploaderBundle\DataCollector\MappingCollector" type="collection">
+        <parameter>vich_uploader.mapping_collector</parameter>
+        <parameter>@VichUploader/Collector/mapping_collector.html.twig</parameter>
+      </parameter>
       <parameter key="data_collector.config" type="collection">
         <parameter>config</parameter>
         <parameter>@WebProfiler/Collector/config.html.twig</parameter>
@@ -326,11 +378,25 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\CompetencesController" class="App\Controller\CompetencesController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\Admin\CompetencesCategoriesController" class="App\Controller\Admin\CompetencesCategoriesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\CompetencesController"/>
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\Admin\CompetencesCategoriesController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Admin\CompetencesController" class="App\Controller\Admin\CompetencesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\Admin\CompetencesController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CategorieController" class="App\Controller\CategorieController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\CategorieController"/>
       </call>
     </service>
     <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
@@ -340,7 +406,43 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\HomeController"/>
       </call>
     </service>
+    <service id="App\Controller\ParcoursController" class="App\Controller\ParcoursController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\ParcoursController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ProduitsController" class="App\Controller\ProduitsController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\ProduitsController"/>
+      </call>
+    </service>
+    <service id="App\Controller\RealisationController" class="App\Controller\RealisationController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\RealisationController"/>
+      </call>
+    </service>
+    <service id="App\Form\CategorieType" class="App\Form\CategorieType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\CompetencesCategoriesType" class="App\Form\CompetencesCategoriesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\CompetencesType" class="App\Form\CompetencesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ParcoursType" class="App\Form\ParcoursType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ProduitsType" class="App\Form\ProduitsType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\RealisationType" class="App\Form\RealisationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Http\Api\Controller\DnsController" class="App\Http\Api\Controller\DnsController" public="true" autowire="true" autoconfigure="true">
@@ -351,8 +453,6 @@
       </call>
     </service>
     <service id="App\Http\Api\Utils\ParseResponse" class="App\Http\Api\Utils\ParseResponse" autowire="true" autoconfigure="true"/>
-    <service id="App\Http\DnsUtils" class="App\Http\DnsUtils" autowire="true" autoconfigure="true"/>
-    <service id="App\Http\PostUtils" class="App\Http\PostUtils" autowire="true" autoconfigure="true"/>
     <service id="App\Repository\CategorieRepository" class="App\Repository\CategorieRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -449,7 +549,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/http_cache</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -459,7 +559,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -621,7 +721,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -651,7 +751,7 @@
       <tag name="console.command" command="assets:install"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -785,16 +885,16 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/translations</argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/translations</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <call method="setName">
         <argument>debug:translation</argument>
@@ -807,16 +907,16 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/translations</argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/translations</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <call method="setName">
         <argument>translation:update</argument>
@@ -852,14 +952,24 @@
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
         <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+        <argument>FOS\CKEditorBundle\Form\Type</argument>
+        <argument>Vich\UploaderBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\CategorieType</argument>
+        <argument>App\Form\CompetencesCategoriesType</argument>
         <argument>App\Form\CompetencesType</argument>
+        <argument>App\Form\ParcoursType</argument>
+        <argument>App\Form\ProduitsType</argument>
+        <argument>App\Form\RealisationType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ColorType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+        <argument>FOS\CKEditorBundle\Form\Type\CKEditorType</argument>
+        <argument>Vich\UploaderBundle\Form\Type\VichFileType</argument>
+        <argument>Vich\UploaderBundle\Form\Type\VichImageType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
@@ -973,7 +1083,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1002,7 +1112,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1154,14 +1264,14 @@
       <deprecated package="symfony/framework-bundle" version="5.1">The "%service_id%" service is deprecated, use "$session-&gt;getAttributeBag()" instead.</deprecated>
     </service>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/sessions</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/sessions</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -1212,7 +1322,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.yiVe09o"/>
+      <argument type="service" id=".service_locator.N8HFzQo"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1515,7 +1625,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/config/validation.xml</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1543,10 +1653,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1617,305 +1727,331 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/translations</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ar.yaml</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.bg.yaml</argument>
           </argument>
           <argument key="bs" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ca.yaml</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.cs.yaml</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.de.yaml</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.en.yaml</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.es.yaml</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.fi.yaml</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.fr.yaml</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.hu.yaml</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.it.yaml</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.lt.yaml</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.nl.yaml</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.pl.yaml</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.pt.yaml</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ru.yaml</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.sl.yaml</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.tr.yaml</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.uk.yaml</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+          </argument>
+          <argument key="vn" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.vn.yaml</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\twig\extra-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\twig\extra-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\friendsofsymfony\ckeditor-bundle\src/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations</argument>
             <argument>translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\twig\extra-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\monolog-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\maker-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\twig\extra-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\friendsofsymfony\ckeditor-bundle\src/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -2186,11 +2322,14 @@
         <argument type="service" id="notifier.data_collector"/>
       </call>
       <call method="add">
+        <argument type="service" id="Vich\UploaderBundle\DataCollector\MappingCollector"/>
+      </call>
+      <call method="add">
         <argument type="service" id="data_collector.config"/>
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/profiler</argument>
+      <argument>file:C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2236,7 +2375,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/App_KernelDevDebugContainer</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -2363,7 +2502,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument type="service" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -2897,7 +3036,7 @@
       <argument type="service" id=".service_locator.EyZUPFz.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2947,7 +3086,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -3006,14 +3145,14 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider">
       <argument type="service">
         <service class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-          <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/annotations.php</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/annotations.php</argument>
           <argument type="service" id="cache.annotations"/>
           <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
         </service>
@@ -3029,7 +3168,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -3038,7 +3177,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/.env.dev.local</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/.env.dev.local</argument>
     </service>
     <service id="serializer" class="Symfony\Component\Serializer\Serializer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -3145,10 +3284,10 @@
           </service>
         </argument>
       </argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3317,7 +3456,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/twig</argument>
+        <argument key="cache">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3379,6 +3518,12 @@
       <call method="addExtension">
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
+      <call method="addExtension">
+        <argument type="service" id="fos_ck_editor.twig_extension"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="Vich\UploaderBundle\Twig\Extension\UploaderExtension"/>
+      </call>
       <call method="addGlobal">
         <argument>app</argument>
         <argument type="service" id="twig.app_variable"/>
@@ -3423,10 +3568,10 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
-        <argument key="C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
+        <argument key="C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
       <tag name="kernel.cache_warmer"/>
@@ -3437,52 +3582,68 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\friendsofsymfony\ckeditor-bundle\src/Resources/views</argument>
+        <argument>FOSCKEditor</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\friendsofsymfony\ckeditor-bundle\src/Resources/views</argument>
+        <argument>!FOSCKEditor</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/templates</argument>
+        <argument>VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/templates</argument>
+        <argument>!VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -3508,7 +3669,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -3585,9 +3746,9 @@
       <tag name="console.command" command="debug:twig"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -3615,7 +3776,7 @@
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3708,7 +3869,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\var\log/dev.log</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\log/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -3768,7 +3929,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -3790,7 +3951,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -3840,8 +4001,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/templates</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -3915,7 +4076,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
       <argument type="service" id="maker.generator"/>
       <argument type="service" id="maker.entity_class_generator"/>
     </service>
@@ -3986,7 +4147,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite</argument>
     </service>
     <service id="doctrine.dbal.logger.chain" class="Doctrine\DBAL\Logging\LoggerChain">
       <argument type="collection">
@@ -4087,9 +4248,15 @@
       </argument>
     </service>
     <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager">
-      <argument type="service" id=".service_locator.U8lX2Ss"/>
+      <argument type="service" id=".service_locator.bptLHIS"/>
       <argument type="collection">
+        <argument>vich_uploader.listener.clean.competences_image</argument>
+        <argument>vich_uploader.listener.clean.product_image</argument>
         <argument>doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber</argument>
+        <argument>vich_uploader.listener.remove.competences_image</argument>
+        <argument>vich_uploader.listener.upload.competences_image</argument>
+        <argument>vich_uploader.listener.remove.product_image</argument>
+        <argument>vich_uploader.listener.upload.product_image</argument>
       </argument>
       <call method="addEventListener">
         <argument type="collection">
@@ -4126,7 +4293,7 @@
         </service>
       </argument>
     </service>
-    <service id=".1_ServiceLocator~6ajuRsX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~G1.hYsb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -4288,6 +4455,7 @@
       <call method="setEntityNamespaces">
         <argument type="collection">
           <argument key="App">App\Entity</argument>
+          <argument key="VichUploaderBundle">Vich\UploaderBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -4303,7 +4471,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -4333,13 +4501,18 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite\src\Entity</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\src\Entity</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle\src\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>App\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>Vich\UploaderBundle\Entity</argument>
       </call>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\TraceableAdapter">
@@ -4407,7 +4580,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>C:\xampp\htdocs\www\Ecole\PPE\mainSite/migrations</argument>
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -5088,14 +5261,396 @@
       </call>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CompetencesController" class="App\Controller\CompetencesController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CompetencesController" class="App\Controller\CompetencesController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\CompetencesController" class="App\Controller\CompetencesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="fos_ck_editor.builder.json_builder" class="FOS\CKEditorBundle\Builder\JsonBuilder">
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="fos_ck_editor.command.installer" class="FOS\CKEditorBundle\Command\CKEditorInstallerCommand">
+      <tag name="console.command" command="ckeditor:install"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="fos_ck_editor.installer"/>
+      <call method="setName">
+        <argument>ckeditor:install</argument>
+      </call>
+    </service>
+    <service id="fos_ck_editor.configuration" class="FOS\CKEditorBundle\Config\CKEditorConfiguration">
+      <argument type="collection">
+        <argument key="configs" type="collection">
+          <argument key="main_config" type="collection">
+            <argument key="toolbar" type="collection">
+              <argument type="collection">
+                <argument key="name">styles</argument>
+                <argument key="items" type="collection">
+                  <argument>Bold</argument>
+                  <argument>Italic</argument>
+                  <argument>Underline</argument>
+                  <argument>Strike</argument>
+                  <argument>Blockquote</argument>
+                  <argument>-</argument>
+                  <argument>Link</argument>
+                  <argument>-</argument>
+                  <argument>RemoveFormat</argument>
+                  <argument>-</argument>
+                  <argument>NumberedList</argument>
+                  <argument>BulletedList</argument>
+                  <argument>-</argument>
+                  <argument>Outdent</argument>
+                  <argument>Indent</argument>
+                  <argument>-</argument>
+                  <argument>-</argument>
+                  <argument>JustifyLeft</argument>
+                  <argument>JustifyCenter</argument>
+                  <argument>JustifyRight</argument>
+                  <argument>JustifyBlock</argument>
+                  <argument>-</argument>
+                  <argument>Image</argument>
+                  <argument>Table</argument>
+                  <argument>-</argument>
+                  <argument>Styles</argument>
+                  <argument>Format</argument>
+                  <argument>Font</argument>
+                  <argument>FontSize</argument>
+                  <argument>-</argument>
+                  <argument>TextColor</argument>
+                  <argument>BGColor</argument>
+                  <argument>Source</argument>
+                </argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="enable">true</argument>
+        <argument key="async">false</argument>
+        <argument key="auto_inline">true</argument>
+        <argument key="inline">false</argument>
+        <argument key="autoload">true</argument>
+        <argument key="jquery">false</argument>
+        <argument key="require_js">false</argument>
+        <argument key="input_sync">false</argument>
+        <argument key="base_path">bundles/fosckeditor/</argument>
+        <argument key="js_path">bundles/fosckeditor/ckeditor.js</argument>
+        <argument key="jquery_path">bundles/fosckeditor/adapters/jquery.js</argument>
+        <argument key="default_config">null</argument>
+        <argument key="plugins" type="collection"/>
+        <argument key="styles" type="collection"/>
+        <argument key="templates" type="collection"/>
+        <argument key="filebrowsers" type="collection"/>
+        <argument key="toolbars" type="collection">
+          <argument key="configs" type="collection"/>
+          <argument key="items" type="collection"/>
+        </argument>
+      </argument>
+    </service>
+    <service id="fos_ck_editor.form.type" class="FOS\CKEditorBundle\Form\Type\CKEditorType">
+      <tag name="form.type"/>
+      <argument type="service" id="fos_ck_editor.configuration"/>
+    </service>
+    <service id="fos_ck_editor.installer" class="FOS\CKEditorBundle\Installer\CKEditorInstaller"/>
+    <service id="fos_ck_editor.renderer" class="FOS\CKEditorBundle\Renderer\CKEditorRenderer">
+      <argument type="service" id="fos_ck_editor.builder.json_builder"/>
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="assets.packages"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="twig"/>
+      <argument type="expression">container.hasParameter('locale') ? parameter('locale') : null</argument>
+    </service>
+    <service id="fos_ck_editor.twig_extension" class="FOS\CKEditorBundle\Twig\CKEditorExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="fos_ck_editor.renderer"/>
+    </service>
+    <service id="Vich\UploaderBundle\Naming\UniqidNamer.competences_image" class="Vich\UploaderBundle\Naming\UniqidNamer" public="true"/>
+    <service id="Vich\UploaderBundle\Naming\UniqidNamer.product_image" class="Vich\UploaderBundle\Naming\UniqidNamer" public="true"/>
+    <service id="vich_uploader.adapter.mongodb" class="Vich\UploaderBundle\Adapter\ODM\MongoDB\MongoDBAdapter"/>
+    <service id="vich_uploader.adapter.orm" class="Vich\UploaderBundle\Adapter\ORM\DoctrineORMAdapter"/>
+    <service id="vich_uploader.adapter.phpcr" class="Vich\UploaderBundle\Adapter\PHPCR\PHPCRAdapter"/>
+    <service id="vich_uploader.listener.doctrine.base" abstract="true">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.inject.orm" class="Vich\UploaderBundle\EventListener\Doctrine\InjectListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.orm" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.orm" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.orm" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.inject.mongodb" class="Vich\UploaderBundle\EventListener\Doctrine\InjectListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.mongodb" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.mongodb" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.mongodb" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.inject.phpcr" class="Vich\UploaderBundle\EventListener\Doctrine\InjectListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.phpcr" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.phpcr" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.phpcr" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <argument></argument>
+      <argument></argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.storage.file_system" class="Vich\UploaderBundle\Storage\FileSystemStorage">
+      <argument type="service" id="vich_uploader.property_mapping_factory"/>
+    </service>
+    <service id="vich_uploader.file_injector" class="Vich\UploaderBundle\Injector\FileInjector">
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+    </service>
+    <service id="vich_uploader.metadata.file_locator" class="Metadata\Driver\FileLocator">
+      <argument type="collection"/>
+    </service>
+    <service id="vich_uploader.metadata_driver.annotation" class="Vich\UploaderBundle\Metadata\Driver\AnnotationDriver">
+      <argument type="service" id="annotations.cached_reader"/>
+    </service>
+    <service id="vich_uploader.metadata_driver.xml" class="Vich\UploaderBundle\Metadata\Driver\XmlDriver">
+      <argument type="service" id="vich_uploader.metadata.file_locator"/>
+    </service>
+    <service id="vich_uploader.metadata_driver.yaml" class="Vich\UploaderBundle\Metadata\Driver\YamlDriver">
+      <argument type="service" id="vich_uploader.metadata.file_locator"/>
+    </service>
+    <service id="vich_uploader.metadata_driver.chain" class="Metadata\Driver\DriverChain">
+      <argument type="collection">
+        <argument type="service" id="vich_uploader.metadata_driver.xml"/>
+        <argument type="service" id="vich_uploader.metadata_driver.annotation"/>
+        <argument type="service" id="vich_uploader.metadata_driver.yaml"/>
+      </argument>
+    </service>
+    <service id="vich_uploader.metadata.cache.file_cache" class="Metadata\Cache\FileCache">
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/vich_uploader</argument>
+    </service>
+    <service id="vich_uploader.metadata_factory" class="Metadata\MetadataFactory">
+      <argument type="service" id="vich_uploader.metadata_driver.chain"/>
+      <argument>Metadata\ClassHierarchyMetadata</argument>
+      <argument>true</argument>
+      <call method="setCache">
+        <argument type="service" id="vich_uploader.metadata.cache.file_cache" on-invalid="ignore"/>
+      </call>
+    </service>
+    <service id="vich_uploader.metadata_reader" class="Vich\UploaderBundle\Metadata\MetadataReader">
+      <argument type="service" id="vich_uploader.metadata_factory"/>
+    </service>
+    <service id="Vich\UploaderBundle\Metadata\CacheWarmer" class="Vich\UploaderBundle\Metadata\CacheWarmer">
+      <tag name="kernel.cache_warmer"/>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/vich_uploader</argument>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+    </service>
+    <service id="vich_uploader.property_mapping_factory" class="Vich\UploaderBundle\Mapping\PropertyMappingFactory">
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument>%vich_uploader.mappings%</argument>
+      <argument>_name</argument>
+    </service>
+    <service id="Vich\UploaderBundle\Naming\UniqidNamer" class="Vich\UploaderBundle\Naming\UniqidNamer" public="true"/>
+    <service id="Vich\UploaderBundle\Naming\PropertyNamer" class="Vich\UploaderBundle\Naming\PropertyNamer" public="true">
+      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
+    </service>
+    <service id="Vich\UploaderBundle\Naming\OrignameNamer" class="Vich\UploaderBundle\Naming\OrignameNamer" public="true">
+      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
+    </service>
+    <service id="Vich\UploaderBundle\Naming\HashNamer" class="Vich\UploaderBundle\Naming\HashNamer" public="true"/>
+    <service id="Vich\UploaderBundle\Naming\Base64Namer" class="Vich\UploaderBundle\Naming\Base64Namer" public="true"/>
+    <service id="Vich\UploaderBundle\Naming\SubdirDirectoryNamer" class="Vich\UploaderBundle\Naming\SubdirDirectoryNamer" public="true"/>
+    <service id="Vich\UploaderBundle\Naming\PropertyDirectoryNamer" class="Vich\UploaderBundle\Naming\PropertyDirectoryNamer" public="true">
+      <argument type="service" id="property_accessor" on-invalid="null"/>
+      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
+    </service>
+    <service id="vich_uploader.current_date_time_helper" class="Vich\UploaderBundle\Naming\CurrentDateTimeHelper"/>
+    <service id="Vich\UploaderBundle\Naming\CurrentDateTimeDirectoryNamer" class="Vich\UploaderBundle\Naming\CurrentDateTimeDirectoryNamer" public="true">
+      <argument type="service" id="vich_uploader.current_date_time_helper" on-invalid="null"/>
+      <argument type="service" id="property_accessor" on-invalid="null"/>
+    </service>
+    <service id="Vich\UploaderBundle\Naming\SmartUniqueNamer" class="Vich\UploaderBundle\Naming\SmartUniqueNamer" public="true">
+      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
+    </service>
+    <service id="Vich\UploaderBundle\Util\Transliterator" class="Vich\UploaderBundle\Util\Transliterator">
+      <argument type="service" id="slugger"/>
+    </service>
+    <service id="vich_uploader.download_handler" class="Vich\UploaderBundle\Handler\DownloadHandler" public="true">
+      <argument type="service" id="vich_uploader.property_mapping_factory"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+    </service>
+    <service id="vich_uploader.upload_handler" class="Vich\UploaderBundle\Handler\UploadHandler" public="true">
+      <argument type="service" id="vich_uploader.property_mapping_factory"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.file_injector"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+    </service>
+    <service id="vich_uploader.command.mapping_debug_class" class="Vich\UploaderBundle\Command\MappingDebugClassCommand">
+      <tag name="console.command" command="vich:mapping:debug-class"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <call method="setName">
+        <argument>vich:mapping:debug-class</argument>
+      </call>
+    </service>
+    <service id="vich_uploader.command.mapping_debug" class="Vich\UploaderBundle\Command\MappingDebugCommand">
+      <tag name="console.command" command="vich:mapping:debug"/>
+      <tag name="container.no_preload"/>
+      <argument>%vich_uploader.mappings%</argument>
+      <call method="setName">
+        <argument>vich:mapping:debug</argument>
+      </call>
+    </service>
+    <service id="vich_uploader.command.mapping_list_classes" class="Vich\UploaderBundle\Command\MappingListClassesCommand">
+      <tag name="console.command" command="vich:mapping:list-classes"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <call method="setName">
+        <argument>vich:mapping:list-classes</argument>
+      </call>
+    </service>
+    <service id="Vich\UploaderBundle\DataCollector\MappingCollector" class="Vich\UploaderBundle\DataCollector\MappingCollector">
+      <tag name="data_collector" template="@VichUploader/Collector/mapping_collector.html.twig" id="vich_uploader.mapping_collector"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+    </service>
+    <service id="vich_uploader.form.type.file" class="Vich\UploaderBundle\Form\Type\VichFileType" public="true">
+      <tag name="form.type" alias="vich_file"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="vich_uploader.property_mapping_factory"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="vich_uploader.form.type.image" class="Vich\UploaderBundle\Form\Type\VichImageType" public="true">
+      <tag name="form.type" alias="vich_image"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="vich_uploader.property_mapping_factory"/>
+      <argument type="service" id="property_accessor"/>
+      <argument>null</argument>
+    </service>
+    <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" class="Vich\UploaderBundle\Templating\Helper\UploaderHelper">
+      <tag name="templating.helper" alias="vich_uploader"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+    </service>
+    <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" class="Vich\UploaderBundle\Twig\Extension\UploaderExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="Vich\UploaderBundle\Templating\Helper\UploaderHelper"/>
+    </service>
+    <service id="vich_uploader.listener.clean.competences_image" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <tag name="doctrine.event_subscriber" priority="50"/>
+      <argument>competences_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.competences_image" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>competences_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.competences_image" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>competences_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.product_image" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <tag name="doctrine.event_subscriber" priority="50"/>
+      <argument>product_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.product_image" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>product_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.product_image" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>product_image</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\CompetencesCategoriesController" class="App\Controller\Admin\CompetencesCategoriesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\CompetencesCategoriesController" class="App\Controller\Admin\CompetencesCategoriesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\CompetencesCategoriesController" class="App\Controller\Admin\CompetencesCategoriesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\CompetencesController" class="App\Controller\Admin\CompetencesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\CompetencesController" class="App\Controller\Admin\CompetencesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\CompetencesController" class="App\Controller\Admin\CompetencesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategorieType" class="App\Form\CategorieType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CategorieType" class="App\Form\CategorieType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CompetencesCategoriesType" class="App\Form\CompetencesCategoriesType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CompetencesCategoriesType" class="App\Form\CompetencesCategoriesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CompetencesType" class="App\Form\CompetencesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CompetencesType" class="App\Form\CompetencesType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ParcoursType" class="App\Form\ParcoursType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ParcoursType" class="App\Form\ParcoursType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProduitsType" class="App\Form\ProduitsType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ProduitsType" class="App\Form\ProduitsType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RealisationType" class="App\Form\RealisationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RealisationType" class="App\Form\RealisationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Http\Api\Controller\DnsController" class="App\Http\Api\Controller\DnsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Http\Api\Controller\DnsController" class="App\Http\Api\Controller\DnsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Http\Api\Controller\DnsController" class="App\Http\Api\Controller\DnsController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5429,6 +5984,18 @@
         <argument key="loader" type="service" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.28o3U.X" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="competencesCategoriesRepository" type="service" id="App\Repository\CompetencesCategoriesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.yvIznsy" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="competencesCategory" type="service" id=".errored..service_locator.yvIznsy.App\Entity\CompetencesCategories"/>
+      </argument>
+    </service>
     <service id=".service_locator.43ajRrC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5441,23 +6008,111 @@
         <argument key="competence" type="service" id=".errored..service_locator.kvkaJ38.App\Entity\Competences"/>
       </argument>
     </service>
-    <service id=".service_locator.uElNi6o" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.2Iz0l6." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\CompetencesController::delete" type="service" id=".service_locator.kvkaJ38"/>
-        <argument key="App\Controller\CompetencesController::edit" type="service" id=".service_locator.kvkaJ38"/>
-        <argument key="App\Controller\CompetencesController::index" type="service" id=".service_locator.43ajRrC"/>
-        <argument key="App\Controller\CompetencesController::show" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="categorieRepository" type="service" id="App\Repository\CategorieRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Z8xh0Z9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="categorie" type="service" id=".errored..service_locator.Z8xh0Z9.App\Entity\Categorie"/>
+      </argument>
+    </service>
+    <service id=".service_locator.gNDaZ8J" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="parcoursRepository" type="service" id="App\Repository\ParcoursRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.qcUgbUp" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="parcour" type="service" id=".errored..service_locator.qcUgbUp.App\Entity\Parcours"/>
+      </argument>
+    </service>
+    <service id=".service_locator.xfMbnwT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produitsRepository" type="service" id="App\Repository\ProduitsRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ZE81RhG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produit" type="service" id=".errored..service_locator.ZE81RhG.App\Entity\Produits"/>
+      </argument>
+    </service>
+    <service id=".service_locator.8ZHgH5v" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="realisationRepository" type="service" id="App\Repository\RealisationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Q6MNAd4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="realisation" type="service" id=".errored..service_locator.Q6MNAd4.App\Entity\Realisation"/>
+      </argument>
+    </service>
+    <service id=".service_locator.2e8kGsU" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\Admin\CompetencesCategoriesController::delete" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController::edit" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController::index" type="service" id=".service_locator.28o3U.X"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController::show" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesController::delete" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\Admin\CompetencesController::edit" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\Admin\CompetencesController::index" type="service" id=".service_locator.43ajRrC"/>
+        <argument key="App\Controller\Admin\CompetencesController::show" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\CategorieController::delete" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\CategorieController::edit" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\CategorieController::index" type="service" id=".service_locator.2Iz0l6."/>
+        <argument key="App\Controller\CategorieController::show" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\ParcoursController::delete" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ParcoursController::edit" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ParcoursController::index" type="service" id=".service_locator.gNDaZ8J"/>
+        <argument key="App\Controller\ParcoursController::show" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ProduitsController::delete" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\ProduitsController::edit" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\ProduitsController::index" type="service" id=".service_locator.xfMbnwT"/>
+        <argument key="App\Controller\ProduitsController::show" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\RealisationController::delete" type="service" id=".service_locator.Q6MNAd4"/>
+        <argument key="App\Controller\RealisationController::edit" type="service" id=".service_locator.Q6MNAd4"/>
+        <argument key="App\Controller\RealisationController::index" type="service" id=".service_locator.8ZHgH5v"/>
+        <argument key="App\Controller\RealisationController::show" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service" id=".service_locator.KfwZsne"/>
         <argument key="kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.KfwZsne"/>
-        <argument key="App\Controller\CompetencesController:delete" type="service" id=".service_locator.kvkaJ38"/>
-        <argument key="App\Controller\CompetencesController:edit" type="service" id=".service_locator.kvkaJ38"/>
-        <argument key="App\Controller\CompetencesController:index" type="service" id=".service_locator.43ajRrC"/>
-        <argument key="App\Controller\CompetencesController:show" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController:delete" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController:edit" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController:index" type="service" id=".service_locator.28o3U.X"/>
+        <argument key="App\Controller\Admin\CompetencesCategoriesController:show" type="service" id=".service_locator.yvIznsy"/>
+        <argument key="App\Controller\Admin\CompetencesController:delete" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\Admin\CompetencesController:edit" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\Admin\CompetencesController:index" type="service" id=".service_locator.43ajRrC"/>
+        <argument key="App\Controller\Admin\CompetencesController:show" type="service" id=".service_locator.kvkaJ38"/>
+        <argument key="App\Controller\CategorieController:delete" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\CategorieController:edit" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\CategorieController:index" type="service" id=".service_locator.2Iz0l6."/>
+        <argument key="App\Controller\CategorieController:show" type="service" id=".service_locator.Z8xh0Z9"/>
+        <argument key="App\Controller\ParcoursController:delete" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ParcoursController:edit" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ParcoursController:index" type="service" id=".service_locator.gNDaZ8J"/>
+        <argument key="App\Controller\ParcoursController:show" type="service" id=".service_locator.qcUgbUp"/>
+        <argument key="App\Controller\ProduitsController:delete" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\ProduitsController:edit" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\ProduitsController:index" type="service" id=".service_locator.xfMbnwT"/>
+        <argument key="App\Controller\ProduitsController:show" type="service" id=".service_locator.ZE81RhG"/>
+        <argument key="App\Controller\RealisationController:delete" type="service" id=".service_locator.Q6MNAd4"/>
+        <argument key="App\Controller\RealisationController:edit" type="service" id=".service_locator.Q6MNAd4"/>
+        <argument key="App\Controller\RealisationController:index" type="service" id=".service_locator.8ZHgH5v"/>
+        <argument key="App\Controller\RealisationController:show" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service" id=".service_locator.KfwZsne"/>
@@ -5522,15 +6177,23 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.yiVe09o" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.N8HFzQo" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\CategorieType" type="service" id="App\Form\CategorieType"/>
+        <argument key="App\Form\CompetencesCategoriesType" type="service" id="App\Form\CompetencesCategoriesType"/>
         <argument key="App\Form\CompetencesType" type="service" id="App\Form\CompetencesType"/>
+        <argument key="App\Form\ParcoursType" type="service" id="App\Form\ParcoursType"/>
+        <argument key="App\Form\ProduitsType" type="service" id="App\Form\ProduitsType"/>
+        <argument key="App\Form\RealisationType" type="service" id="App\Form\RealisationType"/>
+        <argument key="FOS\CKEditorBundle\Form\Type\CKEditorType" type="service" id="fos_ck_editor.form.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service" id="form.type.color"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
+        <argument key="Vich\UploaderBundle\Form\Type\VichFileType" type="service" id="vich_uploader.form.type.file"/>
+        <argument key="Vich\UploaderBundle\Form\Type\VichImageType" type="service" id="vich_uploader.form.type.image"/>
       </argument>
     </service>
     <service id=".debug.http_client" class="Symfony\Component\HttpClient\TraceableHttpClient">
@@ -5687,11 +6350,17 @@
       <configurator class="Symfony\Bundle\FrameworkBundle\DependencyInjection\Compiler\AddDebugLogProcessorPass" method="configureLogger"/>
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
-    <service id=".service_locator.U8lX2Ss" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.bptLHIS" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
         <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
+        <argument key="vich_uploader.listener.clean.competences_image" type="service" id="vich_uploader.listener.clean.competences_image"/>
+        <argument key="vich_uploader.listener.clean.product_image" type="service" id="vich_uploader.listener.clean.product_image"/>
+        <argument key="vich_uploader.listener.remove.competences_image" type="service" id="vich_uploader.listener.remove.competences_image"/>
+        <argument key="vich_uploader.listener.remove.product_image" type="service" id="vich_uploader.listener.remove.product_image"/>
+        <argument key="vich_uploader.listener.upload.competences_image" type="service" id="vich_uploader.listener.upload.competences_image"/>
+        <argument key="vich_uploader.listener.upload.product_image" type="service" id="vich_uploader.listener.upload.product_image"/>
       </argument>
     </service>
     <service id=".service_locator.fIuxneG" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -5758,15 +6427,45 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.5nX7ca3.App\Controller\CompetencesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\CompetencesController"/>
-      <argument>App\Controller\CompetencesController</argument>
+    <service id=".service_locator.5nX7ca3.App\Controller\Admin\CompetencesCategoriesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\CompetencesCategoriesController"/>
+      <argument>App\Controller\Admin\CompetencesCategoriesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\Admin\CompetencesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\CompetencesController"/>
+      <argument>App\Controller\Admin\CompetencesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\CategorieController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CategorieController"/>
+      <argument>App\Controller\CategorieController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
     <service id=".service_locator.5nX7ca3.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
       <argument>App\Controller\HomeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\ParcoursController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ParcoursController"/>
+      <argument>App\Controller\ParcoursController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\ProduitsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitsController"/>
+      <argument>App\Controller\ProduitsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\RealisationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RealisationController"/>
+      <argument>App\Controller\RealisationController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
@@ -5938,12 +6637,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.uElNi6o"/>
+      <argument type="service" id=".service_locator.2e8kGsU"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.uElNi6o"/>
+      <argument type="service" id=".service_locator.2e8kGsU"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -5959,10 +6658,15 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.yvIznsy.App\Entity\CompetencesCategories" class="App\Entity\CompetencesCategories"/>
     <service id=".errored..service_locator.kvkaJ38.App\Entity\Competences" class="App\Entity\Competences"/>
+    <service id=".errored..service_locator.Z8xh0Z9.App\Entity\Categorie" class="App\Entity\Categorie"/>
+    <service id=".errored..service_locator.qcUgbUp.App\Entity\Parcours" class="App\Entity\Parcours"/>
+    <service id=".errored..service_locator.ZE81RhG.App\Entity\Produits" class="App\Entity\Produits"/>
+    <service id=".errored..service_locator.Q6MNAd4.App\Entity\Realisation" class="App\Entity\Realisation"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator.AMKMDT8"/>
+      <argument type="service" id=".service_locator.Qh4_DDY"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -6030,6 +6734,10 @@
         <argument key="doctrine:migrations:up-to-date">doctrine_migrations.up_to_date_command</argument>
         <argument key="doctrine:migrations:version">doctrine_migrations.version_command</argument>
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
+        <argument key="ckeditor:install">fos_ck_editor.command.installer</argument>
+        <argument key="vich:mapping:debug-class">vich_uploader.command.mapping_debug_class</argument>
+        <argument key="vich:mapping:debug">vich_uploader.command.mapping_debug</argument>
+        <argument key="vich:mapping:list-classes">vich_uploader.command.mapping_list_classes</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -6055,7 +6763,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.AMKMDT8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.Qh4_DDY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand" type="service" id="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand"/>
@@ -6119,6 +6827,7 @@
         <argument key="doctrine_migrations.up_to_date_command" type="service" id="doctrine_migrations.up_to_date_command"/>
         <argument key="doctrine_migrations.version_command" type="service" id="doctrine_migrations.version_command"/>
         <argument key="doctrine_migrations.versions_command" type="service" id="doctrine_migrations.versions_command"/>
+        <argument key="fos_ck_editor.command.installer" type="service" id="fos_ck_editor.command.installer"/>
         <argument key="maker.auto_command.make_auth" type="service" id="maker.auto_command.make_auth"/>
         <argument key="maker.auto_command.make_command" type="service" id="maker.auto_command.make_command"/>
         <argument key="maker.auto_command.make_controller" type="service" id="maker.auto_command.make_controller"/>
@@ -6145,54 +6854,57 @@
         <argument key="twig.command.debug" type="service" id="twig.command.debug"/>
         <argument key="twig.command.lint" type="service" id="twig.command.lint"/>
         <argument key="var_dumper.command.server_dump" type="service" id="var_dumper.command.server_dump"/>
+        <argument key="vich_uploader.command.mapping_debug" type="service" id="vich_uploader.command.mapping_debug"/>
+        <argument key="vich_uploader.command.mapping_debug_class" type="service" id="vich_uploader.command.mapping_debug_class"/>
+        <argument key="vich_uploader.command.mapping_list_classes" type="service" id="vich_uploader.command.mapping_list_classes"/>
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>9ucWP29X-k</argument>
+      <argument>7uDaclooa4</argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>PZBeUoQjBx</argument>
+      <argument>pRSokpIi7z</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>ZEW+o3OyHd</argument>
+      <argument>rxHzzqQOVh</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>bkRkwcZIGd</argument>
+      <argument>9jM+LCyuLF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>GFUVc9N24D</argument>
+      <argument>Vzk37zCrdA</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>yTYysiUOXD</argument>
+      <argument>0Q6y+gK9g9</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -6200,10 +6912,10 @@
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>0LZXYoi7Jw</argument>
+      <argument>8Jzh3keYXs</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/www/Ecole/PPE/mainSite/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -6354,9 +7066,28 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
+    <service id="vich_uploader.storage" alias="vich_uploader.storage.file_system"/>
+    <service id="Vich\UploaderBundle\Storage\StorageInterface" alias="vich_uploader.storage.file_system"/>
+    <service id="Vich\UploaderBundle\Storage\FileSystemStorage" alias="vich_uploader.storage.file_system"/>
+    <service id="vich_uploader.metadata_driver" alias="vich_uploader.metadata_driver.chain"/>
+    <service id="vich_uploader.metadata.cache" alias="vich_uploader.metadata.cache.file_cache"/>
+    <service id="Vich\UploaderBundle\Mapping\PropertyMappingFactory" alias="vich_uploader.property_mapping_factory"/>
+    <service id="vich_uploader.namer_uniqid" alias="Vich\UploaderBundle\Naming\UniqidNamer" public="true"/>
+    <service id="vich_uploader.namer_property" alias="Vich\UploaderBundle\Naming\PropertyNamer" public="true"/>
+    <service id="vich_uploader.namer_origname" alias="Vich\UploaderBundle\Naming\OrignameNamer" public="true"/>
+    <service id="vich_uploader.namer_hash" alias="Vich\UploaderBundle\Naming\HashNamer" public="true"/>
+    <service id="vich_uploader.namer_base64" alias="Vich\UploaderBundle\Naming\Base64Namer" public="true"/>
+    <service id="vich_uploader.directory_namer_subdir" alias="Vich\UploaderBundle\Naming\SubdirDirectoryNamer" public="true"/>
+    <service id="vich_uploader.namer_directory_property" alias="Vich\UploaderBundle\Naming\PropertyDirectoryNamer" public="true"/>
+    <service id="vich_uploader.namer_directory_current_date_time" alias="Vich\UploaderBundle\Naming\CurrentDateTimeDirectoryNamer" public="true"/>
+    <service id="vich_uploader.namer_smart_unique" alias="Vich\UploaderBundle\Naming\SmartUniqueNamer" public="true"/>
+    <service id="Vich\UploaderBundle\Handler\DownloadHandler" alias="vich_uploader.download_handler"/>
+    <service id="Vich\UploaderBundle\Handler\UploadHandler" alias="vich_uploader.upload_handler"/>
+    <service id="Vich\UploaderBundle\Form\Type\VichFileType" alias="vich_uploader.form.type.file"/>
+    <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.uElNi6o"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.2e8kGsU"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

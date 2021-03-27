@@ -1,0 +1,17 @@
+vich_uploader:
+    db_driver: orm
+    mappings:
+        competences_image:
+            uri_prefix: /build/upload/images/competences
+            upload_destination: '%kernel.project_dir%/public/build/upload/images/competences'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        product_image:
+            uri_prefix: /build/upload/images/products
+            upload_destination: '%kernel.project_dir%/public/build/upload/images/products'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+
+    #mappings:
+    #    products:
+    #        uri_prefix: /images/products
+    #        upload_destination: '%kernel.project_dir%/public/images/products'

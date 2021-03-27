@@ -5,7 +5,7 @@
 {% block script %}
     <script>
         // Permet de print un resultat donné par l'api
-        let salut;
+       let salut;
        let test = sendAjaxRequest("http/checkDns").then(function (g){
            console.log(g);
            salut = g;

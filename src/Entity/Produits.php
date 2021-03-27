@@ -4,9 +4,15 @@ namespace App\Entity;
 
 use App\Repository\ProduitsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+
 
 /**
  * @ORM\Entity(repositoryClass=ProduitsRepository::class)
+ * @Vich\Uploadable
  */
 class Produits
 {
@@ -33,12 +39,33 @@ class Produits
     private $prix;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string|null
+     * @ORM\Column(type="string", length=255 )
      */
-    private $image;
+    private $filename;
+
+    /**
+     * @var File|null
+     * @Assert\Image(
+     *     mimeTypes={
+     *      "image/jpeg",
+     *     "image/png",
+     *     "image,gif",
+     *     "image/svg+xml"
+     *     }
+     * )
+     * @Vich\UploadableField(mapping="product_image", fileNameProperty="filename")
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime",nullable=true)
+     */
+    private $updated_at;
 
     public function getId(): ?int
     {
+        $this->filename = "empty.jpg";
         return $this->id;
     }
 
@@ -78,15 +105,51 @@ class Produits
         return $this;
     }
 
-    public function getImage(): ?string
+    /**
+     * @return string|null
+     */
+    public function getFilename(): ?string
     {
-        return $this->image;
+        return $this->filename;
     }
 
-    public function setImage(string $image): self
+    /**
+     * @param string|null $filename
+     */
+    public function setFilename(?string $filename): void
     {
-        $this->image = $image;
+        $this->filename = $filename;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     */
+    public function setImageFile(?File $imageFile): void
+    {
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
 
         return $this;
     }
+
 }

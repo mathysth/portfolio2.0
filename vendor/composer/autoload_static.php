@@ -31,6 +31,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         array (
             'Webmozart\\Assert\\' => 17,
         ),
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
+        ),
         'T' => 
         array (
             'Twig\\Extra\\TwigExtraBundle\\' => 27,
@@ -119,12 +123,17 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Metadata\\' => 9,
         ),
         'L' => 
         array (
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Code\\' => 13,
+        ),
+        'F' => 
+        array (
+            'FOS\\CKEditorBundle\\' => 19,
         ),
         'E' => 
         array (
@@ -147,6 +156,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'C' => 
+        array (
+            'Cocur\\Slugify\\' => 14,
+        ),
         'A' => 
         array (
             'App\\Tests\\' => 10,
@@ -164,6 +177,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle/src',
         ),
         'Twig\\Extra\\TwigExtraBundle\\' => 
         array (
@@ -473,6 +490,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Metadata\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jms/metadata/src',
+        ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -484,6 +505,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
+        ),
+        'FOS\\CKEditorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -547,6 +572,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
+        'Cocur\\Slugify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
         'App\\Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -558,6 +587,8 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
     );
 
     public static $classMap = array (
+        'App\\Controller\\CompetencesCategoriesController' => __DIR__ . '/../..',
+        'App\\Controller\\CompetencesController' => __DIR__ . '/../..',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Entity\\Categorie' => __DIR__ . '/../..' . '/src/Entity/Categorie.php',
         'App\\Entity\\Competences' => __DIR__ . '/../..' . '/src/Entity/Competences.php',
@@ -566,10 +597,10 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'App\\Entity\\Parcours' => __DIR__ . '/../..' . '/src/Entity/Parcours.php',
         'App\\Entity\\Produits' => __DIR__ . '/../..' . '/src/Entity/Produits.php',
         'App\\Entity\\Realisation' => __DIR__ . '/../..' . '/src/Entity/Realisation.php',
+        'App\\Form\\CompetencesCategoriesType' => __DIR__ . '/../..' . '/src/Form/CompetencesCategoriesType.php',
+        'App\\Form\\CompetencesType' => __DIR__ . '/../..' . '/src/Form/CompetencesType.php',
         'App\\Http\\Api\\Controller\\DnsController' => __DIR__ . '/../..' . '/src/Http/Api/Controller/DnsController.php',
         'App\\Http\\Api\\Utils\\ParseResponse' => __DIR__ . '/../..' . '/src/Http/Api/Utils/ParseResponse.php',
-        'App\\Http\\DnsUtils' => __DIR__ . '/../..' . '/src/Http/DnsUtils.php',
-        'App\\Http\\PostUtils' => __DIR__ . '/../..' . '/src/Http/PostUtils.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\CategorieRepository' => __DIR__ . '/../..' . '/src/Repository/CategorieRepository.php',
         'App\\Repository\\CompetencesCategoriesRepository' => __DIR__ . '/../..' . '/src/Repository/CompetencesCategoriesRepository.php',
@@ -581,6 +612,25 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'App\\Twig\\AppExtension' => __DIR__ . '/../..' . '/src/Twig/AppExtension.php',
         'App\\Utils\\TranslationsUtils' => __DIR__ . '/../..' . '/src/Utils/TranslationsUtils.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyFacade' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Laravel/SlugifyFacade.php',
+        'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyServiceProvider' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Laravel/SlugifyServiceProvider.php',
+        'Cocur\\Slugify\\Bridge\\Latte\\SlugifyHelper' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Latte/SlugifyHelper.php',
+        'Cocur\\Slugify\\Bridge\\League\\SlugifyServiceProvider' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/League/SlugifyServiceProvider.php',
+        'Cocur\\Slugify\\Bridge\\Nette\\SlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Nette/SlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\Plum\\SlugifyConverter' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Plum/SlugifyConverter.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyBundle' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyBundle.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\Configuration' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/Configuration.php',
+        'Cocur\\Slugify\\Bridge\\Twig\\SlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Twig/SlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\Module' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/Module.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyService' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyService.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyViewHelper' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyViewHelper.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyViewHelperFactory' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyViewHelperFactory.php',
+        'Cocur\\Slugify\\RuleProvider\\DefaultRuleProvider' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/DefaultRuleProvider.php',
+        'Cocur\\Slugify\\RuleProvider\\FileRuleProvider' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/FileRuleProvider.php',
+        'Cocur\\Slugify\\RuleProvider\\RuleProviderInterface' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/RuleProviderInterface.php',
+        'Cocur\\Slugify\\Slugify' => __DIR__ . '/..' . '/cocur/slugify/src/Slugify.php',
+        'Cocur\\Slugify\\SlugifyInterface' => __DIR__ . '/..' . '/cocur/slugify/src/SlugifyInterface.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
@@ -1714,6 +1764,21 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'FOS\\CKEditorBundle\\Builder\\JsonBuilder' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Builder/JsonBuilder.php',
+        'FOS\\CKEditorBundle\\Command\\CKEditorInstallerCommand' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Command/CKEditorInstallerCommand.php',
+        'FOS\\CKEditorBundle\\Config\\CKEditorConfiguration' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Config/CKEditorConfiguration.php',
+        'FOS\\CKEditorBundle\\Config\\CKEditorConfigurationInterface' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Config/CKEditorConfigurationInterface.php',
+        'FOS\\CKEditorBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/DependencyInjection/Configuration.php',
+        'FOS\\CKEditorBundle\\DependencyInjection\\FOSCKEditorExtension' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/DependencyInjection/FOSCKEditorExtension.php',
+        'FOS\\CKEditorBundle\\Exception\\BadProxyUrlException' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Exception/BadProxyUrlException.php',
+        'FOS\\CKEditorBundle\\Exception\\ConfigException' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Exception/ConfigException.php',
+        'FOS\\CKEditorBundle\\Exception\\FOSCKEditorException' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Exception/FOSCKEditorException.php',
+        'FOS\\CKEditorBundle\\FOSCKEditorBundle' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/FOSCKEditorBundle.php',
+        'FOS\\CKEditorBundle\\Form\\Type\\CKEditorType' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Form/Type/CKEditorType.php',
+        'FOS\\CKEditorBundle\\Installer\\CKEditorInstaller' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Installer/CKEditorInstaller.php',
+        'FOS\\CKEditorBundle\\Renderer\\CKEditorRenderer' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Renderer/CKEditorRenderer.php',
+        'FOS\\CKEditorBundle\\Renderer\\CKEditorRendererInterface' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Renderer/CKEditorRendererInterface.php',
+        'FOS\\CKEditorBundle\\Twig\\CKEditorExtension' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Twig/CKEditorExtension.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laminas\\Code\\DeclareStatement' => __DIR__ . '/..' . '/laminas/laminas-code/src/DeclareStatement.php',
@@ -1815,6 +1880,29 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'Laminas\\ZendFrameworkBridge\\Replacements' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/Replacements.php',
         'Laminas\\ZendFrameworkBridge\\RewriteRules' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/RewriteRules.php',
         'Locale' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Locale.php',
+        'Metadata\\AdvancedMetadataFactoryInterface' => __DIR__ . '/..' . '/jms/metadata/src/AdvancedMetadataFactoryInterface.php',
+        'Metadata\\Cache\\CacheInterface' => __DIR__ . '/..' . '/jms/metadata/src/Cache/CacheInterface.php',
+        'Metadata\\Cache\\ClearableCacheInterface' => __DIR__ . '/..' . '/jms/metadata/src/Cache/ClearableCacheInterface.php',
+        'Metadata\\Cache\\DoctrineCacheAdapter' => __DIR__ . '/..' . '/jms/metadata/src/Cache/DoctrineCacheAdapter.php',
+        'Metadata\\Cache\\FileCache' => __DIR__ . '/..' . '/jms/metadata/src/Cache/FileCache.php',
+        'Metadata\\Cache\\PsrCacheAdapter' => __DIR__ . '/..' . '/jms/metadata/src/Cache/PsrCacheAdapter.php',
+        'Metadata\\ClassHierarchyMetadata' => __DIR__ . '/..' . '/jms/metadata/src/ClassHierarchyMetadata.php',
+        'Metadata\\ClassMetadata' => __DIR__ . '/..' . '/jms/metadata/src/ClassMetadata.php',
+        'Metadata\\Driver\\AbstractFileDriver' => __DIR__ . '/..' . '/jms/metadata/src/Driver/AbstractFileDriver.php',
+        'Metadata\\Driver\\AdvancedDriverInterface' => __DIR__ . '/..' . '/jms/metadata/src/Driver/AdvancedDriverInterface.php',
+        'Metadata\\Driver\\AdvancedFileLocatorInterface' => __DIR__ . '/..' . '/jms/metadata/src/Driver/AdvancedFileLocatorInterface.php',
+        'Metadata\\Driver\\DriverChain' => __DIR__ . '/..' . '/jms/metadata/src/Driver/DriverChain.php',
+        'Metadata\\Driver\\DriverInterface' => __DIR__ . '/..' . '/jms/metadata/src/Driver/DriverInterface.php',
+        'Metadata\\Driver\\FileLocator' => __DIR__ . '/..' . '/jms/metadata/src/Driver/FileLocator.php',
+        'Metadata\\Driver\\FileLocatorInterface' => __DIR__ . '/..' . '/jms/metadata/src/Driver/FileLocatorInterface.php',
+        'Metadata\\Driver\\LazyLoadingDriver' => __DIR__ . '/..' . '/jms/metadata/src/Driver/LazyLoadingDriver.php',
+        'Metadata\\MergeableClassMetadata' => __DIR__ . '/..' . '/jms/metadata/src/MergeableClassMetadata.php',
+        'Metadata\\MergeableInterface' => __DIR__ . '/..' . '/jms/metadata/src/MergeableInterface.php',
+        'Metadata\\MetadataFactory' => __DIR__ . '/..' . '/jms/metadata/src/MetadataFactory.php',
+        'Metadata\\MetadataFactoryInterface' => __DIR__ . '/..' . '/jms/metadata/src/MetadataFactoryInterface.php',
+        'Metadata\\MethodMetadata' => __DIR__ . '/..' . '/jms/metadata/src/MethodMetadata.php',
+        'Metadata\\NullMetadata' => __DIR__ . '/..' . '/jms/metadata/src/NullMetadata.php',
+        'Metadata\\PropertyMetadata' => __DIR__ . '/..' . '/jms/metadata/src/PropertyMetadata.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
@@ -5224,6 +5312,78 @@ class ComposerStaticInit3df77cbd9c706bedc79b00a90b39f759
         'Twig\\Util\\TemplateDirIterator' => __DIR__ . '/..' . '/twig/twig/src/Util/TemplateDirIterator.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'Vich\\UploaderBundle\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Adapter/AdapterInterface.php',
+        'Vich\\UploaderBundle\\Adapter\\ODM\\MongoDB\\MongoDBAdapter' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Adapter/ODM/MongoDB/MongoDBAdapter.php',
+        'Vich\\UploaderBundle\\Adapter\\ORM\\DoctrineORMAdapter' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Adapter/ORM/DoctrineORMAdapter.php',
+        'Vich\\UploaderBundle\\Adapter\\PHPCR\\PHPCRAdapter' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Adapter/PHPCR/PHPCRAdapter.php',
+        'Vich\\UploaderBundle\\Command\\MappingDebugClassCommand' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Command/MappingDebugClassCommand.php',
+        'Vich\\UploaderBundle\\Command\\MappingDebugCommand' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Command/MappingDebugCommand.php',
+        'Vich\\UploaderBundle\\Command\\MappingListClassesCommand' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Command/MappingListClassesCommand.php',
+        'Vich\\UploaderBundle\\DataCollector\\MappingCollector' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DataCollector/MappingCollector.php',
+        'Vich\\UploaderBundle\\DependencyInjection\\Compiler\\RegisterFlysystemRegistryPass' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DependencyInjection/Compiler/RegisterFlysystemRegistryPass.php',
+        'Vich\\UploaderBundle\\DependencyInjection\\Compiler\\RegisterMappingDriversPass' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DependencyInjection/Compiler/RegisterMappingDriversPass.php',
+        'Vich\\UploaderBundle\\DependencyInjection\\Compiler\\RegisterSluggerPass' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DependencyInjection/Compiler/RegisterSluggerPass.php',
+        'Vich\\UploaderBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DependencyInjection/Configuration.php',
+        'Vich\\UploaderBundle\\DependencyInjection\\VichUploaderExtension' => __DIR__ . '/..' . '/vich/uploader-bundle/src/DependencyInjection/VichUploaderExtension.php',
+        'Vich\\UploaderBundle\\Entity\\File' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Entity/File.php',
+        'Vich\\UploaderBundle\\EventListener\\Doctrine\\BaseListener' => __DIR__ . '/..' . '/vich/uploader-bundle/src/EventListener/Doctrine/BaseListener.php',
+        'Vich\\UploaderBundle\\EventListener\\Doctrine\\CleanListener' => __DIR__ . '/..' . '/vich/uploader-bundle/src/EventListener/Doctrine/CleanListener.php',
+        'Vich\\UploaderBundle\\EventListener\\Doctrine\\InjectListener' => __DIR__ . '/..' . '/vich/uploader-bundle/src/EventListener/Doctrine/InjectListener.php',
+        'Vich\\UploaderBundle\\EventListener\\Doctrine\\RemoveListener' => __DIR__ . '/..' . '/vich/uploader-bundle/src/EventListener/Doctrine/RemoveListener.php',
+        'Vich\\UploaderBundle\\EventListener\\Doctrine\\UploadListener' => __DIR__ . '/..' . '/vich/uploader-bundle/src/EventListener/Doctrine/UploadListener.php',
+        'Vich\\UploaderBundle\\Event\\Event' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Event/Event.php',
+        'Vich\\UploaderBundle\\Event\\Events' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Event/Events.php',
+        'Vich\\UploaderBundle\\Exception\\MappingNotFoundException' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/MappingNotFoundException.php',
+        'Vich\\UploaderBundle\\Exception\\MissingPackageException' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/MissingPackageException.php',
+        'Vich\\UploaderBundle\\Exception\\NameGenerationException' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/NameGenerationException.php',
+        'Vich\\UploaderBundle\\Exception\\NoFileFoundException' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/NoFileFoundException.php',
+        'Vich\\UploaderBundle\\Exception\\NotUploadableException' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/NotUploadableException.php',
+        'Vich\\UploaderBundle\\Exception\\VichUploaderExceptionInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Exception/VichUploaderExceptionInterface.php',
+        'Vich\\UploaderBundle\\Form\\DataTransformer\\FileTransformer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Form/DataTransformer/FileTransformer.php',
+        'Vich\\UploaderBundle\\Form\\Type\\VichFileType' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Form/Type/VichFileType.php',
+        'Vich\\UploaderBundle\\Form\\Type\\VichImageType' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Form/Type/VichImageType.php',
+        'Vich\\UploaderBundle\\Handler\\AbstractHandler' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Handler/AbstractHandler.php',
+        'Vich\\UploaderBundle\\Handler\\DownloadHandler' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Handler/DownloadHandler.php',
+        'Vich\\UploaderBundle\\Handler\\UploadHandler' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Handler/UploadHandler.php',
+        'Vich\\UploaderBundle\\Injector\\FileInjector' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Injector/FileInjector.php',
+        'Vich\\UploaderBundle\\Injector\\FileInjectorInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Injector/FileInjectorInterface.php',
+        'Vich\\UploaderBundle\\Mapping\\Annotation\\Uploadable' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Mapping/Annotation/Uploadable.php',
+        'Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Mapping/Annotation/UploadableField.php',
+        'Vich\\UploaderBundle\\Mapping\\PropertyMapping' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Mapping/PropertyMapping.php',
+        'Vich\\UploaderBundle\\Mapping\\PropertyMappingFactory' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php',
+        'Vich\\UploaderBundle\\Metadata\\CacheWarmer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/CacheWarmer.php',
+        'Vich\\UploaderBundle\\Metadata\\ClassMetadata' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/ClassMetadata.php',
+        'Vich\\UploaderBundle\\Metadata\\Driver\\AnnotationDriver' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/Driver/AnnotationDriver.php',
+        'Vich\\UploaderBundle\\Metadata\\Driver\\XmlDriver' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/Driver/XmlDriver.php',
+        'Vich\\UploaderBundle\\Metadata\\Driver\\YamlDriver' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/Driver/YamlDriver.php',
+        'Vich\\UploaderBundle\\Metadata\\MetadataReader' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Metadata/MetadataReader.php',
+        'Vich\\UploaderBundle\\Naming\\Base64Namer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/Base64Namer.php',
+        'Vich\\UploaderBundle\\Naming\\ConfigurableInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/ConfigurableInterface.php',
+        'Vich\\UploaderBundle\\Naming\\CurrentDateTimeDirectoryNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/CurrentDateTimeDirectoryNamer.php',
+        'Vich\\UploaderBundle\\Naming\\CurrentDateTimeHelper' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/CurrentDateTimeHelper.php',
+        'Vich\\UploaderBundle\\Naming\\DateTimeHelper' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/DateTimeHelper.php',
+        'Vich\\UploaderBundle\\Naming\\DirectoryNamerInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/DirectoryNamerInterface.php',
+        'Vich\\UploaderBundle\\Naming\\HashNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/HashNamer.php',
+        'Vich\\UploaderBundle\\Naming\\NamerInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/NamerInterface.php',
+        'Vich\\UploaderBundle\\Naming\\OrignameNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/OrignameNamer.php',
+        'Vich\\UploaderBundle\\Naming\\Polyfill\\FileExtensionTrait' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/Polyfill/FileExtensionTrait.php',
+        'Vich\\UploaderBundle\\Naming\\PropertyDirectoryNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/PropertyDirectoryNamer.php',
+        'Vich\\UploaderBundle\\Naming\\PropertyNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/PropertyNamer.php',
+        'Vich\\UploaderBundle\\Naming\\SlugNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/SlugNamer.php',
+        'Vich\\UploaderBundle\\Naming\\SmartUniqueNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/SmartUniqueNamer.php',
+        'Vich\\UploaderBundle\\Naming\\SubdirDirectoryNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/SubdirDirectoryNamer.php',
+        'Vich\\UploaderBundle\\Naming\\UniqidNamer' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Naming/UniqidNamer.php',
+        'Vich\\UploaderBundle\\Storage\\AbstractStorage' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Storage/AbstractStorage.php',
+        'Vich\\UploaderBundle\\Storage\\FileSystemStorage' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Storage/FileSystemStorage.php',
+        'Vich\\UploaderBundle\\Storage\\FlysystemStorage' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Storage/FlysystemStorage.php',
+        'Vich\\UploaderBundle\\Storage\\GaufretteStorage' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Storage/GaufretteStorage.php',
+        'Vich\\UploaderBundle\\Storage\\StorageInterface' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Storage/StorageInterface.php',
+        'Vich\\UploaderBundle\\Templating\\Helper\\UploaderHelper' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Templating/Helper/UploaderHelper.php',
+        'Vich\\UploaderBundle\\Twig\\Extension\\UploaderExtension' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Twig/Extension/UploaderExtension.php',
+        'Vich\\UploaderBundle\\Util\\ClassUtils' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Util/ClassUtils.php',
+        'Vich\\UploaderBundle\\Util\\FilenameUtils' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Util/FilenameUtils.php',
+        'Vich\\UploaderBundle\\Util\\Transliterator' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Util/Transliterator.php',
+        'Vich\\UploaderBundle\\VichUploaderBundle' => __DIR__ . '/..' . '/vich/uploader-bundle/src/VichUploaderBundle.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
