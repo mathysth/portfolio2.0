@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Categorie{% endblock %}
+
+{% block body %}
+    <h1>Create new Categorie</h1>
+
+    {{ include('admin/categorie/_form.html.twig') }}
+
+    <a href="{{ path('categorie_index',{'lang': app.request.get("lang")}) }}">back to list</a>
+{% endblock %}

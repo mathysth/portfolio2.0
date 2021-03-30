@@ -92,7 +92,7 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
         echo "    <script>
         // Permet de print un resultat donné par l'api
        let salut;
-       let test = sendAjaxRequest(\"http/checkDns\").then(function (g){
+       let test = sendAjaxRequest(\"http/checkDns\",\"html\").then(function (g){
            console.log(g);
            salut = g;
        })
@@ -131,7 +131,7 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
     <script>
         // Permet de print un resultat donné par l'api
        let salut;
-       let test = sendAjaxRequest(\"http/checkDns\").then(function (g){
+       let test = sendAjaxRequest(\"http/checkDns\",\"html\").then(function (g){
            console.log(g);
            salut = g;
        })

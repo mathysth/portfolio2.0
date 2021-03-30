@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Presentation index{% endblock %}
+
+{% block body %}
+    <h1>Presentation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Age</th>
+                <th>Job</th>
+                <th>NativeCountry</th>
+                <th>Email</th>
+                <th>PresentationText</th>
+                <th>Cv</th>
+                <th>CoverLetter</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for presentation in presentations %}
+            <tr>
+                <td>{{ presentation.id }}</td>
+                <td>{{ presentation.age }}</td>
+                <td>{{ presentation.job }}</td>
+                <td>{{ presentation.nativeCountry }}</td>
+                <td>{{ presentation.email }}</td>
+                <td>{{ presentation.presentationText }}</td>
+                <td>{{ presentation.cv }}</td>
+                <td>{{ presentation.coverLetter }}</td>
+                <td>
+                    <a href="{{ path('presentation_show', {'id': presentation.id,lang: app.request.get("lang")}) }}">show</a>
+                    <a href="{{ path('presentation_edit', {'id': presentation.id,lang: app.request.get("lang")}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('presentation_new',{"lang": app.request.get("lang")}) }}">Create new</a>
+{% endblock %}

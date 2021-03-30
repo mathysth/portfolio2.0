@@ -63,9 +63,13 @@ class Produits
      */
     private $updated_at;
 
-    public function getId(): ?int
+    public function __construct()
     {
         $this->filename = "empty.jpg";
+    }
+
+    public function getId(): ?int
+    {
         return $this->id;
     }
 

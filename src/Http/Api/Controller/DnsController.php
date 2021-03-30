@@ -23,7 +23,7 @@ class DnsController extends AbstractController
             if ( checkdnsrr($test, 'ANY') ) {
                 $output->setInput("Domaine Indisponible");
                 return $output->returnApiResponse();
-            }else {
+            }else{
                 $output->setInput("Domaine disponible");
                 return $output->returnApiResponse();
             }

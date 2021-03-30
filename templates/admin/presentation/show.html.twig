@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Presentation{% endblock %}
+
+{% block body %}
+    <h1>Presentation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ presentation.id }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ presentation.age }}</td>
+            </tr>
+            <tr>
+                <th>Job</th>
+                <td>{{ presentation.job }}</td>
+            </tr>
+            <tr>
+                <th>NativeCountry</th>
+                <td>{{ presentation.nativeCountry }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ presentation.email }}</td>
+            </tr>
+            <tr>
+                <th>PresentationText</th>
+                <td>{{ presentation.presentationText }}</td>
+            </tr>
+            <tr>
+                <th>Cv</th>
+                <td>{{ presentation.cv }}</td>
+            </tr>
+            <tr>
+                <th>CoverLetter</th>
+                <td>{{ presentation.coverLetter }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('presentation_index') }}">back to list</a>
+
+    <a href="{{ path('presentation_edit', {'id': presentation.id}) }}">edit</a>
+
+    {{ include('presentation/_delete_form.html.twig') }}
+{% endblock %}

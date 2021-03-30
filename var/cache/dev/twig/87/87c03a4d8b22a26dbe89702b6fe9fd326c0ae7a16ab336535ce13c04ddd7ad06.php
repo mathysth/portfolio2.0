@@ -150,14 +150,14 @@ class __TwigTemplate_b0e0e9494309b560f3790178009e4b76f892f04e10c33d9a5f9b641187e
 
     <!-- JS -->
     <script>
-        function sendAjaxRequest(\$url,\$param = null,\$method = \"POST\"){
+        function sendAjaxRequest(url,dataType,param = null,method = \"POST\"){
             return \$.ajax({
-                url: \"/api/\"+\$url,
-                method: \$method,
+                url: \"/api/\"+url,
+                method: method,
                 data: {
-                    explode: \$param
+                    explode: param
                 },
-                dataType: \"html\",
+                dataType: dataType,
                 async: true
             })
         }
@@ -371,14 +371,14 @@ class __TwigTemplate_b0e0e9494309b560f3790178009e4b76f892f04e10c33d9a5f9b641187e
 
     <!-- JS -->
     <script>
-        function sendAjaxRequest(\$url,\$param = null,\$method = \"POST\"){
+        function sendAjaxRequest(url,dataType,param = null,method = \"POST\"){
             return \$.ajax({
-                url: \"/api/\"+\$url,
-                method: \$method,
+                url: \"/api/\"+url,
+                method: method,
                 data: {
-                    explode: \$param
+                    explode: param
                 },
-                dataType: \"html\",
+                dataType: dataType,
                 async: true
             })
         }

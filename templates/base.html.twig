@@ -95,14 +95,14 @@
 
     <!-- JS -->
     <script>
-        function sendAjaxRequest($url,$param = null,$method = "POST"){
+        function sendAjaxRequest(url,dataType,param = null,method = "POST"){
             return $.ajax({
-                url: "/api/"+$url,
-                method: $method,
+                url: "/api/"+url,
+                method: method,
                 data: {
-                    explode: $param
+                    explode: param
                 },
-                dataType: "html",
+                dataType: dataType,
                 async: true
             })
         }

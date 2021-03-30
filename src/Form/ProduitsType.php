@@ -3,7 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Produits;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,10 +16,11 @@ class ProduitsType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('description')
-            ->add('prix')
-            ->add('filename')
-            ->add('updated_at')
+            ->add('description',CKEditorType::class)
+            ->add('prix',NumberType::class)
+            ->add('imageFile',FileType::class,[
+                'required' => false
+            ])
         ;
     }
 
