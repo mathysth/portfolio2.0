@@ -26,6 +26,7 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
 
         $this->blocks = [
             'body' => [$this, 'block_body'],
+            'inline_css' => [$this, 'block_inline_css'],
             'script' => [$this, 'block_script'],
         ];
     }
@@ -66,9 +67,53 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "    ";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("getStarted", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 3, $this->source); })()), "request", [], "any", false, false, false, 3), "get", [0 => "lang"], "method", false, false, false, 3)), "html", null, true);
-        echo "
+        echo "    <section class=\"hero-wrap\">
+        <div class=\"overlay\"></div>
+        <div class=\"container-xl\">
+            <div class=\"row slider-text align-items-center align-items-stretch justify-content-between\">
+                <div class=\"col-lg-6 text d-flex align-items-start align-items-sm-center\">
+                    <div class=\"desc mt-4 mt-md-0\">
+                        <span class=\"subheading\">";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("desiredProfession", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
+        echo "</span>
+                        <h1 class=\"mb-4\">";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("Hello", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)), "html", null, true);
+        echo "</h1>
+                        <p>
+                            <a href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "request", [], "any", false, false, false, 12), "get", [0 => "lang"], "method", false, false, false, 12)]), "html", null, true);
+        echo "\" class=\"btn btn-primary p-4 py-3\">";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("moreAboutMe", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "request", [], "any", false, false, false, 12), "get", [0 => "lang"], "method", false, false, false, 12)), "html", null, true);
+        echo " <span class=\"ion-ios-arrow-round-forward\"></span></a>
+                            <a href=\"mailto:";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("email", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "request", [], "any", false, false, false, 13), "get", [0 => "lang"], "method", false, false, false, 13)), "html", null, true);
+        echo "\" class=\"btn btn-white p-4 py-3\">";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppExtension']->TranslateTextByKey("contactMe", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "request", [], "any", false, false, false, 13), "get", [0 => "lang"], "method", false, false, false, 13)), "html", null, true);
+        echo " <span class=\"ion-ios-arrow-round-forward\"></span></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class=\"col-lg-6 d-flex align-items-end justify-content-end\">
+                    <!--
+                    <div class=\"carousel-about\">
+                        <div class=\"item\">
+                            <img src=\"/build/img/jshmidt.png\" class=\"img-fluid\" alt=\"Me\">
+                        </div>
+                        <div class=\"item\">
+                            <img src=\"/build/img/jshmidt-2.png\" class=\"img-fluid\" alt=\"Me\">
+                        </div>
+                        </span>
+                         <img src=\"images/jschmidt-2.png\" class=\"img-fluid\" alt=\"Colorlib\">
+                    </div>
+                -->
+                </div>
+            </div>
+    </section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -78,7 +123,32 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
 
     }
 
-    // line 5
+    // line 35
+    public function block_inline_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "inline_css"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "inline_css"));
+
+        // line 36
+        echo "<style>
+    .hero-wrap .overlay{
+
+    }
+</style>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 42
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -88,7 +158,7 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
 
-        // line 6
+        // line 43
         echo "    <script>
         // Permet de print un resultat donné par l'api
        let salut;
@@ -118,14 +188,51 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
 
     public function getDebugInfo()
     {
-        return array (  92 => 6,  82 => 5,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  162 => 43,  152 => 42,  137 => 36,  127 => 35,  93 => 13,  87 => 12,  82 => 10,  78 => 9,  70 => 3,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends \"base.html.twig\" %}
 {% block body %}
-    {{ translate('getStarted',app.request.get('lang')) }}
+    <section class=\"hero-wrap\">
+        <div class=\"overlay\"></div>
+        <div class=\"container-xl\">
+            <div class=\"row slider-text align-items-center align-items-stretch justify-content-between\">
+                <div class=\"col-lg-6 text d-flex align-items-start align-items-sm-center\">
+                    <div class=\"desc mt-4 mt-md-0\">
+                        <span class=\"subheading\">{{ translate('desiredProfession',app.request.get('lang')) }}</span>
+                        <h1 class=\"mb-4\">{{ translate('Hello',app.request.get('lang')) }}</h1>
+                        <p>
+                            <a href=\"{{ path('presentation',{\"lang\": app.request.get('lang')}) }}\" class=\"btn btn-primary p-4 py-3\">{{ translate('moreAboutMe',app.request.get('lang')) }} <span class=\"ion-ios-arrow-round-forward\"></span></a>
+                            <a href=\"mailto:{{ translate('email',app.request.get('lang')) }}\" class=\"btn btn-white p-4 py-3\">{{ translate('contactMe',app.request.get('lang')) }} <span class=\"ion-ios-arrow-round-forward\"></span></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class=\"col-lg-6 d-flex align-items-end justify-content-end\">
+                    <!--
+                    <div class=\"carousel-about\">
+                        <div class=\"item\">
+                            <img src=\"/build/img/jshmidt.png\" class=\"img-fluid\" alt=\"Me\">
+                        </div>
+                        <div class=\"item\">
+                            <img src=\"/build/img/jshmidt-2.png\" class=\"img-fluid\" alt=\"Me\">
+                        </div>
+                        </span>
+                         <img src=\"images/jschmidt-2.png\" class=\"img-fluid\" alt=\"Colorlib\">
+                    </div>
+                -->
+                </div>
+            </div>
+    </section>
+{% endblock %}
+{% block inline_css %}
+<style>
+    .hero-wrap .overlay{
+
+    }
+</style>
 {% endblock %}
 {% block script %}
     <script>
@@ -136,6 +243,6 @@ class __TwigTemplate_fe8484e249a8a28e4de94df137ace1ea20d2bb2c7e3dd353394a620d184
            salut = g;
        })
     </script>
-{% endblock %}", "pages/home.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\pages\\home.html.twig");
+{% endblock %}", "pages/home.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\pages\\home.html.twig");
     }
 }

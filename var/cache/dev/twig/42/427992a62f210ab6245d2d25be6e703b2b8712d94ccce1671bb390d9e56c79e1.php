@@ -89,12 +89,12 @@ class __TwigTemplate_f194fe3ecd3390b016dbdf60813714762d38663f08e44bb4a6a51b8b656
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "competences/_form.html.twig");
+        echo twig_include($this->env, $context, "admin/competences/_form.html.twig");
         echo "
 
     <a href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_index");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">back to list</a>
 ";
         
@@ -129,10 +129,10 @@ class __TwigTemplate_f194fe3ecd3390b016dbdf60813714762d38663f08e44bb4a6a51b8b656
 {% block body %}
     <h1>Create new Competences</h1>
 
-    {{ include('competences/_form.html.twig') }}
+    {{ include('admin/competences/_form.html.twig') }}
 
-    <a href=\"{{ path('competences_index') }}\">back to list</a>
+    <a href=\"{{ path('competences_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
 {% endblock %}
-", "admin/competences/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\new.html.twig");
+", "admin/competences/new.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\competences\\new.html.twig");
     }
 }

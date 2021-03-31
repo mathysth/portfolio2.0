@@ -18,11 +18,6 @@ class Presentation
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $age;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $job;
@@ -57,22 +52,16 @@ class Presentation
      */
     private $centerOfInterest;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthday;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getAge(): ?int
-    {
-        return $this->age;
-    }
-
-    public function setAge(int $age): self
-    {
-        $this->age = $age;
-
-        return $this;
-    }
 
     public function getJob(): ?string
     {
@@ -154,6 +143,18 @@ class Presentation
     public function setCenterOfInterest(string $centerOfInterest): self
     {
         $this->centerOfInterest = $centerOfInterest;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(\DateTimeInterface $birthday): self
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }

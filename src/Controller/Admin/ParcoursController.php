@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/parcours")
+ * @Route("{lang}/admin/parcours")
  */
 class ParcoursController extends AbstractController
 {
@@ -20,7 +20,7 @@ class ParcoursController extends AbstractController
      */
     public function index(ParcoursRepository $parcoursRepository): Response
     {
-        return $this->render('parcours/index.html.twig', [
+        return $this->render('admin/parcours/index.html.twig', [
             'parcours' => $parcoursRepository->findAll(),
         ]);
     }
@@ -39,22 +39,14 @@ class ParcoursController extends AbstractController
             $entityManager->persist($parcour);
             $entityManager->flush();
 
-            return $this->redirectToRoute('parcours_index');
+            return $this->redirectToRoute('parcours_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('parcours/new.html.twig', [
+        return $this->render('admin/parcours/new.html.twig', [
             'parcour' => $parcour,
             'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="parcours_show", methods={"GET"})
-     */
-    public function show(Parcours $parcour): Response
-    {
-        return $this->render('parcours/show.html.twig', [
-            'parcour' => $parcour,
         ]);
     }
 
@@ -69,10 +61,12 @@ class ParcoursController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('parcours_index');
+            return $this->redirectToRoute('parcours_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('parcours/edit.html.twig', [
+        return $this->render('admin/parcours/edit.html.twig', [
             'parcour' => $parcour,
             'form' => $form->createView(),
         ]);
@@ -89,6 +83,8 @@ class ParcoursController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('parcours_index');
+        return $this->redirectToRoute('parcours_index',[
+            "lang" => $request->get("lang")
+        ]);
     }
 }

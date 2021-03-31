@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/realisation")
+ * @Route("{lang}/admin/realisation")
  */
 class RealisationController extends AbstractController
 {
@@ -20,7 +20,7 @@ class RealisationController extends AbstractController
      */
     public function index(RealisationRepository $realisationRepository): Response
     {
-        return $this->render('realisation/index.html.twig', [
+        return $this->render('admin/realisation/index.html.twig', [
             'realisations' => $realisationRepository->findAll(),
         ]);
     }
@@ -39,10 +39,12 @@ class RealisationController extends AbstractController
             $entityManager->persist($realisation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('realisation_index');
+            return $this->redirectToRoute('realisation_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('realisation/new.html.twig', [
+        return $this->render('admin/realisation/new.html.twig', [
             'realisation' => $realisation,
             'form' => $form->createView(),
         ]);
@@ -69,10 +71,12 @@ class RealisationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('realisation_index');
+            return $this->redirectToRoute('realisation_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('realisation/edit.html.twig', [
+        return $this->render('admin/realisation/edit.html.twig', [
             'realisation' => $realisation,
             'form' => $form->createView(),
         ]);
@@ -89,6 +93,8 @@ class RealisationController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('realisation_index');
+        return $this->redirectToRoute('realisation_index',[
+            "lang" => $request->get("lang")
+        ]);
     }
 }

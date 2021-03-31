@@ -89,7 +89,7 @@ class __TwigTemplate_2f3655c68b06b1cf334c2fee751141f7d1cef06a1b578f1502f5e1cd54c
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "presentation/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "admin/presentation/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
@@ -99,7 +99,7 @@ class __TwigTemplate_2f3655c68b06b1cf334c2fee751141f7d1cef06a1b578f1502f5e1cd54c
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "presentation/_delete_form.html.twig");
+        echo twig_include($this->env, $context, "admin/presentation/_delete_form.html.twig");
         echo "
 ";
         
@@ -134,12 +134,12 @@ class __TwigTemplate_2f3655c68b06b1cf334c2fee751141f7d1cef06a1b578f1502f5e1cd54c
 {% block body %}
     <h1>Edit Presentation</h1>
 
-    {{ include('presentation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/presentation/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href=\"{{ path('presentation_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
 
-    {{ include('presentation/_delete_form.html.twig') }}
+    {{ include('admin/presentation/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/presentation/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\edit.html.twig");
+", "admin/presentation/edit.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\presentation\\edit.html.twig");
     }
 }

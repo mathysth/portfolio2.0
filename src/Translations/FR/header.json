@@ -1,9 +1,3 @@
 {
-  "homePage": "Accueil",
-  "hosting": "Hébergement",
-  "news": "Actualités",
-  "login": "Connexion",
-  "register": "Inscription",
-  "memberSpace": "Espace Membre",
-  "headerHelp": "Centre d'aide"
+  "homePage": "Accueil"
 }

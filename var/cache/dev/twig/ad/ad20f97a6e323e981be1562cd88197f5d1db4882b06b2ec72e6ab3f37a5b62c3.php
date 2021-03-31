@@ -172,6 +172,6 @@ class __TwigTemplate_6fb04dcdfdb05be66fa97af1a2af4eb825cb745afdeee011deff55c1213
 
     {{ include('categorie/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/categorie/show.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\show.html.twig");
+", "admin/categorie/show.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\categorie\\show.html.twig");
     }
 }

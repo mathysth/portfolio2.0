@@ -1,0 +1,13 @@
+{
+  "nameLabel": "Nom / Prénom",
+  "nameResult": "THEOLADE Mathys",
+  "BirthdayLabel": "Date de naissance",
+  "BirthdayResult": "29 Octobre 2001",
+  "AddressLabel": "Adresse",
+  "AddressResult": "Sérignan",
+  "emailLabel": "Email",
+  "zipLabel": "Code Postal",
+  "zipResult": 34410,
+  "skills": "Compétences",
+  "mySkills": "Mes Compétences"
+}

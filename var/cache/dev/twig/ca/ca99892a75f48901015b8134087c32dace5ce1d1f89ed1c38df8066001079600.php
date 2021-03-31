@@ -140,6 +140,6 @@ class __TwigTemplate_228467d7098ce3bfa77676fc464ed25102f1451c898876b01c80fa510ac
 
     {{ include('admin/produits/_delete_form.html.twig',{lang: app.request.get(\"lang\")}) }}
 {% endblock %}
-", "admin/produits/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\edit.html.twig");
+", "admin/produits/edit.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\produits\\edit.html.twig");
     }
 }

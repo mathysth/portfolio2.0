@@ -89,17 +89,17 @@ class __TwigTemplate_afd7d832ce736bab2b044fbe961696ec5e71c54e22ec40579626f63233e
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "competences/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "admin/competences/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_index");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">back to list</a>
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "competences/_delete_form.html.twig");
+        echo twig_include($this->env, $context, "admin/competences/_delete_form.html.twig");
         echo "
 ";
         
@@ -134,12 +134,12 @@ class __TwigTemplate_afd7d832ce736bab2b044fbe961696ec5e71c54e22ec40579626f63233e
 {% block body %}
     <h1>Edit Competences</h1>
 
-    {{ include('competences/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/competences/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('competences_index') }}\">back to list</a>
+    <a href=\"{{ path('competences_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
 
-    {{ include('competences/_delete_form.html.twig') }}
+    {{ include('admin/competences/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/competences/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\edit.html.twig");
+", "admin/competences/edit.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\competences\\edit.html.twig");
     }
 }

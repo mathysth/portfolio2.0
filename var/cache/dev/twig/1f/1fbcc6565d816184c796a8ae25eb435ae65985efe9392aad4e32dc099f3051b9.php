@@ -41,7 +41,7 @@ class __TwigTemplate_d23d04d34e8c1dd6220676ea53e8805d6fcfa50ca8a355242f5baadcb7a
 
         // line 1
         echo "<form method=\"post\" action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["parcour"]) || array_key_exists("parcour", $context) ? $context["parcour"] : (function () { throw new RuntimeError('Variable "parcour" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["parcour"]) || array_key_exists("parcour", $context) ? $context["parcour"] : (function () { throw new RuntimeError('Variable "parcour" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 1, $this->source); })()), "request", [], "any", false, false, false, 1), "get", [0 => "lang"], "method", false, false, false, 1)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
@@ -76,11 +76,11 @@ class __TwigTemplate_d23d04d34e8c1dd6220676ea53e8805d6fcfa50ca8a355242f5baadcb7a
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('parcours_delete', {'id': parcour.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('parcours_delete', {'id': parcour.id,'lang': app.request.get('lang')}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ parcour.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "admin/parcours/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\parcours\\_delete_form.html.twig");
+", "admin/parcours/_delete_form.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\parcours\\_delete_form.html.twig");
     }
 }

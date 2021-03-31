@@ -89,17 +89,17 @@ class __TwigTemplate_b75a2028adf3f7056347758982369eb1c6257cedf0008341d8bfcdbc3bc
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "realisation/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "admin/realisation/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_index");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">back to list</a>
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "realisation/_delete_form.html.twig");
+        echo twig_include($this->env, $context, "admin/realisation/_delete_form.html.twig");
         echo "
 ";
         
@@ -134,12 +134,12 @@ class __TwigTemplate_b75a2028adf3f7056347758982369eb1c6257cedf0008341d8bfcdbc3bc
 {% block body %}
     <h1>Edit Realisation</h1>
 
-    {{ include('realisation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('realisation_index') }}\">back to list</a>
+    <a href=\"{{ path('realisation_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
 
-    {{ include('realisation/_delete_form.html.twig') }}
+    {{ include('admin/realisation/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/realisation/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\edit.html.twig");
+", "admin/realisation/edit.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\realisation\\edit.html.twig");
     }
 }

@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/competences/categories")
+ * @Route("/{lang}/admin/competences/categories")
  */
 class CompetencesCategoriesController extends AbstractController
 {
@@ -20,13 +20,15 @@ class CompetencesCategoriesController extends AbstractController
      */
     public function index(CompetencesCategoriesRepository $competencesCategoriesRepository): Response
     {
-        return $this->render('competences_categories/index.html.twig', [
+        return $this->render('admin/competences_categories/index.html.twig', [
             'competences_categories' => $competencesCategoriesRepository->findAll(),
         ]);
     }
 
     /**
      * @Route("/new", name="competences_categories_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -39,10 +41,12 @@ class CompetencesCategoriesController extends AbstractController
             $entityManager->persist($competencesCategory);
             $entityManager->flush();
 
-            return $this->redirectToRoute('competences_categories_index');
+            return $this->redirectToRoute('competences_categories_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('competences_categories/new.html.twig', [
+        return $this->render('admin/competences_categories/new.html.twig', [
             'competences_category' => $competencesCategory,
             'form' => $form->createView(),
         ]);
@@ -53,7 +57,7 @@ class CompetencesCategoriesController extends AbstractController
      */
     public function show(CompetencesCategories $competencesCategory): Response
     {
-        return $this->render('competences_categories/show.html.twig', [
+        return $this->render('admin/competences_categories/show.html.twig', [
             'competences_category' => $competencesCategory,
         ]);
     }
@@ -69,10 +73,12 @@ class CompetencesCategoriesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('competences_categories_index');
+            return $this->redirectToRoute('competences_categories_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('competences_categories/edit.html.twig', [
+        return $this->render('admin/competences_categories/edit.html.twig', [
             'competences_category' => $competencesCategory,
             'form' => $form->createView(),
         ]);
@@ -89,6 +95,8 @@ class CompetencesCategoriesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('competences_categories_index');
+        return $this->redirectToRoute('competences_categories_index',[
+            "lang" => $request->get("lang")
+        ]);
     }
 }

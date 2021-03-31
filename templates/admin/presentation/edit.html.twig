@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Edit Presentation</h1>
 
-    {{ include('presentation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/presentation/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('presentation_index',{"lang": app.request.get("lang")}) }}">back to list</a>
 
-    {{ include('presentation/_delete_form.html.twig') }}
+    {{ include('admin/presentation/_delete_form.html.twig') }}
 {% endblock %}

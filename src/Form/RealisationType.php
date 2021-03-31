@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Realisation;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,7 +15,7 @@ class RealisationType extends AbstractType
         $builder
             ->add('titre')
             ->add('images')
-            ->add('description')
+            ->add('description',CKEditorType::class)
             ->add('lien')
         ;
     }

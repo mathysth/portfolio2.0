@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Create new Realisation</h1>
 
-    {{ include('realisation/_form.html.twig') }}
+    {{ include('admin/realisation/_form.html.twig') }}
 
-    <a href="{{ path('realisation_index') }}">back to list</a>
+    <a href="{{ path('realisation_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 {% endblock %}

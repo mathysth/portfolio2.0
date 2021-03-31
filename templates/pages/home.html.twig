@@ -1,6 +1,43 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    {{ translate('getStarted',app.request.get('lang')) }}
+    <section class="hero-wrap">
+        <div class="overlay"></div>
+        <div class="container-xl">
+            <div class="row slider-text align-items-center align-items-stretch justify-content-between">
+                <div class="col-lg-6 text d-flex align-items-start align-items-sm-center">
+                    <div class="desc mt-4 mt-md-0">
+                        <span class="subheading">{{ translate('desiredProfession',app.request.get('lang')) }}</span>
+                        <h1 class="mb-4">{{ translate('Hello',app.request.get('lang')) }}</h1>
+                        <p>
+                            <a href="{{ path('presentation',{"lang": app.request.get('lang')}) }}" class="btn btn-primary p-4 py-3">{{ translate('moreAboutMe',app.request.get('lang')) }} <span class="ion-ios-arrow-round-forward"></span></a>
+                            <a href="mailto:{{ translate('email',app.request.get('lang')) }}" class="btn btn-white p-4 py-3">{{ translate('contactMe',app.request.get('lang')) }} <span class="ion-ios-arrow-round-forward"></span></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-end justify-content-end">
+                    <!--
+                    <div class="carousel-about">
+                        <div class="item">
+                            <img src="/build/img/jshmidt.png" class="img-fluid" alt="Me">
+                        </div>
+                        <div class="item">
+                            <img src="/build/img/jshmidt-2.png" class="img-fluid" alt="Me">
+                        </div>
+                        </span>
+                         <img src="images/jschmidt-2.png" class="img-fluid" alt="Colorlib">
+                    </div>
+                -->
+                </div>
+            </div>
+    </section>
+{% endblock %}
+{% block inline_css %}
+<style>
+    .hero-wrap .overlay{
+
+    }
+</style>
 {% endblock %}
 {% block script %}
     <script>

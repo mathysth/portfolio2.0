@@ -19,8 +19,8 @@
                 <td>{{ competences_category.id }}</td>
                 <td>{{ competences_category.nom }}</td>
                 <td>
-                    <a href="{{ path('competences_categories_show', {'id': competences_category.id}) }}">show</a>
-                    <a href="{{ path('competences_categories_edit', {'id': competences_category.id}) }}">edit</a>
+                    <a href="{{ path('competences_categories_show', {'id': competences_category.id,"lang": app.request.get('lang')}) }}">show</a>
+                    <a href="{{ path('competences_categories_edit', {'id': competences_category.id,"lang": app.request.get('lang')}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('competences_categories_new') }}">Create new</a>
+    <a href="{{ path('competences_categories_new',{"lang": app.request.get('lang')}) }}">Create new</a>
 {% endblock %}

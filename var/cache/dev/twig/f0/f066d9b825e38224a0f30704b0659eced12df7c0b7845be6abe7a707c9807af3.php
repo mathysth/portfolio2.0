@@ -203,8 +203,8 @@ class __TwigTemplate_fa56a3353bb9f0a4f6dcf508d95237cf4dcee6e2038878e99b5434e710c
         </tbody>
     </table>
 
-    <a href=\"{{ path('categorie_new',{lang: app.request.get(\"lang\")}) }}\">Create new</a>
+    <a href=\"{{ path('categorie_new',{'lang': app.request.get(\"lang\")}) }}\">Create new</a>
 {% endblock %}
-", "admin/categorie/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\index.html.twig");
+", "admin/categorie/index.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\categorie\\index.html.twig");
     }
 }

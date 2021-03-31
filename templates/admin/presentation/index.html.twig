@@ -23,7 +23,7 @@
         {% for presentation in presentations %}
             <tr>
                 <td>{{ presentation.id }}</td>
-                <td>{{ presentation.age }}</td>
+                <td>{{ presentation.birthday |date("m/d/Y") }}</td>
                 <td>{{ presentation.job }}</td>
                 <td>{{ presentation.nativeCountry }}</td>
                 <td>{{ presentation.email }}</td>

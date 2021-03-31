@@ -130,11 +130,7 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
                 <td>
                     <a href=\"";
             // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_show", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 28)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 28), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "get", [0 => "lang"], "method", false, false, false, 28)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -142,7 +138,7 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 33
+            // line 32
             echo "            <tr>
                 <td colspan=\"6\">no records found</td>
             </tr>
@@ -151,13 +147,13 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['realisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 36
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 40
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_new");
+        // line 39
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "request", [], "any", false, false, false, 39), "get", [0 => "lang"], "method", false, false, false, 39)]), "html", null, true);
         echo "\">Create new</a>
 ";
         
@@ -180,7 +176,7 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
 
     public function getDebugInfo()
     {
-        return array (  160 => 40,  155 => 37,  146 => 33,  137 => 29,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  156 => 39,  151 => 36,  142 => 32,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -212,8 +208,7 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
                 <td>{{ realisation.description }}</td>
                 <td>{{ realisation.lien }}</td>
                 <td>
-                    <a href=\"{{ path('realisation_show', {'id': realisation.id}) }}\">show</a>
-                    <a href=\"{{ path('realisation_edit', {'id': realisation.id}) }}\">edit</a>
+                    <a href=\"{{ path('realisation_edit', {'id': realisation.id,\"lang\": app.request.get('lang')}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -224,8 +219,8 @@ class __TwigTemplate_7e86bffaf93e2687df629a1566b246dbcf459fd098b38f6d0fe9af6e8fb
         </tbody>
     </table>
 
-    <a href=\"{{ path('realisation_new') }}\">Create new</a>
+    <a href=\"{{ path('realisation_new',{\"lang\": app.request.get('lang')}) }}\">Create new</a>
 {% endblock %}
-", "admin/realisation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\index.html.twig");
+", "admin/realisation/index.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\realisation\\index.html.twig");
     }
 }

@@ -1,10 +1,6 @@
 {
   "domainDesc": "La vérification du domaine vous permettras de savoir s'il est disponible à l'achat.  Si oui vous pourrez alors faire une demande de réservation",
-  "chooseSolutions": "Choisissez ce plan",
-  "ourSolutions": "Nos solutions",
-  "solutionsDemo": "Demo",
-  "domainRegister": "Vérifier votre domaine",
-  "contactUs": "Nous contacter",
-  "joinUs": "Pour bénéficier de nos services rejoignez-nous",
-  "getStarted": "Commencez maintenant"
+  "Hello" : "Mathys Theolade",
+  "desiredProfession": "Développeur Full Stack",
+  "moreAboutMe" : "À propos de moi"
 }

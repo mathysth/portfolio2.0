@@ -11,16 +11,18 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/competences")
+ * @Route("/{lang}/admin/competences")
  */
 class CompetencesController extends AbstractController
 {
     /**
      * @Route("/", name="competences_index", methods={"GET"})
+     * @param CompetencesRepository $competencesRepository
+     * @return Response
      */
     public function index(CompetencesRepository $competencesRepository): Response
     {
-        return $this->render('competences/index.html.twig', [
+        return $this->render('admin/competences/index.html.twig', [
             'competences' => $competencesRepository->findAll(),
         ]);
     }
@@ -39,10 +41,12 @@ class CompetencesController extends AbstractController
             $entityManager->persist($competence);
             $entityManager->flush();
 
-            return $this->redirectToRoute('competences_index');
+            return $this->redirectToRoute('competences_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('competences/new.html.twig', [
+        return $this->render('admin/competences/new.html.twig', [
             'competence' => $competence,
             'form' => $form->createView(),
         ]);
@@ -53,7 +57,7 @@ class CompetencesController extends AbstractController
      */
     public function show(Competences $competence): Response
     {
-        return $this->render('competences/show.html.twig', [
+        return $this->render('admin/competences/show.html.twig', [
             'competence' => $competence,
         ]);
     }
@@ -69,10 +73,12 @@ class CompetencesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('competences_index');
+            return $this->redirectToRoute('competences_index',[
+                "lang" => $request->get("lang")
+            ]);
         }
 
-        return $this->render('competences/edit.html.twig', [
+        return $this->render('admin/competences/edit.html.twig', [
             'competence' => $competence,
             'form' => $form->createView(),
         ]);
@@ -89,6 +95,8 @@ class CompetencesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('competences_index');
+        return $this->redirectToRoute('competences_index',[
+            "lang" => $request->get("lang")
+        ]);
     }
 }

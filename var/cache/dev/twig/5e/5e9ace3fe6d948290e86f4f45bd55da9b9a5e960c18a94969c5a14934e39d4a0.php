@@ -133,6 +133,6 @@ class __TwigTemplate_8fe6b60054885504778f4cd7402cf84dabc306da27f1aca7ee50b323761
 
     <a href=\"{{ path('produits_index',{lang: app.request.get(\"lang\")}) }}\">back to list</a>
 {% endblock %}
-", "admin/produits/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\new.html.twig");
+", "admin/produits/new.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\produits\\new.html.twig");
     }
 }

@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Create new Parcours</h1>
 
-    {{ include('parcours/_form.html.twig') }}
+    {{ include('admin/parcours/_form.html.twig') }}
 
-    <a href="{{ path('parcours_index') }}">back to list</a>
+    <a href="{{ path('parcours_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 {% endblock %}

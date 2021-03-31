@@ -228,6 +228,6 @@ class __TwigTemplate_88517823566771b9b717e1a9d4d9161bae89943b7e476c5ed3c5fb49fdf
 
     <a href=\"{{ path('produits_new',{lang: app.request.get(\"lang\")}) }}\">Create new</a>
 {% endblock %}
-", "admin/produits/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\index.html.twig");
+", "admin/produits/index.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\produits\\index.html.twig");
     }
 }

@@ -131,8 +131,7 @@ class __TwigTemplate_0048c1ae74b9cac9c453ac5c04b6cfb08a7c33d29f0ba692dc3f936487f
 
     {{ include('admin/categorie/_form.html.twig') }}
 
-    <a href=\"{{ path('categorie_index',{lang: app.request.get(\"lang\")}) }}\">back to list</a>
-{% endblock %}
-", "admin/categorie/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\new.html.twig");
+    <a href=\"{{ path('categorie_index',{'lang': app.request.get(\"lang\")}) }}\">back to list</a>
+{% endblock %}", "admin/categorie/new.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\categorie\\new.html.twig");
     }
 }

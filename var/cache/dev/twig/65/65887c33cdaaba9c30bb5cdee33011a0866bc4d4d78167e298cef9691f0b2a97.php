@@ -116,7 +116,7 @@ class __TwigTemplate_1a751640f844896594c987ced77dcbd3c33184aecf7d6df31205a522bfe
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "age", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "birthday", [], "any", false, false, false, 26), "m/d/Y"), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
@@ -225,7 +225,7 @@ class __TwigTemplate_1a751640f844896594c987ced77dcbd3c33184aecf7d6df31205a522bfe
         {% for presentation in presentations %}
             <tr>
                 <td>{{ presentation.id }}</td>
-                <td>{{ presentation.age }}</td>
+                <td>{{ presentation.birthday |date(\"m/d/Y\") }}</td>
                 <td>{{ presentation.job }}</td>
                 <td>{{ presentation.nativeCountry }}</td>
                 <td>{{ presentation.email }}</td>
@@ -247,6 +247,6 @@ class __TwigTemplate_1a751640f844896594c987ced77dcbd3c33184aecf7d6df31205a522bfe
 
     <a href=\"{{ path('presentation_new',{\"lang\": app.request.get(\"lang\")}) }}\">Create new</a>
 {% endblock %}
-", "admin/presentation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\index.html.twig");
+", "admin/presentation/index.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\presentation\\index.html.twig");
     }
 }

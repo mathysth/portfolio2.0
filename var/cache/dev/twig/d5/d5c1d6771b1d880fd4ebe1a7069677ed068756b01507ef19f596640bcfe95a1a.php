@@ -81,6 +81,6 @@ class __TwigTemplate_3af1d6078fb9f913a50fcea4b99288e4858db9c0ef6d3294463d1eca177
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ produit.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "admin/produits/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\_delete_form.html.twig");
+", "admin/produits/_delete_form.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\produits\\_delete_form.html.twig");
     }
 }

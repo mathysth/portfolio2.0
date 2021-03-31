@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Edit Realisation</h1>
 
-    {{ include('realisation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('realisation_index') }}">back to list</a>
+    <a href="{{ path('realisation_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 
-    {{ include('realisation/_delete_form.html.twig') }}
+    {{ include('admin/realisation/_delete_form.html.twig') }}
 {% endblock %}

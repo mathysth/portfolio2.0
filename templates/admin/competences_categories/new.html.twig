@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Create new CompetencesCategories</h1>
 
-    {{ include('competences_categories/_form.html.twig') }}
+    {{ include('admin/competences_categories/_form.html.twig') }}
 
-    <a href="{{ path('competences_categories_index') }}">back to list</a>
+    <a href="{{ path('competences_categories_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 {% endblock %}

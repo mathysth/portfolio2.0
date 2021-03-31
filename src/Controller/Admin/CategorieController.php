@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("{lang}/categorie")
+ * @Route("{lang}/admin/categorie")
  */
 class CategorieController extends AbstractController
 {
@@ -27,6 +27,8 @@ class CategorieController extends AbstractController
 
     /**
      * @Route("/new", name="categorie_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {

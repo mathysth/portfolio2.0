@@ -94,7 +94,7 @@ class __TwigTemplate_be06711bb2bd808eb7326b674e0f4b986c3e49f431f7ec62010e53da4b6
 
     <a href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie_index");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">back to list</a>
 
     ";
@@ -136,10 +136,10 @@ class __TwigTemplate_be06711bb2bd808eb7326b674e0f4b986c3e49f431f7ec62010e53da4b6
 
     {{ include('categorie/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('categorie_index') }}\">back to list</a>
+    <a href=\"{{ path('categorie_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
 
     {{ include('categorie/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/categorie/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\edit.html.twig");
+", "admin/categorie/edit.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\categorie\\edit.html.twig");
     }
 }

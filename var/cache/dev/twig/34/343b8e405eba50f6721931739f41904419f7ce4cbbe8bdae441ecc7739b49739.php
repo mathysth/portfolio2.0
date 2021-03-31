@@ -115,11 +115,11 @@ class __TwigTemplate_cd418c560df4865f616458a4fd2869e655451a5b1522daa7b25d5d45349
                 <td>
                     <a href=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_show", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_show", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 22), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "request", [], "any", false, false, false, 22), "get", [0 => "lang"], "method", false, false, false, 22)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
             // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 23), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "request", [], "any", false, false, false, 23), "get", [0 => "lang"], "method", false, false, false, 23)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -142,7 +142,7 @@ class __TwigTemplate_cd418c560df4865f616458a4fd2869e655451a5b1522daa7b25d5d45349
 
     <a href=\"";
         // line 34
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_new");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "request", [], "any", false, false, false, 34), "get", [0 => "lang"], "method", false, false, false, 34)]), "html", null, true);
         echo "\">Create new</a>
 ";
         
@@ -191,8 +191,8 @@ class __TwigTemplate_cd418c560df4865f616458a4fd2869e655451a5b1522daa7b25d5d45349
                 <td>{{ competences_category.id }}</td>
                 <td>{{ competences_category.nom }}</td>
                 <td>
-                    <a href=\"{{ path('competences_categories_show', {'id': competences_category.id}) }}\">show</a>
-                    <a href=\"{{ path('competences_categories_edit', {'id': competences_category.id}) }}\">edit</a>
+                    <a href=\"{{ path('competences_categories_show', {'id': competences_category.id,\"lang\": app.request.get('lang')}) }}\">show</a>
+                    <a href=\"{{ path('competences_categories_edit', {'id': competences_category.id,\"lang\": app.request.get('lang')}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -203,8 +203,8 @@ class __TwigTemplate_cd418c560df4865f616458a4fd2869e655451a5b1522daa7b25d5d45349
         </tbody>
     </table>
 
-    <a href=\"{{ path('competences_categories_new') }}\">Create new</a>
+    <a href=\"{{ path('competences_categories_new',{\"lang\": app.request.get('lang')}) }}\">Create new</a>
 {% endblock %}
-", "admin/competences_categories/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences_categories\\index.html.twig");
+", "admin/competences_categories/index.html.twig", "C:\\wamp64\\www\\mathys.theolade\\Theolade\\04_sitePPE_dynamique\\portfolio2.0\\templates\\admin\\competences_categories\\index.html.twig");
     }
 }
