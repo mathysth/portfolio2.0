@@ -6,12 +6,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+/**
+ * @Route("http")
+ */
 class DnsController extends AbstractController
 {
     /**
      * Permet de vérifier la validite d'un domaine
      *
-     * @Route("http/checkDns", name="dnsChecker", methods={"POST"})
+     * @Route("/checkDns", name="dnsChecker", methods={"POST"})
      * @param Request $request
      * @return int|string
      */

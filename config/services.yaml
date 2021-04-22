@@ -24,12 +24,12 @@ services:
         tags: ['controller.service_arguments']
 
     App\Http\Api\Controller\:
+        autowire: true
         resource: '../src/Http/Api/Controller/'
         tags: ['controller.service_arguments']
 
     Symfony\Component\HttpFoundation\Request:
         autowire: true
-
 
 
     # add more service definitions when explicit configuration is needed

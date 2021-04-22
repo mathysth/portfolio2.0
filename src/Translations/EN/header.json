@@ -1,3 +1,7 @@
 {
-  "homePage": "Home"
+  "nav_homePage": "Accueil",
+  "nav_aboutPage": "About me",
+  "nav_experiencePage": "Expérience",
+  "nav_blogPage": "Blog",
+  "nav_shopPage": "Boutique"
 }

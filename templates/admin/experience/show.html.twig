@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Experience{% endblock %}
+
+{% block body %}
+    <h1>Experience</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ experience.id }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ experience.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Societe</th>
+                <td>{{ experience.societe }}</td>
+            </tr>
+            <tr>
+                <th>TypeContrat</th>
+                <td>{{ experience.typeContrat }}</td>
+            </tr>
+            <tr>
+                <th>StartDate</th>
+                <td>{{ experience.startDate ? experience.startDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EndDate</th>
+                <td>{{ experience.endDate ? experience.endDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ experience.description }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ experience.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('experience_index') }}">back to list</a>
+
+    <a href="{{ path('experience_edit', {'id': experience.id}) }}">edit</a>
+
+    {{ include('experience/_delete_form.html.twig') }}
+{% endblock %}

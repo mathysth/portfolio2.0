@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/build/css/glightbox.min.css">
     <link rel="stylesheet" href="/build/css/aos.css">
     <link rel="stylesheet" href="/build/css/style.css">
+    <link rel="stylesheet" href="/build/css/feature.css">
 
     <!-- Font / ScrollTools  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
@@ -48,21 +49,20 @@
 <body>
 <nav class="navbar ftco-navbar-light"><!-- navbar-expand-lg  -->
     <div class="container-xl">
-        <a class="navbar-brand align-items-center" href="{{ path('home',{"lang": app.request.get("lang")}) }}">
-            <span class="">{{ translate('websiteName',app.request.get('lang')) }}</span>
+        <a class="navbar-brand align-items-center" href="{{ path('home') }}">
+            <span class="">{{ translate('websiteName') }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="experience.html">Experiences</a></li>
-                <li class="nav-item"><a class="nav-link" href="work.html">Works</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_homePage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_aboutPage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_experiencePage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_blogPage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_shopPage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="mailto:{{ translate('email') }}">{{ translate('contactMe') }}</a></li>
             </ul>
             <!-- <p class="mb-0"><a href="#" class="btn btn-primary rounded">Submit A Property</a></p> -->
         </div>
@@ -71,17 +71,36 @@
 
     {% block body %} {%  endblock %}
 
+<!-- Button trigger modal -->
+<button type="button" class="changeLang" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fas fa-language fa-3x"></i>
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Changement de Langue</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="customLang" onclick="updateLangSelect('FR')" id="FR">
+                    FR
+                </div>
+                <div class="customLang" onclick="updateLangSelect('EN')" id="EN">
+                    EN
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="confirmLangChange()">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- JS -->
-    <script src="/build/js/bootstrap.bundle.min.js"></script>
-    <script src="/build/js/tiny-slider.js"></script>
-    <script src="/build/js/glightbox.min.js"></script>
-    <script src="/build/js/aos.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="/build/js/main.js"></script>
-
-
     <script>
         function sendAjaxRequest(url,dataType,param = null,method = "POST"){
             return $.ajax({
@@ -95,6 +114,18 @@
             })
         }
     </script>
+
+
+    <script src="/build/js/LangController.js"></script>
+    <script src="/build/js/bootstrap.bundle.min.js"></script>
+    <script src="/build/js/tiny-slider.js"></script>
+    <script src="/build/js/glightbox.min.js"></script>
+    <script src="/build/js/aos.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/build/js/main.js"></script>
+    <script src="/build/js/feature.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
     <!--
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     -->
@@ -103,6 +134,36 @@
             crossorigin="anonymous"></script>
     <script>
         $('select').select2();
+    </script>
+
+    <script>
+        // Permet de print un resultat donné par l'api
+        let currentLang = new LangController();
+        function setLang(requiredLang = null,param = {}){
+            if (currentLang.getCurrentLang() === null || param['_force'] === true){
+                /** SetUp de la langue **/
+                if (requiredLang){
+                    currentLang.setCurrentLang(requiredLang);
+                }else{
+                    currentLang.setCurrentLang(currentLang.supportedLang[0]);
+                }
+                currentLang.setLang();
+                /** Mise en place de la langue au niveau de l'api **/
+                sendAjaxRequest("{{ path('api_Lang_set') | setApiCorrectLinkFormat }}", "html", {lang: currentLang.getCurrentLang()}).then(function (e) {
+                    console.log("Changement de langue effectué avec succès");
+                }).catch(function (e) {
+                    console.log("erreur");
+                    console.log(e);
+                })
+            }
+        }
+        sendAjaxRequest("{{ path('api_Lang_get') | setApiCorrectLinkFormat }}", "html").then(function (data) {
+            console.log(data);
+        });
+        // Lancer cette fonction que si il n'y a aucune langue détecté
+        if (currentLang.getCurrentLang() === null) {
+            setLang();
+        }
     </script>
 
     {% block script %}{% endblock %}

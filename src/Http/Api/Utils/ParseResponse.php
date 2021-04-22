@@ -20,12 +20,12 @@ class ParseResponse{
         $this->input = $input;
     }
 
-    public function returnApiResponse(): Response{
-        return new Response($this->input);
+    public function returnApiResponse($status = 200): Response{
+        return new Response($this->input,$status);
     }
 
-    public function returnApiArray(): JsonResponse
+    public function returnApiJsonResponse($status = 200): JsonResponse
     {
-        return new JsonResponse($this->input);
+        return new JsonResponse($this->input,$status);
     }
 }

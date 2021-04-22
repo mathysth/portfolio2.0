@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("{lang}/admin/realisation")
+ * @Route("/{lang}/admin/experience")
  */
 class RealisationController extends AbstractController
 {
@@ -45,7 +45,7 @@ class RealisationController extends AbstractController
         }
 
         return $this->render('admin/realisation/new.html.twig', [
-            'realisation' => $realisation,
+            'experience' => $realisation,
             'form' => $form->createView(),
         ]);
     }
@@ -55,8 +55,8 @@ class RealisationController extends AbstractController
      */
     public function show(Realisation $realisation): Response
     {
-        return $this->render('realisation/show.html.twig', [
-            'realisation' => $realisation,
+        return $this->render('experience/show.html.twig', [
+            'experience' => $realisation,
         ]);
     }
 
@@ -77,7 +77,7 @@ class RealisationController extends AbstractController
         }
 
         return $this->render('admin/realisation/edit.html.twig', [
-            'realisation' => $realisation,
+            'experience' => $realisation,
             'form' => $form->createView(),
         ]);
     }

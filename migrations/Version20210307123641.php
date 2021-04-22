@@ -26,7 +26,7 @@ final class Version20210307123641 extends AbstractMigration
         $this->addSql('CREATE TABLE member (id INT AUTO_INCREMENT NOT NULL, pseudo VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, register_date DATETIME NOT NULL, is_admin TINYINT(1) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE parcours (id INT AUTO_INCREMENT NOT NULL, diplome VARCHAR(255) NOT NULL, annee VARCHAR(15) NOT NULL, etablissement VARCHAR(100) NOT NULL, commune VARCHAR(100) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE produits (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, description VARCHAR(255) NOT NULL, prix NUMERIC(10, 2) NOT NULL, image VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE realisation (id INT AUTO_INCREMENT NOT NULL, titre VARCHAR(255) NOT NULL, images VARCHAR(255) NOT NULL, description LONGTEXT NOT NULL, lien VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE experience (id INT AUTO_INCREMENT NOT NULL, titre VARCHAR(255) NOT NULL, images VARCHAR(255) NOT NULL, description LONGTEXT NOT NULL, lien VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE competences ADD CONSTRAINT FK_DB2077CE8CED3CBF FOREIGN KEY (competence_categories_id_id) REFERENCES competences_categories (id)');
     }
 
@@ -40,6 +40,6 @@ final class Version20210307123641 extends AbstractMigration
         $this->addSql('DROP TABLE member');
         $this->addSql('DROP TABLE parcours');
         $this->addSql('DROP TABLE produits');
-        $this->addSql('DROP TABLE realisation');
+        $this->addSql('DROP TABLE experience');
     }
 }

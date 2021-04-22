@@ -3,11 +3,12 @@ namespace App\Utils;
 
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class TranslationsUtils
 {
     private static $instance;
-    private $currentLang;
+    private static $sessionInstance;
     private $request;
     private $supportedLang = [
         "FR",
@@ -16,29 +17,29 @@ class TranslationsUtils
 
     /**
      * TranslationsUtils constructor.
-     * @param $currentLang
      * @param Request $request
      */
-    public function __construct($currentLang,Request $request)
+    public function __construct(Request $request)
     {
-        $this->currentLang = strtoupper($currentLang);
         $this->request = $request;
     }
+
 
     /**
      * @return bool
      */
-    public function verifyIsLangSupported(): bool
+    public function verifyIsLangSupported()
     {
         $isSupported = true;
         for ($i = 0; $i < count($this->supportedLang); $i++) {
-            if ($this->currentLang == $this->supportedLang[$i]) {
+            if (self::getCurrentLang() == $this->supportedLang[$i]) {
                 $isSupported = true;
                 break;
             } else {
                 $isSupported = false;
             }
         }
+
 
         if (!$isSupported) {
             return false;
@@ -53,7 +54,7 @@ class TranslationsUtils
     private function getJsonOfFilesInFolder(): array
     {
         $finder = new Finder();
-        $filesFolders = $finder->files()->in(__DIR__."/../Translations/$this->currentLang/");
+        $filesFolders = $finder->files()->in(__DIR__."/../Translations/".self::getCurrentLang()."/");
         $json = [];
 
         if ($finder->hasResults()) {
@@ -64,26 +65,40 @@ class TranslationsUtils
         return $json;
     }
 
-    public static function isLangUrlValid($url,Request  $request){
-        // verifier l'url si url = GGGG/member/profil redrigier sur fr/member/profil
+    /**
+     * @return mixed
+     */
+    public static function getCurrentLang(){
+        $instance = null;
+        if (!self::$instance){
+            $instance = new Session();
+            self::$instance = new Session();
+        }else{
+            $instance = self::$instance;
+        }
+
+        return (new Session())->get("lang");
     }
 
     /**
      * @param $key
-     * @param $lang
-     * @param $request
+     * @param Request $request
      * @return mixed|string
      */
-    public static function GetLangKey($key,$lang,Request $request){
+    public static function GetLangKey($key,Request $request){
         $instance = null;
         if (!self::$instance){
-            $instance = new TranslationsUtils($lang,$request);
+            $instance = new TranslationsUtils($request);
+            self::$instance = new TranslationsUtils($request);
         }else{
             $instance = self::$instance;
         }
         $langJson = $instance->getJsonOfFilesInFolder();
         $error = false;
         for ($i = 0; $i < count($langJson);$i++){
+            if (json_decode($langJson[$i]) == "" || json_decode($langJson[$i]) == null){
+                    continue;
+                }
             foreach (json_decode($langJson[$i]) as $k => $finalKey){
                 if ($key == $k){
                     $error = false;
@@ -94,7 +109,7 @@ class TranslationsUtils
             }
         }
         if ($error){
-            return "Error 500 : Key $key not exist";
+            return "Error 500 : Key $key not found";
         }
     }
 }
