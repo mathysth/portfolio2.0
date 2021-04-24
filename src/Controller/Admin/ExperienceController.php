@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/admin/experience")
+ * @Route("admin/experience")
  */
 class ExperienceController extends AbstractController
 {
     /**
-     * @Route("/", name="experience_index", methods={"GET"})
+     * @Route("/", name="admin_experience_index", methods={"GET"})
      */
     public function index(ExperienceRepository $experienceRepository): Response
     {
@@ -26,7 +26,7 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="experience_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_experience_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -51,7 +51,7 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="experience_show", methods={"GET"})
+     * @Route("/{id}", name="admin_experience_show", methods={"GET"})
      */
     public function show(Experience $experience): Response
     {
@@ -61,7 +61,7 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="experience_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_experience_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Experience $experience): Response
     {
@@ -83,7 +83,7 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="experience_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_experience_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Experience $experience): Response
     {

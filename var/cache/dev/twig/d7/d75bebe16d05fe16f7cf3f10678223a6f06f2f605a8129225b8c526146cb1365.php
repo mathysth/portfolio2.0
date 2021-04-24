@@ -260,13 +260,16 @@ class __TwigTemplate_9ed504977bc7f1e17eda7f62ad19e6648293c232a3cfec5237f44d4e603
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();
+            setTimeout(function (e){
+                document.location.href = document.location;
+            },1000)
         }
     </script>
 
     ";
-        // line 169
+        // line 172
         $this->displayBlock('script', $context, $blocks);
-        // line 170
+        // line 173
         echo "</div>
 </body>
 </html>
@@ -335,7 +338,7 @@ class __TwigTemplate_9ed504977bc7f1e17eda7f62ad19e6648293c232a3cfec5237f44d4e603
 
     }
 
-    // line 169
+    // line 172
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -365,7 +368,7 @@ class __TwigTemplate_9ed504977bc7f1e17eda7f62ad19e6648293c232a3cfec5237f44d4e603
 
     public function getDebugInfo()
     {
-        return array (  339 => 169,  320 => 72,  301 => 45,  283 => 43,  270 => 170,  268 => 169,  256 => 160,  245 => 152,  164 => 73,  162 => 72,  150 => 65,  144 => 64,  138 => 63,  132 => 62,  126 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
+        return array (  342 => 172,  323 => 72,  304 => 45,  286 => 43,  273 => 173,  271 => 172,  256 => 160,  245 => 152,  164 => 73,  162 => 72,  150 => 65,  144 => 64,  138 => 63,  132 => 62,  126 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -535,6 +538,9 @@ class __TwigTemplate_9ed504977bc7f1e17eda7f62ad19e6648293c232a3cfec5237f44d4e603
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();
+            setTimeout(function (e){
+                document.location.href = document.location;
+            },1000)
         }
     </script>
 

@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/admin/competences")
+ * @Route("admin/competences")
  */
 class CompetencesController extends AbstractController
 {
     /**
-     * @Route("/", name="competences_index", methods={"GET"})
+     * @Route("/", name="admin_competences_index", methods={"GET"})
      * @param CompetencesRepository $competencesRepository
      * @return Response
      */
@@ -28,7 +28,7 @@ class CompetencesController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="competences_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_competences_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -53,7 +53,7 @@ class CompetencesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="competences_show", methods={"GET"})
+     * @Route("/{id}", name="admin_competences_show", methods={"GET"})
      */
     public function show(Competences $competence): Response
     {
@@ -63,7 +63,7 @@ class CompetencesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="competences_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_competences_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Competences $competence): Response
     {
@@ -85,7 +85,7 @@ class CompetencesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="competences_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_competences_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Competences $competence): Response
     {

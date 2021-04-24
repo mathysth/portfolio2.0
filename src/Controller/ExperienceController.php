@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Realisation;
-use App\Repository\RealisationRepository;
+use App\Repository\ExperienceRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,13 +17,22 @@ class ExperienceController extends AbstractController
 {
     /**
      * @Route("/", name="realisation_index", methods={"GET"})
-     * @param RealisationRepository $realisationRepository
+     * @param ExperienceRepository $realisationRepository
+     * @param PaginatorInterface $paginator
+     * @param Request $request
      * @return Response
      */
-    public function index(RealisationRepository $realisationRepository): Response
+    public function index(ExperienceRepository $realisationRepository,PaginatorInterface $paginator,Request $request): Response
     {
+        $experience = $paginator->paginate(
+            $realisationRepository->findAll(),
+            $request->query->get('page',1),
+            6
+        );
+
+        dump($realisationRepository->findAll());
         return $this->render('pages/experience/realisation.html.twig', [
-            'realisations' => $realisationRepository->findAll(),
+            'experiences' => $experience,
         ]);
     }
 

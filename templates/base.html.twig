@@ -163,6 +163,9 @@
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();
+            setTimeout(function (e){
+                document.location.href = document.location;
+            },1000)
         }
     </script>
 

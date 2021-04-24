@@ -22,6 +22,7 @@
       <parameter key="TwigExtraBundle">Twig\Extra\TwigExtraBundle\TwigExtraBundle</parameter>
       <parameter key="FOSCKEditorBundle">FOS\CKEditorBundle\FOSCKEditorBundle</parameter>
       <parameter key="VichUploaderBundle">Vich\UploaderBundle\VichUploaderBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -75,6 +76,10 @@
       <parameter key="VichUploaderBundle" type="collection">
         <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle</parameter>
         <parameter key="namespace">Vich\UploaderBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -284,6 +289,11 @@
       </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/sliding.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
+    <parameter key="knp_paginator.page_limit">null</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -1798,16 +1808,175 @@
         <argument key="cache_dir">C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
-          <argument key="af" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
-          </argument>
           <argument key="ar" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ar.xliff</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ar.yaml</argument>
+          </argument>
+          <argument key="bg" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.bg.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.bg.yaml</argument>
+          </argument>
+          <argument key="cs" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.cs.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.cs.yaml</argument>
+          </argument>
+          <argument key="da" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.da.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+          </argument>
+          <argument key="de" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.de.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.de.yaml</argument>
+          </argument>
+          <argument key="en" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.en.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.en.yaml</argument>
+          </argument>
+          <argument key="es" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.es.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.es.yaml</argument>
+          </argument>
+          <argument key="eu" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.eu.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+          </argument>
+          <argument key="fa" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fa.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+          </argument>
+          <argument key="fr" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fr.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.fr.yaml</argument>
+          </argument>
+          <argument key="hu" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hu.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.hu.yaml</argument>
+          </argument>
+          <argument key="id" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.id.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+          </argument>
+          <argument key="it" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.it.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.it.yaml</argument>
+          </argument>
+          <argument key="ja" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ja.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+          </argument>
+          <argument key="ky" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="lt" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.lt.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.lt.yaml</argument>
+          </argument>
+          <argument key="nl" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.nl.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.nl.yaml</argument>
+          </argument>
+          <argument key="no" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.no.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+          </argument>
+          <argument key="pl" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pl.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.pl.yaml</argument>
+          </argument>
+          <argument key="pt_BR" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+          </argument>
+          <argument key="ro" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ro.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+          </argument>
+          <argument key="ru" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ru.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ru.yaml</argument>
+          </argument>
+          <argument key="sv" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sv.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sw.xliff</argument>
+          </argument>
+          <argument key="tr" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.tr.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.tr.yaml</argument>
+          </argument>
+          <argument key="uk" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.uk.xliff</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.uk.yaml</argument>
+          </argument>
+          <argument key="af" type="collection">
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
@@ -1818,12 +1987,6 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
-          </argument>
-          <argument key="bg" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.bg.yaml</argument>
           </argument>
           <argument key="bs" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
@@ -1836,65 +1999,20 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ca.yaml</argument>
           </argument>
-          <argument key="cs" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.cs.yaml</argument>
-          </argument>
-          <argument key="da" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-          </argument>
-          <argument key="de" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.de.yaml</argument>
-          </argument>
           <argument key="el" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
           </argument>
-          <argument key="en" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.en.yaml</argument>
-          </argument>
-          <argument key="es" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.es.yaml</argument>
-          </argument>
           <argument key="et" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-          </argument>
-          <argument key="eu" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-          </argument>
-          <argument key="fa" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.fi.yaml</argument>
-          </argument>
-          <argument key="fr" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.fr.yaml</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
@@ -1911,42 +2029,14 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
           </argument>
-          <argument key="hu" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.hu.yaml</argument>
-          </argument>
           <argument key="hy" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-          </argument>
-          <argument key="id" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-          </argument>
-          <argument key="it" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.it.yaml</argument>
-          </argument>
-          <argument key="ja" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-          </argument>
-          <argument key="lt" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.lt.yaml</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
@@ -1963,49 +2053,16 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
           </argument>
-          <argument key="nl" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.nl.yaml</argument>
-          </argument>
           <argument key="nn" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-          </argument>
-          <argument key="no" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-          </argument>
-          <argument key="pl" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.pl.yaml</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.pt.yaml</argument>
-          </argument>
-          <argument key="pt_BR" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-          </argument>
-          <argument key="ro" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-          </argument>
-          <argument key="ru" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.ru.yaml</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
@@ -2033,11 +2090,6 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
           </argument>
-          <argument key="sv" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-          </argument>
           <argument key="th" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
@@ -2047,18 +2099,6 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
-          </argument>
-          <argument key="tr" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.tr.yaml</argument>
-          </argument>
-          <argument key="uk" type="collection">
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations\messages.uk.yaml</argument>
           </argument>
           <argument key="vi" type="collection">
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
@@ -2087,6 +2127,7 @@
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations</argument>
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/translations</argument>
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
           <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
@@ -2107,6 +2148,7 @@
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\form/Resources/translations</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\security-core/Resources/translations</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/translations</argument>
             <argument>translations</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\symfony\framework-bundle/translations</argument>
             <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\sensio\framework-extra-bundle\src/translations</argument>
@@ -2594,6 +2636,14 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
           <argument type="service" id="response_listener"/>
@@ -3024,6 +3074,46 @@
           <argument>onLogout</argument>
         </argument>
         <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
       </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
@@ -3595,6 +3685,9 @@
       <call method="addExtension">
         <argument type="service" id="Vich\UploaderBundle\Twig\Extension\UploaderExtension"/>
       </call>
+      <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
       <call method="addGlobal">
         <argument>app</argument>
         <argument type="service" id="twig.app_variable"/>
@@ -3701,6 +3794,14 @@
       <call method="addPath">
         <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\vich\uploader-bundle/templates</argument>
         <argument>!VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\xampp\htdocs\www\Sites\Ecole\PPE\mainSite/templates</argument>
@@ -5689,6 +5790,52 @@
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator" public="true" lazy="true">
+      <tag name="proxy" interface="Knp\Component\Pager\PaginatorInterface"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="request_stack"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+          <argument key="pageOutOfRange">ignore</argument>
+          <argument key="defaultLimit">10</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <tag name="container.hot_path"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/sliding.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+        <argument key="defaultPageLimit">null</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6178,6 +6325,13 @@
         <argument key="realisation" type="service" id=".errored..service_locator.Q6MNAd4.App\Entity\Realisation"/>
       </argument>
     </service>
+    <service id=".service_locator.GGPduTW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginator" type="service" id="knp_paginator"/>
+        <argument key="realisationRepository" type="service" id="App\Repository\ExperienceRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.ti.lzZi" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6185,7 +6339,7 @@
         <argument key="competencesRepository" type="service" id="App\Repository\CompetencesRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.jejCZ2M" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.uDLwN1N" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategorieController::delete" type="service" id=".service_locator.Z8xh0Z9"/>
@@ -6218,7 +6372,7 @@
         <argument key="App\Controller\Admin\RealisationController::edit" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\Admin\RealisationController::index" type="service" id=".service_locator.8ZHgH5v"/>
         <argument key="App\Controller\Admin\RealisationController::show" type="service" id=".service_locator.Q6MNAd4"/>
-        <argument key="App\Controller\ExperienceController::index" type="service" id=".service_locator.8ZHgH5v"/>
+        <argument key="App\Controller\ExperienceController::index" type="service" id=".service_locator.GGPduTW"/>
         <argument key="App\Controller\ExperienceController::show" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\PresentationController::show" type="service" id=".service_locator.ti.lzZi"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
@@ -6257,7 +6411,7 @@
         <argument key="App\Controller\Admin\RealisationController:edit" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\Admin\RealisationController:index" type="service" id=".service_locator.8ZHgH5v"/>
         <argument key="App\Controller\Admin\RealisationController:show" type="service" id=".service_locator.Q6MNAd4"/>
-        <argument key="App\Controller\ExperienceController:index" type="service" id=".service_locator.8ZHgH5v"/>
+        <argument key="App\Controller\ExperienceController:index" type="service" id=".service_locator.GGPduTW"/>
         <argument key="App\Controller\ExperienceController:show" type="service" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\PresentationController:show" type="service" id=".service_locator.ti.lzZi"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
@@ -6819,12 +6973,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.jejCZ2M"/>
+      <argument type="service" id=".service_locator.uDLwN1N"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.jejCZ2M"/>
+      <argument type="service" id=".service_locator.uDLwN1N"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -7269,9 +7423,10 @@
     <service id="Vich\UploaderBundle\Handler\UploadHandler" alias="vich_uploader.upload_handler"/>
     <service id="Vich\UploaderBundle\Form\Type\VichFileType" alias="vich_uploader.form.type.file"/>
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
+    <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jejCZ2M"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.uDLwN1N"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

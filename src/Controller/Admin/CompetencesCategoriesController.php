@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/admin/competences/categories")
+ * @Route("admin/competences/categories")
  */
 class CompetencesCategoriesController extends AbstractController
 {
     /**
-     * @Route("/", name="competences_categories_index", methods={"GET"})
+     * @Route("/", name="admin_competences_categories_index", methods={"GET"})
      */
     public function index(CompetencesCategoriesRepository $competencesCategoriesRepository): Response
     {
@@ -26,7 +26,7 @@ class CompetencesCategoriesController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="competences_categories_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_competences_categories_new", methods={"GET","POST"})
      * @param Request $request
      * @return Response
      */
@@ -53,7 +53,7 @@ class CompetencesCategoriesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="competences_categories_show", methods={"GET"})
+     * @Route("/{id}", name="admin_competences_categories_show", methods={"GET"})
      */
     public function show(CompetencesCategories $competencesCategory): Response
     {
@@ -63,7 +63,7 @@ class CompetencesCategoriesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="competences_categories_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_competences_categories_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, CompetencesCategories $competencesCategory): Response
     {
@@ -85,7 +85,7 @@ class CompetencesCategoriesController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="competences_categories_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_competences_categories_delete", methods={"DELETE"})
      */
     public function delete(Request $request, CompetencesCategories $competencesCategory): Response
     {

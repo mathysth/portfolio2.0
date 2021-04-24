@@ -75,7 +75,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)]), "html", null, true);
         echo "\"> ";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("homePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
         echo " <i class=\"fa fa-chevron-right\"></i></a></span> <span>";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("experiencePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
         echo " <i class=\"fa fa-chevron-right\"></i></span></p>
@@ -88,37 +88,8 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
     <section class=\"ftco-section\">
         <div class=\"container-xl\">
             <div class=\"row\">
-                <div class=\"col-md-6\">
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"100\">
-                        <div class=\"w-100\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Master Degree of Design</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"200\">
-                        <div class=\"w-100\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Bachelor's Degree of C.A</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"900\">
-                        <div class=\"w-300\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Diploma in Computer</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-12\">
 
-                <div class=\"col-md-6\">
                     <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"400\">
                         <div class=\"w-100\">
                             <div class=\"icon\"><span class=\"flaticon-work-from-home\"></span></div>
@@ -128,6 +99,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
                             <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                         </div>
                     </div>
+
                     <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"500\">
                         <div class=\"w-100\">
                             <div class=\"icon\"><span class=\"flaticon-work-from-home\"></span></div>
@@ -147,6 +119,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -185,7 +158,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
         <div class=\"container\">
             <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
                 <div class=\"col-md-9 pt-5 text-center\">
-                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home',{\"lang\": app.request.get('lang')}) }}\"> {{ translate('homePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></a></span> <span>{{ translate('experiencePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></span></p>
+                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home',{\"lang\": app.request.get('lang')}) }}\"> {{ translate('nav_homePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></a></span> <span>{{ translate('experiencePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></span></p>
                     <h1 class=\"mb-0 bread\">Experiences</h1>
                 </div>
             </div>
@@ -195,37 +168,8 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
     <section class=\"ftco-section\">
         <div class=\"container-xl\">
             <div class=\"row\">
-                <div class=\"col-md-6\">
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"100\">
-                        <div class=\"w-100\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Master Degree of Design</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"200\">
-                        <div class=\"w-100\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Bachelor's Degree of C.A</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                    <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"900\">
-                        <div class=\"w-300\">
-                            <div class=\"icon\"><span class=\"flaticon-graduated\"></span></div>
-                            <span class=\"date\">2014-2015</span>
-                            <h2>Diploma in Computer</h2>
-                            <span class=\"position\"><i class=\"ion-ios-pin me-2\"></i>Google Inc.</span>
-                            <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-12\">
 
-                <div class=\"col-md-6\">
                     <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"400\">
                         <div class=\"w-100\">
                             <div class=\"icon\"><span class=\"flaticon-work-from-home\"></span></div>
@@ -235,6 +179,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
                             <p class=\"mt-4\">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                         </div>
                     </div>
+
                     <div class=\"resume-wrap d-flex align-item-stretch\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"500\">
                         <div class=\"w-100\">
                             <div class=\"icon\"><span class=\"flaticon-work-from-home\"></span></div>
@@ -254,6 +199,7 @@ class __TwigTemplate_89cd7ddaf104c3979bd97d6ab755573d9aae49a72cde505e101839a685d
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

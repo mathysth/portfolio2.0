@@ -13,6 +13,20 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/admin/categorie' => [[['_route' => 'admin_categorie_index', '_controller' => 'App\\Controller\\Admin\\CategorieController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/categorie/new' => [[['_route' => 'admin_categorie_new', '_controller' => 'App\\Controller\\Admin\\CategorieController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/competences/categories' => [[['_route' => 'admin_competences_categories_index', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/competences/categories/new' => [[['_route' => 'admin_competences_categories_new', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/competences' => [[['_route' => 'admin_competences_index', '_controller' => 'App\\Controller\\Admin\\CompetencesController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/competences/new' => [[['_route' => 'admin_competences_new', '_controller' => 'App\\Controller\\Admin\\CompetencesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/experience' => [[['_route' => 'admin_experience_index', '_controller' => 'App\\Controller\\Admin\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/experience/new' => [[['_route' => 'admin_experience_new', '_controller' => 'App\\Controller\\Admin\\ExperienceController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/parcours' => [[['_route' => 'admin_parcours_index', '_controller' => 'App\\Controller\\Admin\\ParcoursController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/parcours/new' => [[['_route' => 'admin_parcours_new', '_controller' => 'App\\Controller\\Admin\\ParcoursController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/presentation' => [[['_route' => 'presentation_index', '_controller' => 'App\\Controller\\Admin\\PresentationController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/presentation/new' => [[['_route' => 'presentation_new', '_controller' => 'App\\Controller\\Admin\\PresentationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/produits' => [[['_route' => 'produits_index', '_controller' => 'App\\Controller\\Admin\\ProduitsController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/produits/new' => [[['_route' => 'produits_new', '_controller' => 'App\\Controller\\Admin\\ProduitsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/experience' => [[['_route' => 'realisation_index', '_controller' => 'App\\Controller\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/presentation' => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], null, ['GET' => 0], null, true, false, null]],
@@ -38,95 +52,57 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/([^/]++)/admin/(?'
+                .'|/admin/(?'
                     .'|c(?'
-                        .'|ategorie(?'
+                        .'|ategorie/([^/]++)(?'
                             .'|(*:203)'
-                            .'|/(?'
-                                .'|new(*:218)'
-                                .'|([^/]++)(?'
-                                    .'|(*:237)'
-                                    .'|/edit(*:250)'
-                                    .'|(*:258)'
-                                .')'
-                            .')'
+                            .'|/edit(*:216)'
+                            .'|(*:224)'
                         .')'
-                        .'|ompetences(?'
-                            .'|/(?'
-                                .'|categories(?'
-                                    .'|(*:299)'
-                                    .'|/(?'
-                                        .'|new(*:314)'
-                                        .'|([^/]++)(?'
-                                            .'|(*:333)'
-                                            .'|/edit(*:346)'
-                                            .'|(*:354)'
-                                        .')'
-                                    .')'
-                                .')'
-                                .'|new(*:368)'
-                                .'|([^/]++)(?'
-                                    .'|(*:387)'
-                                    .'|/edit(*:400)'
-                                    .'|(*:408)'
-                                .')'
+                        .'|ompetences/(?'
+                            .'|categories/([^/]++)(?'
+                                .'|(*:269)'
+                                .'|/edit(*:282)'
+                                .'|(*:290)'
                             .')'
-                            .'|(*:418)'
+                            .'|([^/]++)(?'
+                                .'|(*:310)'
+                                .'|/edit(*:323)'
+                                .'|(*:331)'
+                            .')'
                         .')'
                     .')'
-                    .'|experience(?'
-                        .'|(*:441)'
-                        .'|/(?'
-                            .'|new(*:456)'
-                            .'|([^/]++)(?'
-                                .'|(*:475)'
-                                .'|/edit(*:488)'
-                                .'|(*:496)'
-                            .')'
-                            .'|new(*:508)'
-                            .'|([^/]++)(?'
-                                .'|/edit(*:532)'
-                                .'|(*:540)'
-                            .')'
+                    .'|experience/(?'
+                        .'|([^/]++)(?'
+                            .'|(*:367)'
+                            .'|/edit(*:380)'
+                            .'|(*:388)'
+                        .')'
+                        .'|new(*:400)'
+                        .'|([^/]++)(?'
+                            .'|/edit(*:424)'
+                            .'|(*:432)'
                         .')'
                     .')'
                     .'|p(?'
-                        .'|arcours(?'
-                            .'|(*:565)'
-                            .'|/(?'
-                                .'|new(*:580)'
-                                .'|([^/]++)(?'
-                                    .'|/edit(*:604)'
-                                    .'|(*:612)'
-                                .')'
-                            .')'
+                        .'|arcours/([^/]++)(?'
+                            .'|/edit(*:470)'
+                            .'|(*:478)'
                         .')'
                         .'|r(?'
-                            .'|esentation(?'
-                                .'|(*:640)'
-                                .'|/(?'
-                                    .'|new(*:655)'
-                                    .'|([^/]++)(?'
-                                        .'|(*:674)'
-                                        .'|/edit(*:687)'
-                                        .'|(*:695)'
-                                    .')'
-                                .')'
+                            .'|esentation/([^/]++)(?'
+                                .'|(*:513)'
+                                .'|/edit(*:526)'
+                                .'|(*:534)'
                             .')'
-                            .'|oduits(?'
-                                .'|(*:715)'
-                                .'|/(?'
-                                    .'|new(*:730)'
-                                    .'|([^/]++)(?'
-                                        .'|/edit(*:754)'
-                                        .'|(*:762)'
-                                    .')'
-                                .')'
+                            .'|oduits/([^/]++)(?'
+                                .'|/edit(*:566)'
+                                .'|(*:574)'
                             .')'
                         .')'
                     .')'
                 .')'
-                .'|/experience/([^/]++)(*:796)'
+                .'|/experience/([^/]++)(*:606)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -137,43 +113,29 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        203 => [[['_route' => 'categorie_index', '_controller' => 'App\\Controller\\Admin\\CategorieController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        218 => [[['_route' => 'categorie_new', '_controller' => 'App\\Controller\\Admin\\CategorieController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        237 => [[['_route' => 'categorie_show', '_controller' => 'App\\Controller\\Admin\\CategorieController::show'], ['lang', 'id'], ['GET' => 0], null, false, true, null]],
-        250 => [[['_route' => 'categorie_edit', '_controller' => 'App\\Controller\\Admin\\CategorieController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        258 => [[['_route' => 'categorie_delete', '_controller' => 'App\\Controller\\Admin\\CategorieController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        299 => [[['_route' => 'competences_categories_index', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        314 => [[['_route' => 'competences_categories_new', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        333 => [[['_route' => 'competences_categories_show', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::show'], ['lang', 'id'], ['GET' => 0], null, false, true, null]],
-        346 => [[['_route' => 'competences_categories_edit', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        354 => [[['_route' => 'competences_categories_delete', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        368 => [[['_route' => 'competences_new', '_controller' => 'App\\Controller\\Admin\\CompetencesController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        387 => [[['_route' => 'competences_show', '_controller' => 'App\\Controller\\Admin\\CompetencesController::show'], ['lang', 'id'], ['GET' => 0], null, false, true, null]],
-        400 => [[['_route' => 'competences_edit', '_controller' => 'App\\Controller\\Admin\\CompetencesController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        408 => [[['_route' => 'competences_delete', '_controller' => 'App\\Controller\\Admin\\CompetencesController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        418 => [[['_route' => 'competences_index', '_controller' => 'App\\Controller\\Admin\\CompetencesController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        441 => [[['_route' => 'experience_index', '_controller' => 'App\\Controller\\Admin\\ExperienceController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        456 => [[['_route' => 'experience_new', '_controller' => 'App\\Controller\\Admin\\ExperienceController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        475 => [[['_route' => 'experience_show', '_controller' => 'App\\Controller\\Admin\\ExperienceController::show'], ['lang', 'id'], ['GET' => 0], null, false, true, null]],
-        488 => [[['_route' => 'experience_edit', '_controller' => 'App\\Controller\\Admin\\ExperienceController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        496 => [[['_route' => 'experience_delete', '_controller' => 'App\\Controller\\Admin\\ExperienceController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        508 => [[['_route' => 'realisation_new', '_controller' => 'App\\Controller\\Admin\\RealisationController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        532 => [[['_route' => 'realisation_edit', '_controller' => 'App\\Controller\\Admin\\RealisationController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        540 => [[['_route' => 'realisation_delete', '_controller' => 'App\\Controller\\Admin\\RealisationController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        565 => [[['_route' => 'parcours_index', '_controller' => 'App\\Controller\\Admin\\ParcoursController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        580 => [[['_route' => 'parcours_new', '_controller' => 'App\\Controller\\Admin\\ParcoursController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        604 => [[['_route' => 'parcours_edit', '_controller' => 'App\\Controller\\Admin\\ParcoursController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        612 => [[['_route' => 'parcours_delete', '_controller' => 'App\\Controller\\Admin\\ParcoursController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        640 => [[['_route' => 'presentation_index', '_controller' => 'App\\Controller\\Admin\\PresentationController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        655 => [[['_route' => 'presentation_new', '_controller' => 'App\\Controller\\Admin\\PresentationController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        674 => [[['_route' => 'presentation_show', '_controller' => 'App\\Controller\\Admin\\PresentationController::show'], ['lang', 'id'], ['GET' => 0], null, false, true, null]],
-        687 => [[['_route' => 'presentation_edit', '_controller' => 'App\\Controller\\Admin\\PresentationController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        695 => [[['_route' => 'presentation_delete', '_controller' => 'App\\Controller\\Admin\\PresentationController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        715 => [[['_route' => 'produits_index', '_controller' => 'App\\Controller\\Admin\\ProduitsController::index'], ['lang'], ['GET' => 0], null, true, false, null]],
-        730 => [[['_route' => 'produits_new', '_controller' => 'App\\Controller\\Admin\\ProduitsController::new'], ['lang'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        754 => [[['_route' => 'produits_edit', '_controller' => 'App\\Controller\\Admin\\ProduitsController::edit'], ['lang', 'id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        762 => [[['_route' => 'produits_delete', '_controller' => 'App\\Controller\\Admin\\ProduitsController::delete'], ['lang', 'id'], ['DELETE' => 0], null, false, true, null]],
-        796 => [
+        203 => [[['_route' => 'admin_categorie_show', '_controller' => 'App\\Controller\\Admin\\CategorieController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        216 => [[['_route' => 'admin_categorie_edit', '_controller' => 'App\\Controller\\Admin\\CategorieController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        224 => [[['_route' => 'admin_categorie_delete', '_controller' => 'App\\Controller\\Admin\\CategorieController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        269 => [[['_route' => 'admin_competences_categories_show', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        282 => [[['_route' => 'admin_competences_categories_edit', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        290 => [[['_route' => 'admin_competences_categories_delete', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        310 => [[['_route' => 'admin_competences_show', '_controller' => 'App\\Controller\\Admin\\CompetencesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        323 => [[['_route' => 'admin_competences_edit', '_controller' => 'App\\Controller\\Admin\\CompetencesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        331 => [[['_route' => 'admin_competences_delete', '_controller' => 'App\\Controller\\Admin\\CompetencesController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        367 => [[['_route' => 'admin_experience_show', '_controller' => 'App\\Controller\\Admin\\ExperienceController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        380 => [[['_route' => 'admin_experience_edit', '_controller' => 'App\\Controller\\Admin\\ExperienceController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        388 => [[['_route' => 'admin_experience_delete', '_controller' => 'App\\Controller\\Admin\\ExperienceController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        400 => [[['_route' => 'realisation_new', '_controller' => 'App\\Controller\\Admin\\RealisationController::new'], [], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        424 => [[['_route' => 'realisation_edit', '_controller' => 'App\\Controller\\Admin\\RealisationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        432 => [[['_route' => 'realisation_delete', '_controller' => 'App\\Controller\\Admin\\RealisationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        470 => [[['_route' => 'admin_parcours_edit', '_controller' => 'App\\Controller\\Admin\\ParcoursController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        478 => [[['_route' => 'admin_parcours_delete', '_controller' => 'App\\Controller\\Admin\\ParcoursController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        513 => [[['_route' => 'presentation_show', '_controller' => 'App\\Controller\\Admin\\PresentationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        526 => [[['_route' => 'presentation_edit', '_controller' => 'App\\Controller\\Admin\\PresentationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        534 => [[['_route' => 'presentation_delete', '_controller' => 'App\\Controller\\Admin\\PresentationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        566 => [[['_route' => 'produits_edit', '_controller' => 'App\\Controller\\Admin\\ProduitsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        574 => [[['_route' => 'produits_delete', '_controller' => 'App\\Controller\\Admin\\ProduitsController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        606 => [
             [['_route' => 'realisation_show', '_controller' => 'App\\Controller\\ExperienceController::show'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

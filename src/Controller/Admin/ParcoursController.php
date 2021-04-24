@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{lang}/admin/parcours")
+ * @Route("admin/parcours")
  */
 class ParcoursController extends AbstractController
 {
     /**
-     * @Route("/", name="parcours_index", methods={"GET"})
+     * @Route("/", name="admin_parcours_index", methods={"GET"})
      */
     public function index(ParcoursRepository $parcoursRepository): Response
     {
@@ -26,7 +26,7 @@ class ParcoursController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="parcours_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_parcours_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -51,7 +51,7 @@ class ParcoursController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="parcours_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_parcours_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Parcours $parcour): Response
     {
@@ -73,7 +73,7 @@ class ParcoursController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="parcours_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_parcours_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Parcours $parcour): Response
     {
