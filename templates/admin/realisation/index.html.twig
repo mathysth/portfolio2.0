@@ -25,7 +25,7 @@
                 <td>{{ realisation.description }}</td>
                 <td>{{ realisation.lien }}</td>
                 <td>
-                    <a href="{{ path('realisation_edit', {'id': realisation.id,"lang": app.request.get('lang')}) }}">edit</a>
+                    <a href="{{ path('admin_realisation_edit', {'id': realisation.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +36,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('realisation_new',{"lang": app.request.get('lang')}) }}">Create new</a>
+    <a href="{{ path('admin_realisation_new') }}">Create new</a>
 {% endblock %}

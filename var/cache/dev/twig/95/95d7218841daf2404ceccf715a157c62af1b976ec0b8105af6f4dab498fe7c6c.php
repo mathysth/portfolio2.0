@@ -94,7 +94,7 @@ class __TwigTemplate_89ea2182fbc9f489277f4934df6470944fd6174a4f88cba9f698ea94083
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">back to list</a>
 ";
         
@@ -131,7 +131,7 @@ class __TwigTemplate_89ea2182fbc9f489277f4934df6470944fd6174a4f88cba9f698ea94083
 
     {{ include('admin/competences/_form.html.twig') }}
 
-    <a href=\"{{ path('competences_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
+    <a href=\"{{ path('admin_competences_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
 {% endblock %}
 ", "admin/competences/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\new.html.twig");
     }

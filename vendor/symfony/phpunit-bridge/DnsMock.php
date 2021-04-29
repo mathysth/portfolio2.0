@@ -33,9 +33,9 @@ class DnsMock
     ];
 
     /**
-     * Configures the mock values for Controller queries.
+     * Configures the mock values for DNS queries.
      *
-     * @param array $hosts Mocked hosts as keys, arrays of Controller records as returned by dns_get_record() as values
+     * @param array $hosts Mocked hosts as keys, arrays of DNS records as returned by dns_get_record() as values
      */
     public static function withMockedHosts(array $hosts)
     {

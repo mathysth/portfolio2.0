@@ -51,16 +51,6 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin_experience_show", methods={"GET"})
-     */
-    public function show(Experience $experience): Response
-    {
-        return $this->render('admin/experience/show.html.twig', [
-            'experience' => $experience,
-        ]);
-    }
-
-    /**
      * @Route("/{id}/edit", name="admin_experience_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Experience $experience): Response

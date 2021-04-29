@@ -25,3 +25,6 @@
 .customLang:hover{
     cursor: pointer;
 }
+.pagination_disabled{
+    display: none !important;
+}

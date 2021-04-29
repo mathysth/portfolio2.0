@@ -7,7 +7,7 @@
 
     {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('experience_index',{"lang": app.request.get('lang')}) }}">back to list</a>
+    <a href="{{ path('admin_experience_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 
     {{ include('admin/experience/_delete_form.html.twig') }}
 {% endblock %}

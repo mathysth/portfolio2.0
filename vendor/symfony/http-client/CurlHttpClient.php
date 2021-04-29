@@ -177,19 +177,19 @@ final class CurlHttpClient implements HttpClientInterface, LoggerAwareInterface,
             $curlopts[\CURLOPT_HEADEROPT] = \CURLHEADER_SEPARATE;
         }
 
-        // curl's resolve feature varies by host:port but ours varies by host only, let's handle this with our own Controller map
+        // curl's resolve feature varies by host:port but ours varies by host only, let's handle this with our own DNS map
         if (isset($this->multi->dnsCache->hostnames[$host])) {
             $options['resolve'] += [$host => $this->multi->dnsCache->hostnames[$host]];
         }
 
         if ($options['resolve'] || $this->multi->dnsCache->evictions) {
-            // First reset any old Controller cache entries then add the new ones
+            // First reset any old DNS cache entries then add the new ones
             $resolve = $this->multi->dnsCache->evictions;
             $this->multi->dnsCache->evictions = [];
             $port = parse_url($authority, \PHP_URL_PORT) ?: ('http:' === $scheme ? 80 : 443);
 
             if ($resolve && 0x072a00 > self::$curlVersion['version_number']) {
-                // Controller cache removals require curl 7.42 or higher
+                // DNS cache removals require curl 7.42 or higher
                 // On lower versions, we have to create a new multi handle
                 curl_multi_close($this->multi->handle);
                 $this->multi->handle = (new self())->multi->handle;

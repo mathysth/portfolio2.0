@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("admin/experience")
+ * @Route("admin/realisations")
  */
 class RealisationController extends AbstractController
 {
     /**
-     * @Route("/", name="realisation_index", methods={"GET"})
+     * @Route("/", name="admin_realisation_index", methods={"GET"})
      */
     public function index(RealisationRepository $realisationRepository): Response
     {
@@ -26,7 +26,7 @@ class RealisationController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="realisation_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_realisation_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -39,7 +39,7 @@ class RealisationController extends AbstractController
             $entityManager->persist($realisation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('realisation_index',[
+            return $this->redirectToRoute('admin_realisation_index',[
                 "lang" => $request->get("lang")
             ]);
         }
@@ -51,17 +51,7 @@ class RealisationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="realisation_show", methods={"GET"})
-     */
-    public function show(Realisation $realisation): Response
-    {
-        return $this->render('experience/show.html.twig', [
-            'experience' => $realisation,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}/edit", name="realisation_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_realisation_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Realisation $realisation): Response
     {
@@ -71,7 +61,7 @@ class RealisationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('realisation_index',[
+            return $this->redirectToRoute('admin_realisation_index',[
                 "lang" => $request->get("lang")
             ]);
         }
@@ -83,7 +73,7 @@ class RealisationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="realisation_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_realisation_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Realisation $realisation): Response
     {
@@ -93,7 +83,7 @@ class RealisationController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('realisation_index',[
+        return $this->redirectToRoute('admin_realisation_index',[
             "lang" => $request->get("lang")
         ]);
     }

@@ -295,12 +295,12 @@ final class NativeHttpClient implements HttpClientInterface, LoggerAwareInterfac
     }
 
     /**
-     * Resolves the IP of the host using the local Controller cache if possible.
+     * Resolves the IP of the host using the local DNS cache if possible.
      */
     private static function dnsResolve($host, NativeClientState $multi, array &$info, ?\Closure $onProgress): string
     {
         if (null === $ip = $multi->dnsCache[$host] ?? null) {
-            $info['debug'] .= "* Hostname was NOT found in Controller cache\n";
+            $info['debug'] .= "* Hostname was NOT found in DNS cache\n";
             $now = microtime(true);
 
             if (!$ip = gethostbynamel($host)) {
@@ -309,15 +309,15 @@ final class NativeHttpClient implements HttpClientInterface, LoggerAwareInterfac
 
             $info['namelookup_time'] = microtime(true) - ($info['start_time'] ?: $now);
             $multi->dnsCache[$host] = $ip = $ip[0];
-            $info['debug'] .= "* Added {$host}:0:{$ip} to Controller cache\n";
+            $info['debug'] .= "* Added {$host}:0:{$ip} to DNS cache\n";
         } else {
-            $info['debug'] .= "* Hostname was found in Controller cache\n";
+            $info['debug'] .= "* Hostname was found in DNS cache\n";
         }
 
         $info['primary_ip'] = $ip;
 
         if ($onProgress) {
-            // Notify Controller resolution
+            // Notify DNS resolution
             $onProgress();
         }
 

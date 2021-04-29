@@ -17,7 +17,7 @@ use Amp\Promise;
 use Amp\Success;
 
 /**
- * Handles local overrides for the Controller resolver.
+ * Handles local overrides for the DNS resolver.
  *
  * @author Nicolas Grekas <p@tchwork.com>
  *

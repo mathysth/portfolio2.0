@@ -42,7 +42,7 @@
           crossorigin="anonymous"/>
     {% block inline_css %}{% endblock %}
 
-    <title>{% block title %}Portfolio Mathys Theolade {% endblock %}</title>
+    <title>{% block title %}Portfolio {{ translate("ownerFullName")}} {% endblock %}</title>
 
 
 </head>
@@ -58,13 +58,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_homePage') }}</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_aboutPage') }}</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_experiencePage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('presentation') }}">{{ translate('nav_aboutPage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('realisation') }}">{{ translate('nav_realisation') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('experience') }}">{{ translate('nav_experiencePage') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_parcour') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_blogPage') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_shopPage') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="mailto:{{ translate('email') }}">{{ translate('contactMe') }}</a></li>
             </ul>
-            <!-- <p class="mb-0"><a href="#" class="btn btn-primary rounded">Submit A Property</a></p> -->
         </div>
     </div>
 </nav>
@@ -157,9 +158,11 @@
                 })
             }
         }
+
         sendAjaxRequest("{{ path('api_Lang_get') | setApiCorrectLinkFormat }}", "html").then(function (data) {
             console.log(data);
         });
+
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();

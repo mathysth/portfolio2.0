@@ -7,5 +7,5 @@
 
     {{ include('admin/competences/_form.html.twig') }}
 
-    <a href="{{ path('competences_index',{"lang": app.request.get('lang')}) }}">back to list</a>
+    <a href="{{ path('admin_competences_index',{"lang": app.request.get('lang')}) }}">back to list</a>
 {% endblock %}

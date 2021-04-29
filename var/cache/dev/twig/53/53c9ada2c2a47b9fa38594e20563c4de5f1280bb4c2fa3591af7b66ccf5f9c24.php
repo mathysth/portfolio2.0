@@ -130,7 +130,7 @@ class __TwigTemplate_df45bc9f923eb28bc015aae2ebceed1ce583ea014f729ab83f744d794ec
                 <td>
                     <a href=\"";
             // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 28), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "get", [0 => "lang"], "method", false, false, false, 28)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 28)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -153,7 +153,7 @@ class __TwigTemplate_df45bc9f923eb28bc015aae2ebceed1ce583ea014f729ab83f744d794ec
 
     <a href=\"";
         // line 39
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "request", [], "any", false, false, false, 39), "get", [0 => "lang"], "method", false, false, false, 39)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_new");
         echo "\">Create new</a>
 ";
         
@@ -208,7 +208,7 @@ class __TwigTemplate_df45bc9f923eb28bc015aae2ebceed1ce583ea014f729ab83f744d794ec
                 <td>{{ realisation.description }}</td>
                 <td>{{ realisation.lien }}</td>
                 <td>
-                    <a href=\"{{ path('realisation_edit', {'id': realisation.id,\"lang\": app.request.get('lang')}) }}\">edit</a>
+                    <a href=\"{{ path('admin_realisation_edit', {'id': realisation.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -219,7 +219,7 @@ class __TwigTemplate_df45bc9f923eb28bc015aae2ebceed1ce583ea014f729ab83f744d794ec
         </tbody>
     </table>
 
-    <a href=\"{{ path('realisation_new',{\"lang\": app.request.get('lang')}) }}\">Create new</a>
+    <a href=\"{{ path('admin_realisation_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/realisation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\index.html.twig");
     }

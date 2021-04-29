@@ -11,7 +11,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 '/{id}/edit',
             ],
             'name' => [
-                'categorie_edit',
+                'admin_categorie_edit',
             ],
             'methods' => [
                 [

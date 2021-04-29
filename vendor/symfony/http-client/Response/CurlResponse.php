@@ -192,7 +192,7 @@ final class CurlResponse implements ResponseInterface, StreamableInterface
             ]);
 
             if (!$multi->openHandles) {
-                // Schedule Controller cache eviction for the next request
+                // Schedule DNS cache eviction for the next request
                 $multi->dnsCache->evictions = $multi->dnsCache->evictions ?: $multi->dnsCache->removals;
                 $multi->dnsCache->removals = $multi->dnsCache->hostnames = [];
             }
@@ -425,7 +425,7 @@ final class CurlResponse implements ResponseInterface, StreamableInterface
                 $url = parse_url($location ?? ':');
 
                 if (isset($url['host']) && null !== $ip = $multi->dnsCache->hostnames[$url['host'] = strtolower($url['host'])] ?? null) {
-                    // Populate Controller cache for redirects if needed
+                    // Populate DNS cache for redirects if needed
                     $port = $url['port'] ?? ('http' === ($url['scheme'] ?? parse_url(curl_getinfo($ch, \CURLINFO_EFFECTIVE_URL), \PHP_URL_SCHEME)) ? 80 : 443);
                     curl_setopt($ch, \CURLOPT_RESOLVE, ["{$url['host']}:$port:$ip"]);
                     $multi->dnsCache->removals["-{$url['host']}:$port"] = "-{$url['host']}:$port";

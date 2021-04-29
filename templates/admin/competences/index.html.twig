@@ -24,8 +24,7 @@
                 <td>{{ competence.filename }}</td>
                 <td>{{ competence.niveauCompetence }}</td>
                 <td>
-                    <a href="{{ path('competences_show', {'id': competence.id,"lang": app.request.get("lang")}) }}">show</a>
-                    <a href="{{ path('competences_edit', {'id': competence.id,"lang": app.request.get("lang")}) }}">edit</a>
+                    <a href="{{ path('admin_competences_edit', {'id': competence.id,"lang": app.request.get("lang")}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('competences_new',{"lang": app.request.get("lang")}) }}">Create new</a>
+    <a href="{{ path('admin_competences_new',{"lang": app.request.get("lang")}) }}">Create new</a>
 {% endblock %}

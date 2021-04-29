@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Realisation;
 use App\Repository\ExperienceRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ExperienceController extends AbstractController
 {
     /**
-     * @Route("/", name="realisation_index", methods={"GET"})
+     * @Route("/", name="experience", methods={"GET"})
      * @param ExperienceRepository $realisationRepository
      * @param PaginatorInterface $paginator
      * @param Request $request
@@ -27,24 +26,12 @@ class ExperienceController extends AbstractController
         $experience = $paginator->paginate(
             $realisationRepository->findAll(),
             $request->query->get('page',1),
-            6
+            1
         );
 
         dump($realisationRepository->findAll());
         return $this->render('pages/experience/realisation.html.twig', [
             'experiences' => $experience,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="realisation_show", methods={"GET"})
-     * @param Realisation $realisation
-     * @return Response
-     */
-    public function show(Realisation $realisation): Response
-    {
-        return $this->render('pages/experience/show.html.twig', [
-            'experience' => $realisation,
         ]);
     }
 }

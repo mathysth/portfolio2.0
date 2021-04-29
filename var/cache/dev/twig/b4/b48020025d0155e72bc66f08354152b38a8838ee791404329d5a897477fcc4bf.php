@@ -41,7 +41,7 @@ class __TwigTemplate_83f62031db32a31216ff2ffb738d0edcee4588df3251e38673dca1d0592
 
         // line 1
         echo "<form method=\"post\" action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["competence"]) || array_key_exists("competence", $context) ? $context["competence"] : (function () { throw new RuntimeError('Variable "competence" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 1, $this->source); })()), "request", [], "any", false, false, false, 1), "get", [0 => "lang"], "method", false, false, false, 1)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["competence"]) || array_key_exists("competence", $context) ? $context["competence"] : (function () { throw new RuntimeError('Variable "competence" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
@@ -76,9 +76,9 @@ class __TwigTemplate_83f62031db32a31216ff2ffb738d0edcee4588df3251e38673dca1d0592
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('competences_delete', {'id': competence.id,\"lang\": app.request.get('lang')}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('admin_competences_delete', {'id': competence.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
-    <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ competence.id) }}\">
+    <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ competence.id)}}\">
     <button class=\"btn\">Delete</button>
 </form>
 ", "admin/competences/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\_delete_form.html.twig");

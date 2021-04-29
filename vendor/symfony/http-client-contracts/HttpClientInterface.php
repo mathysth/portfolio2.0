@@ -19,6 +19,8 @@ use Symfony\Contracts\HttpClient\Test\HttpClientTestCase;
  *
  * @see HttpClientTestCase for a reference test suite
  *
+ * @method static withOptions(array $options) Returns a new instance of the client with new default options
+ *
  * @author Nicolas Grekas <p@tchwork.com>
  */
 interface HttpClientInterface
@@ -47,9 +49,9 @@ interface HttpClientInterface
                                 //   or a stream resource where the response body should be written,
                                 //   or a closure telling if/where the response should be buffered based on its headers
         'on_progress' => null,  // callable(int $dlNow, int $dlSize, array $info) - throwing any exceptions MUST abort
-                                //   the request; it MUST be called on Controller resolution, on arrival of headers and on
+                                //   the request; it MUST be called on DNS resolution, on arrival of headers and on
                                 //   completion; it SHOULD be called on upload/download of data and at least 1/s
-        'resolve' => [],        // string[] - a map of host to IP address that SHOULD replace Controller resolution
+        'resolve' => [],        // string[] - a map of host to IP address that SHOULD replace DNS resolution
         'proxy' => null,        // string - by default, the proxy-related env vars handled by curl SHOULD be honored
         'no_proxy' => null,     // string - a comma separated list of hosts that do not require a proxy to be reached
         'timeout' => null,      // float - the idle timeout - defaults to ini_get('default_socket_timeout')

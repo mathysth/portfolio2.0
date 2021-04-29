@@ -41,7 +41,7 @@ class CompetencesController extends AbstractController
             $entityManager->persist($competence);
             $entityManager->flush();
 
-            return $this->redirectToRoute('competences_index',[
+            return $this->redirectToRoute('admin_competences_index',[
                 "lang" => $request->get("lang")
             ]);
         }
@@ -49,16 +49,6 @@ class CompetencesController extends AbstractController
         return $this->render('admin/competences/new.html.twig', [
             'competence' => $competence,
             'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="admin_competences_show", methods={"GET"})
-     */
-    public function show(Competences $competence): Response
-    {
-        return $this->render('admin/competences/show.html.twig', [
-            'competence' => $competence,
         ]);
     }
 
@@ -73,9 +63,7 @@ class CompetencesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('competences_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_competences_index');
         }
 
         return $this->render('admin/competences/edit.html.twig', [
@@ -95,8 +83,6 @@ class CompetencesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('competences_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_competences_index');
     }
 }

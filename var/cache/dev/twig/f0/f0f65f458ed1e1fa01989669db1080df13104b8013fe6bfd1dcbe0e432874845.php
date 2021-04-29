@@ -123,44 +123,55 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         echo "</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
         // line 61
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_aboutPage"), "html", null, true);
         echo "</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
         // line 62
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation");
         echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_experiencePage"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_realisation"), "html", null, true);
         echo "</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
         // line 63
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("experience");
         echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_blogPage"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_experiencePage"), "html", null, true);
         echo "</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
         // line 64
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_parcour"), "html", null, true);
+        echo "</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+        // line 65
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_blogPage"), "html", null, true);
+        echo "</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+        // line 66
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_shopPage"), "html", null, true);
         echo "</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"mailto:";
-        // line 65
+        // line 67
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("email"), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("contactMe"), "html", null, true);
         echo "</a></li>
             </ul>
-            <!-- <p class=\"mb-0\"><a href=\"#\" class=\"btn btn-primary rounded\">Submit A Property</a></p> -->
         </div>
     </div>
 </nav>
 
     ";
-        // line 72
-        $this->displayBlock('body', $context, $blocks);
         // line 73
+        $this->displayBlock('body', $context, $blocks);
+        // line 74
         echo "
 <!-- Button trigger modal -->
 <button type=\"button\" class=\"changeLang\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
@@ -241,7 +252,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
                 currentLang.setLang();
                 /** Mise en place de la langue au niveau de l'api **/
                 sendAjaxRequest(\"";
-        // line 152
+        // line 153
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_Lang_set")), "html", null, true);
         echo "\", \"html\", {lang: currentLang.getCurrentLang()}).then(function (e) {
                     console.log(\"Changement de langue effectué avec succès\");
@@ -251,12 +262,14 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
                 })
             }
         }
+
         sendAjaxRequest(\"";
-        // line 160
+        // line 162
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_Lang_get")), "html", null, true);
         echo "\", \"html\").then(function (data) {
             console.log(data);
         });
+
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();
@@ -267,9 +280,9 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
     </script>
 
     ";
-        // line 172
+        // line 175
         $this->displayBlock('script', $context, $blocks);
-        // line 173
+        // line 176
         echo "</div>
 </body>
 </html>
@@ -310,7 +323,9 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Portfolio Mathys Theolade ";
+        echo "Portfolio ";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("ownerFullName"), "html", null, true);
+        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -319,7 +334,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     }
 
-    // line 72
+    // line 73
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -338,7 +353,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     }
 
-    // line 172
+    // line 175
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,7 +383,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     public function getDebugInfo()
     {
-        return array (  342 => 172,  323 => 72,  304 => 45,  286 => 43,  273 => 173,  271 => 172,  256 => 160,  245 => 152,  164 => 73,  162 => 72,  150 => 65,  144 => 64,  138 => 63,  132 => 62,  126 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
+        return array (  357 => 175,  338 => 73,  317 => 45,  299 => 43,  286 => 176,  284 => 175,  268 => 162,  256 => 153,  175 => 74,  173 => 73,  162 => 67,  156 => 66,  150 => 65,  144 => 64,  138 => 63,  132 => 62,  126 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -417,7 +432,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
           crossorigin=\"anonymous\"/>
     {% block inline_css %}{% endblock %}
 
-    <title>{% block title %}Portfolio Mathys Theolade {% endblock %}</title>
+    <title>{% block title %}Portfolio {{ translate(\"ownerFullName\")}} {% endblock %}</title>
 
 
 </head>
@@ -433,13 +448,14 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
             <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_homePage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_aboutPage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_experiencePage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('presentation') }}\">{{ translate('nav_aboutPage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('realisation') }}\">{{ translate('nav_realisation') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('experience') }}\">{{ translate('nav_experiencePage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_parcour') }}</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_blogPage') }}</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_shopPage') }}</a></li>
                 <li class=\"nav-item\"><a class=\"nav-link active\" href=\"mailto:{{ translate('email') }}\">{{ translate('contactMe') }}</a></li>
             </ul>
-            <!-- <p class=\"mb-0\"><a href=\"#\" class=\"btn btn-primary rounded\">Submit A Property</a></p> -->
         </div>
     </div>
 </nav>
@@ -532,9 +548,11 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
                 })
             }
         }
+
         sendAjaxRequest(\"{{ path('api_Lang_get') | setApiCorrectLinkFormat }}\", \"html\").then(function (data) {
             console.log(data);
         });
+
         // Lancer cette fonction que si il n'y a aucune langue détecté
         if (currentLang.getCurrentLang() === null) {
             setLang();

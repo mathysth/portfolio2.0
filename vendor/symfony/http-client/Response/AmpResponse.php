@@ -157,7 +157,7 @@ final class AmpResponse implements ResponseInterface, StreamableInterface
         try {
             $this->doDestruct();
         } finally {
-            // Clear the Controller cache when all requests completed
+            // Clear the DNS cache when all requests completed
             if (0 >= --$this->multi->responseCount) {
                 $this->multi->responseCount = 0;
                 $this->multi->dnsCache = [];

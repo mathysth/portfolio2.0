@@ -31,7 +31,7 @@
                 <td>{{ experience.description }}</td>
                 <td>{{ experience.location }}</td>
                 <td>
-                    <a href="{{ path('experience_edit', {'id': experience.id,'lang': app.request.get('lang')}) }}">edit</a>
+                    <a href="{{ path('admin_experience_edit', {'id': experience.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -42,5 +42,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('experience_new',{"lang": app.request.get('lang')}) }}">Create new</a>
+    <a href="{{ path('admin_experience_new') }}">Create new</a>
 {% endblock %}

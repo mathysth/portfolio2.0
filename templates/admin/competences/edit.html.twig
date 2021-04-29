@@ -7,7 +7,7 @@
 
     {{ include('admin/competences/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('competences_index',{"lang": app.request.get("lang")}) }}">back to list</a>
+    <a href="{{ path('admin_competences_index',{"lang": app.request.get("lang")}) }}">back to list</a>
 
     {{ include('admin/competences/_delete_form.html.twig') }}
 {% endblock %}

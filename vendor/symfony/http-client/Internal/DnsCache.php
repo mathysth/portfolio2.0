@@ -12,7 +12,7 @@
 namespace Symfony\Component\HttpClient\Internal;
 
 /**
- * Cache for resolved Controller queries.
+ * Cache for resolved DNS queries.
  *
  * @author Alexander M. Turek <me@derrabus.de>
  *

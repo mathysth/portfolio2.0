@@ -145,7 +145,7 @@ class __TwigTemplate_7b72f102db076cf7b1546ff88bbe8429cd00ecf0477cff5c2cdf6b75cce
                 <td>
                     <a href=\"";
             // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("experience_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 34), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "request", [], "any", false, false, false, 34), "get", [0 => "lang"], "method", false, false, false, 34)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 34)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -168,7 +168,7 @@ class __TwigTemplate_7b72f102db076cf7b1546ff88bbe8429cd00ecf0477cff5c2cdf6b75cce
 
     <a href=\"";
         // line 45
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("experience_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "request", [], "any", false, false, false, 45), "get", [0 => "lang"], "method", false, false, false, 45)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_new");
         echo "\">Create new</a>
 ";
         
@@ -229,7 +229,7 @@ class __TwigTemplate_7b72f102db076cf7b1546ff88bbe8429cd00ecf0477cff5c2cdf6b75cce
                 <td>{{ experience.description }}</td>
                 <td>{{ experience.location }}</td>
                 <td>
-                    <a href=\"{{ path('experience_edit', {'id': experience.id,'lang': app.request.get('lang')}) }}\">edit</a>
+                    <a href=\"{{ path('admin_experience_edit', {'id': experience.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -240,7 +240,7 @@ class __TwigTemplate_7b72f102db076cf7b1546ff88bbe8429cd00ecf0477cff5c2cdf6b75cce
         </tbody>
     </table>
 
-    <a href=\"{{ path('experience_new',{\"lang\": app.request.get('lang')}) }}\">Create new</a>
+    <a href=\"{{ path('admin_experience_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/experience/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\experience\\index.html.twig");
     }

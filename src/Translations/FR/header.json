@@ -2,6 +2,8 @@
   "nav_homePage": "Accueil",
   "nav_aboutPage": "A propos",
   "nav_experiencePage": "Expérience",
+  "nav_realisation": "Realisations",
   "nav_blogPage": "Blog",
-  "nav_shopPage": "Boutique"
+  "nav_shopPage": "Boutique",
+  "nav_parcour": "Parcour"
 }

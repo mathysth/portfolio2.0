@@ -68,7 +68,7 @@ class RetryableHttpClient implements HttpClientInterface
                 // catch TransportExceptionInterface to send it to the strategy
             }
             if (null !== $exception) {
-                // always retry request that fail to resolve Controller
+                // always retry request that fail to resolve DNS
                 if ('' !== $context->getInfo('primary_ip')) {
                     $shouldRetry = $this->strategy->shouldRetry($context, null, $exception);
                     if (null === $shouldRetry) {
@@ -127,7 +127,7 @@ class RetryableHttpClient implements HttpClientInterface
 
             $context->getResponse()->cancel();
 
-            $delay = $this->getDelayFromHeader($context->getHeaders()) ?? $this->strategy->getDelay($context, $chunk->isLast() ? $content : null, $exception);
+            $delay = $this->getDelayFromHeader($context->getHeaders()) ?? $this->strategy->getDelay($context, !$exception && $chunk->isLast() ? $content : null, $exception);
             ++$retryCount;
 
             $this->logger->info('Try #{count} after {delay}ms'.($exception ? ': '.$exception->getMessage() : ', status code: '.$context->getStatusCode()), [

@@ -232,12 +232,12 @@ class MockResponse implements ResponseInterface, StreamableInterface
             $response->info['size_upload'] = 0.0;
         }
 
-        // simulate "total_time" if it is set
-        if (isset($response->info['total_time'])) {
+        // simulate "total_time" if it is not set
+        if (!isset($response->info['total_time'])) {
             $response->info['total_time'] = microtime(true) - $response->info['start_time'];
         }
 
-        // "notify" Controller resolution
+        // "notify" DNS resolution
         $onProgress(0, 0, $response->info);
 
         // consume the request body
@@ -281,7 +281,7 @@ class MockResponse implements ResponseInterface, StreamableInterface
             'http_code' => $response->info['http_code'],
         ] + $info + $response->info;
 
-        if (isset($response->info['total_time'])) {
+        if (!isset($response->info['total_time'])) {
             $response->info['total_time'] = microtime(true) - $response->info['start_time'];
         }
 
@@ -308,7 +308,7 @@ class MockResponse implements ResponseInterface, StreamableInterface
             $offset = \strlen($body);
         }
 
-        if (isset($response->info['total_time'])) {
+        if (!isset($response->info['total_time'])) {
             $response->info['total_time'] = microtime(true) - $response->info['start_time'];
         }
 

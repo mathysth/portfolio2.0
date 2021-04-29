@@ -96,7 +96,7 @@ final class WebLinkExtension extends AbstractExtension
     }
 
     /**
-     * Initiates a early connection to a resource (Controller resolution, TCP handshake, TLS negotiation).
+     * Initiates a early connection to a resource (DNS resolution, TCP handshake, TLS negotiation).
      *
      * @param array $attributes The attributes of this link (e.g. "['as' => true]", "['pr' => 0.5]")
      *
