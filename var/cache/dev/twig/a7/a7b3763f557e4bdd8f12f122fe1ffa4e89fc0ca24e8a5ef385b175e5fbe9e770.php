@@ -94,7 +94,7 @@ class __TwigTemplate_f9d6904f59f82ce343484780e7053d9b215857a0350b1f598e6739ec3c3
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_index");
         echo "\">back to list</a>
 
     ";
@@ -136,7 +136,7 @@ class __TwigTemplate_f9d6904f59f82ce343484780e7053d9b215857a0350b1f598e6739ec3c3
 
     {{ include('admin/parcours/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('parcours_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
+    <a href=\"{{ path('admin_parcours_index') }}\">back to list</a>
 
     {{ include('admin/parcours/_delete_form.html.twig') }}
 {% endblock %}

@@ -25,7 +25,7 @@
                 <td>{{ parcour.etablissement }}</td>
                 <td>{{ parcour.commune }}</td>
                 <td>
-                    <a href="{{ path('parcours_edit', {'id': parcour.id,'lang': app.request.get('lang')}) }}">edit</a>
+                    <a href="{{ path('admin_parcours_edit', {'id': parcour.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +36,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('parcours_new',{"lang": app.request.get("lang")}) }}">Create new</a>
+    <a href="{{ path('admin_parcours_new') }}">Create new</a>
 {% endblock %}

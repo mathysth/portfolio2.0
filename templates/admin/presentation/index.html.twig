@@ -31,8 +31,7 @@
                 <td>{{ presentation.cv }}</td>
                 <td>{{ presentation.coverLetter }}</td>
                 <td>
-                    <a href="{{ path('presentation_show', {'id': presentation.id,lang: app.request.get("lang")}) }}">show</a>
-                    <a href="{{ path('presentation_edit', {'id': presentation.id,lang: app.request.get("lang")}) }}">edit</a>
+                    <a href="{{ path('admin_presentation_edit', {'id': presentation.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +42,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('presentation_new',{"lang": app.request.get("lang")}) }}">Create new</a>
+    <a href="{{ path('admin_presentation_new') }}">Create new</a>
 {% endblock %}

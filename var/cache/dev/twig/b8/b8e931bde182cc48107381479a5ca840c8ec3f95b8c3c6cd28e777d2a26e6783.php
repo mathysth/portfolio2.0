@@ -115,11 +115,7 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
                 <td>
                     <a href=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_show", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 22), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "request", [], "any", false, false, false, 22), "get", [0 => "lang"], "method", false, false, false, 22)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 23), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "request", [], "any", false, false, false, 23), "get", [0 => "lang"], "method", false, false, false, 23)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 22)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -127,7 +123,7 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 27
+            // line 26
             echo "            <tr>
                 <td colspan=\"3\">no records found</td>
             </tr>
@@ -136,13 +132,13 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['competences_category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 30
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 34
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "request", [], "any", false, false, false, 34), "get", [0 => "lang"], "method", false, false, false, 34)]), "html", null, true);
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_new");
         echo "\">Create new</a>
 ";
         
@@ -165,7 +161,7 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
 
     public function getDebugInfo()
     {
-        return array (  145 => 34,  140 => 31,  131 => 27,  122 => 23,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  141 => 33,  136 => 30,  127 => 26,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -191,8 +187,7 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
                 <td>{{ competences_category.id }}</td>
                 <td>{{ competences_category.nom }}</td>
                 <td>
-                    <a href=\"{{ path('competences_categories_show', {'id': competences_category.id,\"lang\": app.request.get('lang')}) }}\">show</a>
-                    <a href=\"{{ path('competences_categories_edit', {'id': competences_category.id,\"lang\": app.request.get('lang')}) }}\">edit</a>
+                    <a href=\"{{ path('admin_competences_categories_edit', {'id': competences_category.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -203,7 +198,7 @@ class __TwigTemplate_96ed52728859f3f6cc17eadf799ea285a158ad55496f5d3eefad599bf34
         </tbody>
     </table>
 
-    <a href=\"{{ path('competences_categories_new',{\"lang\": app.request.get('lang')}) }}\">Create new</a>
+    <a href=\"{{ path('admin_competences_categories_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/competences_categories/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences_categories\\index.html.twig");
     }

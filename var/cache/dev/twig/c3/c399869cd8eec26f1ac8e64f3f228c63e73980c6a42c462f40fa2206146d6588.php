@@ -94,7 +94,7 @@ class __TwigTemplate_e3b1caa3b036e50a9d3c81e487a02ef75c9529961e74a6cb35d306e351e
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_index");
         echo "\">back to list</a>
 
     ";
@@ -136,7 +136,7 @@ class __TwigTemplate_e3b1caa3b036e50a9d3c81e487a02ef75c9529961e74a6cb35d306e351e
 
     {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('realisation_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
+    <a href=\"{{ path('admin_realisation_index') }}\">back to list</a>
 
     {{ include('admin/experience/_delete_form.html.twig') }}
 {% endblock %}

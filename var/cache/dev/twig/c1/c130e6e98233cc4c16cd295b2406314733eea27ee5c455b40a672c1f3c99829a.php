@@ -94,7 +94,7 @@ class __TwigTemplate_1da1dcc87ed5459d6b0c8bdcb0256e1ab5ef8a79f1f8776fef5f34b9da9
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produits_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_index");
         echo "\">back to list</a>
 ";
         
@@ -131,7 +131,7 @@ class __TwigTemplate_1da1dcc87ed5459d6b0c8bdcb0256e1ab5ef8a79f1f8776fef5f34b9da9
 
     {{ include('admin/produits/_form.html.twig') }}
 
-    <a href=\"{{ path('produits_index',{lang: app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_produits_index') }}\">back to list</a>
 {% endblock %}
 ", "admin/produits/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\new.html.twig");
     }

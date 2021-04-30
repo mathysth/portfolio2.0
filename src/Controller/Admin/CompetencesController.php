@@ -41,9 +41,7 @@ class CompetencesController extends AbstractController
             $entityManager->persist($competence);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_competences_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_competences_index');
         }
 
         return $this->render('admin/competences/new.html.twig', [

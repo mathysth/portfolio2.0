@@ -41,7 +41,7 @@ class __TwigTemplate_2f75d6cda4030e23e5baa8ef3655068f31ff4a711e59e657f3b7da494c6
 
         // line 1
         echo "<form method=\"post\" action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["realisation"]) || array_key_exists("realisation", $context) ? $context["realisation"] : (function () { throw new RuntimeError('Variable "realisation" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 1, $this->source); })()), "request", [], "any", false, false, false, 1), "get", [0 => "lang"], "method", false, false, false, 1)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["realisation"]) || array_key_exists("realisation", $context) ? $context["realisation"] : (function () { throw new RuntimeError('Variable "realisation" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
@@ -76,7 +76,7 @@ class __TwigTemplate_2f75d6cda4030e23e5baa8ef3655068f31ff4a711e59e657f3b7da494c6
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('realisation_delete', {'id': realisation.id,\"lang\": app.request.get('lang')}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('admin_realisation_delete', {'id': realisation.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ realisation.id) }}\">
     <button class=\"btn\">Delete</button>

@@ -94,12 +94,12 @@ class __TwigTemplate_66b0c5d836445290517f22fd252ef4df9461f65f02f660fa23f82e7d221
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produits_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_index");
         echo "\">back to list</a>
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "admin/produits/_delete_form.html.twig", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "request", [], "any", false, false, false, 12), "get", [0 => "lang"], "method", false, false, false, 12)]);
+        echo twig_include($this->env, $context, "admin/produits/_delete_form.html.twig");
         echo "
 ";
         
@@ -136,9 +136,9 @@ class __TwigTemplate_66b0c5d836445290517f22fd252ef4df9461f65f02f660fa23f82e7d221
 
     {{ include('admin/produits/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('produits_index',{lang: app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_produits_index') }}\">back to list</a>
 
-    {{ include('admin/produits/_delete_form.html.twig',{lang: app.request.get(\"lang\")}) }}
+    {{ include('admin/produits/_delete_form.html.twig') }}
 {% endblock %}
 ", "admin/produits/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\edit.html.twig");
     }

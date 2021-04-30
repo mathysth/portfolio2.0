@@ -89,17 +89,17 @@ class __TwigTemplate_6a65612d83f5f352564620993bba86d97e5e75faf4500d101e7601413e7
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "categorie/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "admin/categorie/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_index");
         echo "\">back to list</a>
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "categorie/_delete_form.html.twig");
+        echo twig_include($this->env, $context, "admin/categorie/_delete_form.html.twig");
         echo "
 ";
         
@@ -134,11 +134,11 @@ class __TwigTemplate_6a65612d83f5f352564620993bba86d97e5e75faf4500d101e7601413e7
 {% block body %}
     <h1>Edit Categorie</h1>
 
-    {{ include('categorie/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/categorie/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('categorie_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_categorie_index') }}\">back to list</a>
 
-    {{ include('categorie/_delete_form.html.twig') }}
+    {{ include('admin/categorie/_delete_form.html.twig') }}
 {% endblock %}
 ", "admin/categorie/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\edit.html.twig");
     }

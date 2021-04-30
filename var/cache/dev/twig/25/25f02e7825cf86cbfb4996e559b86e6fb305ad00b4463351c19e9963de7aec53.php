@@ -125,7 +125,7 @@ class __TwigTemplate_9bbac8c985502ee1fbfadc13f50257cee9b715ea4b49560d511a67ee248
                 <td>
                     <a href=\"";
             // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 27), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "request", [], "any", false, false, false, 27), "get", [0 => "lang"], "method", false, false, false, 27)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -148,7 +148,7 @@ class __TwigTemplate_9bbac8c985502ee1fbfadc13f50257cee9b715ea4b49560d511a67ee248
 
     <a href=\"";
         // line 38
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "request", [], "any", false, false, false, 38), "get", [0 => "lang"], "method", false, false, false, 38)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_new");
         echo "\">Create new</a>
 ";
         
@@ -202,7 +202,7 @@ class __TwigTemplate_9bbac8c985502ee1fbfadc13f50257cee9b715ea4b49560d511a67ee248
                 <td>{{ competence.filename }}</td>
                 <td>{{ competence.niveauCompetence }}</td>
                 <td>
-                    <a href=\"{{ path('admin_competences_edit', {'id': competence.id,\"lang\": app.request.get(\"lang\")}) }}\">edit</a>
+                    <a href=\"{{ path('admin_competences_edit', {'id': competence.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -213,7 +213,7 @@ class __TwigTemplate_9bbac8c985502ee1fbfadc13f50257cee9b715ea4b49560d511a67ee248
         </tbody>
     </table>
 
-    <a href=\"{{ path('admin_competences_new',{\"lang\": app.request.get(\"lang\")}) }}\">Create new</a>
+    <a href=\"{{ path('admin_competences_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/competences/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\index.html.twig");
     }

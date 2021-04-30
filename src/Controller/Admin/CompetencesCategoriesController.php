@@ -41,24 +41,12 @@ class CompetencesCategoriesController extends AbstractController
             $entityManager->persist($competencesCategory);
             $entityManager->flush();
 
-            return $this->redirectToRoute('competences_categories_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_competences_categories_index');
         }
 
         return $this->render('admin/competences_categories/new.html.twig', [
             'competences_category' => $competencesCategory,
             'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="admin_competences_categories_show", methods={"GET"})
-     */
-    public function show(CompetencesCategories $competencesCategory): Response
-    {
-        return $this->render('admin/competences_categories/show.html.twig', [
-            'competences_category' => $competencesCategory,
         ]);
     }
 
@@ -73,9 +61,7 @@ class CompetencesCategoriesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('competences_categories_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_competences_categories_index');
         }
 
         return $this->render('admin/competences_categories/edit.html.twig', [
@@ -95,8 +81,6 @@ class CompetencesCategoriesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('competences_categories_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_competences_categories_index');
     }
 }

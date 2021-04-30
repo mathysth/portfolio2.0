@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PresentationController extends AbstractController
 {
     /**
-     * @Route("/", name="presentation_index", methods={"GET"})
+     * @Route("/", name="admin_presentation_index", methods={"GET"})
      */
     public function index(PresentationRepository $presentationRepository): Response
     {
@@ -26,7 +26,7 @@ class PresentationController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="presentation_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_presentation_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -39,9 +39,7 @@ class PresentationController extends AbstractController
             $entityManager->persist($presentation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('presentation_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_presentation_index');
         }
 
         return $this->render('admin/presentation/new.html.twig', [
@@ -51,17 +49,7 @@ class PresentationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="presentation_show", methods={"GET"})
-     */
-    public function show(Presentation $presentation): Response
-    {
-        return $this->render('admin/presentation/show.html.twig', [
-            'presentation' => $presentation,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}/edit", name="presentation_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_presentation_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Presentation $presentation): Response
     {
@@ -71,9 +59,7 @@ class PresentationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('presentation_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_presentation_index');
         }
 
         return $this->render('admin/presentation/edit.html.twig', [
@@ -83,7 +69,7 @@ class PresentationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="presentation_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_presentation_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Presentation $presentation): Response
     {
@@ -93,8 +79,6 @@ class PresentationController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('presentation_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_presentation_index');
     }
 }

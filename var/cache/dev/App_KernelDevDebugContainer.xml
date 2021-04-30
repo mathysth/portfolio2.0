@@ -6444,17 +6444,15 @@
         <argument key="realisationRepository" type="service" id="App\Repository\RealisationRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.tKE.RwJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.2FAsTFC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategorieController::delete" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CategorieController::edit" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CategorieController::index" type="service" id=".service_locator.2Iz0l6."/>
-        <argument key="App\Controller\Admin\CategorieController::show" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController::delete" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController::edit" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController::index" type="service" id=".service_locator.28o3U.X"/>
-        <argument key="App\Controller\Admin\CompetencesCategoriesController::show" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesController::delete" type="service" id=".service_locator.kvkaJ38"/>
         <argument key="App\Controller\Admin\CompetencesController::edit" type="service" id=".service_locator.kvkaJ38"/>
         <argument key="App\Controller\Admin\CompetencesController::index" type="service" id=".service_locator.43ajRrC"/>
@@ -6467,7 +6465,6 @@
         <argument key="App\Controller\Admin\PresentationController::delete" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\PresentationController::edit" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\PresentationController::index" type="service" id=".service_locator._n.1n13"/>
-        <argument key="App\Controller\Admin\PresentationController::show" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\ProduitsController::delete" type="service" id=".service_locator.ZE81RhG"/>
         <argument key="App\Controller\Admin\ProduitsController::edit" type="service" id=".service_locator.ZE81RhG"/>
         <argument key="App\Controller\Admin\ProduitsController::index" type="service" id=".service_locator.xfMbnwT"/>
@@ -6486,11 +6483,9 @@
         <argument key="App\Controller\Admin\CategorieController:delete" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CategorieController:edit" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CategorieController:index" type="service" id=".service_locator.2Iz0l6."/>
-        <argument key="App\Controller\Admin\CategorieController:show" type="service" id=".service_locator.Z8xh0Z9"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController:delete" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController:edit" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesCategoriesController:index" type="service" id=".service_locator.28o3U.X"/>
-        <argument key="App\Controller\Admin\CompetencesCategoriesController:show" type="service" id=".service_locator.yvIznsy"/>
         <argument key="App\Controller\Admin\CompetencesController:delete" type="service" id=".service_locator.kvkaJ38"/>
         <argument key="App\Controller\Admin\CompetencesController:edit" type="service" id=".service_locator.kvkaJ38"/>
         <argument key="App\Controller\Admin\CompetencesController:index" type="service" id=".service_locator.43ajRrC"/>
@@ -6503,7 +6498,6 @@
         <argument key="App\Controller\Admin\PresentationController:delete" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\PresentationController:edit" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\PresentationController:index" type="service" id=".service_locator._n.1n13"/>
-        <argument key="App\Controller\Admin\PresentationController:show" type="service" id=".service_locator.sIQEE3."/>
         <argument key="App\Controller\Admin\ProduitsController:delete" type="service" id=".service_locator.ZE81RhG"/>
         <argument key="App\Controller\Admin\ProduitsController:edit" type="service" id=".service_locator.ZE81RhG"/>
         <argument key="App\Controller\Admin\ProduitsController:index" type="service" id=".service_locator.xfMbnwT"/>
@@ -7094,12 +7088,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.tKE.RwJ"/>
+      <argument type="service" id=".service_locator.2FAsTFC"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.tKE.RwJ"/>
+      <argument type="service" id=".service_locator.2FAsTFC"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -7559,7 +7553,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.tKE.RwJ"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.2FAsTFC"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

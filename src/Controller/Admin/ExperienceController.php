@@ -39,9 +39,7 @@ class ExperienceController extends AbstractController
             $entityManager->persist($experience);
             $entityManager->flush();
 
-            return $this->redirectToRoute('experience_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_experience_index');
         }
 
         return $this->render('admin/experience/new.html.twig', [
@@ -61,9 +59,7 @@ class ExperienceController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('experience_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_experience_index');
         }
 
         return $this->render('admin/experience/edit.html.twig', [
@@ -83,8 +79,6 @@ class ExperienceController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('experience_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_experience_index');
     }
 }

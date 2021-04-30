@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProduitsController extends AbstractController
 {
     /**
-     * @Route("/", name="produits_index", methods={"GET"})
+     * @Route("/", name="admin_produits_index", methods={"GET"})
      */
     public function index(ProduitsRepository $produitsRepository): Response
     {
@@ -26,7 +26,7 @@ class ProduitsController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="produits_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_produits_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -38,9 +38,7 @@ class ProduitsController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($produit);
             $entityManager->flush();
-            return $this->redirectToRoute('produits_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_produits_index');
         }
 
         return $this->render('admin/produits/new.html.twig', [
@@ -50,7 +48,7 @@ class ProduitsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="produits_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_produits_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Produits $produit): Response
     {
@@ -60,9 +58,7 @@ class ProduitsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('produits_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_produits_index');
         }
 
         return $this->render('admin/produits/edit.html.twig', [
@@ -72,7 +68,7 @@ class ProduitsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="produits_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_produits_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Produits $produit): Response
     {
@@ -82,8 +78,6 @@ class ProduitsController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('produits_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_produits_index');
     }
 }

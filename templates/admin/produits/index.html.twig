@@ -27,7 +27,7 @@
                 <td>{{ produit.filename }}</td>
                 <td>{{ produit.updatedAt ? produit.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('produits_edit', {'id': produit.id,lang: app.request.get("lang")}) }}">edit</a>
+                    <a href="{{ path('admin_produits_edit', {'id': produit.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -38,5 +38,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('produits_new',{lang: app.request.get("lang")}) }}">Create new</a>
+    <a href="{{ path('admin_produits_new') }}">Create new</a>
 {% endblock %}

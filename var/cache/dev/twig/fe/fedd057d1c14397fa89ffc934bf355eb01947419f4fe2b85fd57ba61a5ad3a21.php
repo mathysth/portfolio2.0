@@ -94,7 +94,7 @@ class __TwigTemplate_1357335b0c15ec1cc0c766e6c9c2773725222b66c1d7ba5752d9736eedc
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_index");
         echo "\">back to list</a>
 ";
         
@@ -131,7 +131,7 @@ class __TwigTemplate_1357335b0c15ec1cc0c766e6c9c2773725222b66c1d7ba5752d9736eedc
 
     {{ include('admin/presentation/_form.html.twig') }}
 
-    <a href=\"{{ path('presentation_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_presentation_index') }}\">back to list</a>
 {% endblock %}
 ", "admin/presentation/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\new.html.twig");
     }

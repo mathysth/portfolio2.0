@@ -94,7 +94,7 @@ class __TwigTemplate_704efe175bdbae7723806e7f9f11101c7aea43c1e3d1b6d84fb86253b33
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_index");
         echo "\">back to list</a>
 ";
         
@@ -131,7 +131,7 @@ class __TwigTemplate_704efe175bdbae7723806e7f9f11101c7aea43c1e3d1b6d84fb86253b33
 
     {{ include('admin/categorie/_form.html.twig') }}
 
-    <a href=\"{{ path('categorie_index',{'lang': app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_categorie_index') }}\">back to list</a>
 {% endblock %}", "admin/categorie/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\new.html.twig");
     }
 }

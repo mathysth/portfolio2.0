@@ -7,5 +7,5 @@
 
     {{ include('admin/presentation/_form.html.twig') }}
 
-    <a href="{{ path('presentation_index',{"lang": app.request.get("lang")}) }}">back to list</a>
+    <a href="{{ path('admin_presentation_index') }}">back to list</a>
 {% endblock %}

@@ -41,24 +41,12 @@ class CategorieController extends AbstractController
             $entityManager->persist($categorie);
             $entityManager->flush();
 
-            return $this->redirectToRoute('categorie_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_categorie_index');
         }
 
         return $this->render('admin/categorie/new.html.twig', [
             'categorie' => $categorie,
             'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="admin_categorie_show", methods={"GET"})
-     */
-    public function show(Categorie $categorie): Response
-    {
-        return $this->render('categorie/show.html.twig', [
-            'categorie' => $categorie,
         ]);
     }
 
@@ -73,9 +61,7 @@ class CategorieController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('categorie_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_categorie_index');
         }
 
         return $this->render('admin/categorie/edit.html.twig', [
@@ -95,8 +81,6 @@ class CategorieController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('categorie_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_categorie_index');
     }
 }

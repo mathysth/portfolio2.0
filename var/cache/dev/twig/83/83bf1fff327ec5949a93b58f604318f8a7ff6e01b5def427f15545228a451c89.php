@@ -145,11 +145,7 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
                 <td>
                     <a href=\"";
             // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation_show", ["id" => twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 34), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "request", [], "any", false, false, false, 34), "get", [0 => "lang"], "method", false, false, false, 34)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 35), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "request", [], "any", false, false, false, 35), "get", [0 => "lang"], "method", false, false, false, 35)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 34)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -157,7 +153,7 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 39
+            // line 38
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -166,13 +162,13 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['presentation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 42
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 46
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "request", [], "any", false, false, false, 46), "get", [0 => "lang"], "method", false, false, false, 46)]), "html", null, true);
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_new");
         echo "\">Create new</a>
 ";
         
@@ -195,7 +191,7 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
 
     public function getDebugInfo()
     {
-        return array (  175 => 46,  170 => 43,  161 => 39,  152 => 35,  148 => 34,  143 => 32,  139 => 31,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  171 => 45,  166 => 42,  157 => 38,  148 => 34,  143 => 32,  139 => 31,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -233,8 +229,7 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
                 <td>{{ presentation.cv }}</td>
                 <td>{{ presentation.coverLetter }}</td>
                 <td>
-                    <a href=\"{{ path('presentation_show', {'id': presentation.id,lang: app.request.get(\"lang\")}) }}\">show</a>
-                    <a href=\"{{ path('presentation_edit', {'id': presentation.id,lang: app.request.get(\"lang\")}) }}\">edit</a>
+                    <a href=\"{{ path('admin_presentation_edit', {'id': presentation.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -245,7 +240,7 @@ class __TwigTemplate_148b7350062a8b8a960a404920b05f986462f507ea6914744ccd770893d
         </tbody>
     </table>
 
-    <a href=\"{{ path('presentation_new',{\"lang\": app.request.get(\"lang\")}) }}\">Create new</a>
+    <a href=\"{{ path('admin_presentation_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/presentation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\index.html.twig");
     }

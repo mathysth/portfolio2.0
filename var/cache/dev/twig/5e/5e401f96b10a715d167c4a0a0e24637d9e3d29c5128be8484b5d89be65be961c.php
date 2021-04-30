@@ -94,7 +94,7 @@ class __TwigTemplate_5783ef66ed6c97b206c5394a0132dc672df61d12b045e7f1796e5041856
 
     <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competences_categories_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_index");
         echo "\">back to list</a>
 
     ";
@@ -136,7 +136,7 @@ class __TwigTemplate_5783ef66ed6c97b206c5394a0132dc672df61d12b045e7f1796e5041856
 
     {{ include('admin/competences_categories/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('competences_categories_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
+    <a href=\"{{ path('admin_competences_categories_index') }}\">back to list</a>
 
     {{ include('admin/competences_categories/_delete_form.html.twig') }}
 {% endblock %}

@@ -39,9 +39,7 @@ class RealisationController extends AbstractController
             $entityManager->persist($realisation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_realisation_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_realisation_index');
         }
 
         return $this->render('admin/realisation/new.html.twig', [
@@ -61,9 +59,7 @@ class RealisationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_realisation_index',[
-                "lang" => $request->get("lang")
-            ]);
+            return $this->redirectToRoute('admin_realisation_index');
         }
 
         return $this->render('admin/realisation/edit.html.twig', [
@@ -83,8 +79,6 @@ class RealisationController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_realisation_index',[
-            "lang" => $request->get("lang")
-        ]);
+        return $this->redirectToRoute('admin_realisation_index');
     }
 }

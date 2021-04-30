@@ -135,7 +135,7 @@ class __TwigTemplate_5a079b701088f0cd5ada0e6dcb92a7ab5f19092c87887cc01d214aa02c5
                 <td>
                     <a href=\"";
             // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produits_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 30), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "request", [], "any", false, false, false, 30), "get", [0 => "lang"], "method", false, false, false, 30)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -158,7 +158,7 @@ class __TwigTemplate_5a079b701088f0cd5ada0e6dcb92a7ab5f19092c87887cc01d214aa02c5
 
     <a href=\"";
         // line 41
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produits_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "request", [], "any", false, false, false, 41), "get", [0 => "lang"], "method", false, false, false, 41)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_new");
         echo "\">Create new</a>
 ";
         
@@ -215,7 +215,7 @@ class __TwigTemplate_5a079b701088f0cd5ada0e6dcb92a7ab5f19092c87887cc01d214aa02c5
                 <td>{{ produit.filename }}</td>
                 <td>{{ produit.updatedAt ? produit.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href=\"{{ path('produits_edit', {'id': produit.id,lang: app.request.get(\"lang\")}) }}\">edit</a>
+                    <a href=\"{{ path('admin_produits_edit', {'id': produit.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -226,7 +226,7 @@ class __TwigTemplate_5a079b701088f0cd5ada0e6dcb92a7ab5f19092c87887cc01d214aa02c5
         </tbody>
     </table>
 
-    <a href=\"{{ path('produits_new',{lang: app.request.get(\"lang\")}) }}\">Create new</a>
+    <a href=\"{{ path('admin_produits_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/produits/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\index.html.twig");
     }

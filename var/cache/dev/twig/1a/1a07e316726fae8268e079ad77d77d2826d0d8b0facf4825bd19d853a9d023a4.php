@@ -130,7 +130,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
                 <td>
                     <a href=\"";
             // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 28), "lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "get", [0 => "lang"], "method", false, false, false, 28)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 28)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -153,7 +153,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
 
     <a href=\"";
         // line 39
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours_new", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "request", [], "any", false, false, false, 39), "get", [0 => "lang"], "method", false, false, false, 39)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_new");
         echo "\">Create new</a>
 ";
         
@@ -208,7 +208,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
                 <td>{{ parcour.etablissement }}</td>
                 <td>{{ parcour.commune }}</td>
                 <td>
-                    <a href=\"{{ path('parcours_edit', {'id': parcour.id,'lang': app.request.get('lang')}) }}\">edit</a>
+                    <a href=\"{{ path('admin_parcours_edit', {'id': parcour.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -219,7 +219,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
         </tbody>
     </table>
 
-    <a href=\"{{ path('parcours_new',{\"lang\": app.request.get(\"lang\")}) }}\">Create new</a>
+    <a href=\"{{ path('admin_parcours_new') }}\">Create new</a>
 {% endblock %}
 ", "admin/parcours/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\parcours\\index.html.twig");
     }
