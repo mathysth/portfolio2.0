@@ -98,7 +98,9 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
         $context['_seq'] = twig_ensure_traversable((isset($context["realisations"]) || array_key_exists("realisations", $context) ? $context["realisations"] : (function () { throw new RuntimeError('Variable "realisations" does not exist.', 22, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["realisation"]) {
             // line 23
-            echo "                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
+            echo "                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#modal_";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 23), "html", null, true);
+            echo "\">
                         ";
             // line 24
             if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["realisation"], "filename", [], "any", false, false, false, 24), "empty.jpg"))) {
@@ -123,12 +125,19 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                    <div class=\"modal fade\" id=\"modal_";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 36), "html", null, true);
+            echo "\" tabindex=\"-1\" aria-labelledby=\"modal_";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 36), "html", null, true);
+            echo "Label\" aria-hidden=\"true\">
                         <div class=\"modal-dialog\">
                             <div class=\"modal-content\">
                                 <div class=\"modal-header\">
-                                    <h5 class=\"modal-title\" id=\"exampleModalLabel\"> ";
+                                    <h5 class=\"modal-title\" id=\"modal_";
             // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 40), "html", null, true);
+            echo "Label\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "titre", [], "any", false, false, false, 40), "html", null, true);
             echo " </h5>
                                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
@@ -180,7 +189,7 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
 
     public function getDebugInfo()
     {
-        return array (  157 => 54,  151 => 50,  139 => 44,  132 => 40,  120 => 31,  116 => 29,  112 => 27,  106 => 25,  104 => 24,  101 => 23,  97 => 22,  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  166 => 54,  160 => 50,  148 => 44,  139 => 40,  130 => 36,  122 => 31,  118 => 29,  114 => 27,  108 => 25,  106 => 24,  101 => 23,  97 => 22,  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -207,7 +216,7 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
             <div class=\"row\">
 
                 {% for realisation in realisations %}
-                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
+                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#modal_{{ realisation.id}}\">
                         {% if realisation.filename != \"empty.jpg\" %}
                             <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url({{ vich_uploader_asset(realisation,\"images\") }});\">
                         {% else %}
@@ -220,11 +229,11 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                    <div class=\"modal fade\" id=\"modal_{{ realisation.id}}\" tabindex=\"-1\" aria-labelledby=\"modal_{{ realisation.id}}Label\" aria-hidden=\"true\">
                         <div class=\"modal-dialog\">
                             <div class=\"modal-content\">
                                 <div class=\"modal-header\">
-                                    <h5 class=\"modal-title\" id=\"exampleModalLabel\"> {{ realisation.titre }} </h5>
+                                    <h5 class=\"modal-title\" id=\"modal_{{ realisation.id}}Label\"> {{ realisation.titre }} </h5>
                                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                                 </div>
                                 <div class=\"modal-body\">
