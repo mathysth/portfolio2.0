@@ -105,6 +105,9 @@ class Realisation
     public function setImages(?File $images): void
     {
         $this->images = $images;
+        if ($this->images instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
 
