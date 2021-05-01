@@ -92,43 +92,70 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
         <div class=\"container\">
             <div class=\"row\">
 
-                <div class=\"col-md-4\">
-                    <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(/build/img/project-1.jpg);\">
-                        <div class=\"overlay\"></div>
-                        <div class=\"text text-center p-4\">
-                            <h3><a href=\"#\">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
+                ";
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["realisations"]) || array_key_exists("realisations", $context) ? $context["realisations"] : (function () { throw new RuntimeError('Variable "realisations" does not exist.', 22, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["realisation"]) {
+            // line 23
+            echo "                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
+                        ";
+            // line 24
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["realisation"], "filename", [], "any", false, false, false, 24), "empty.jpg"))) {
+                // line 25
+                echo "                            <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(";
+                echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["realisation"], "images"), "html", null, true);
+                echo ");\">
+                        ";
+            } else {
+                // line 27
+                echo "                            <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(http://via.placeholder.com/1000x600);\">
+                        ";
+            }
+            // line 29
+            echo "                            <div class=\"overlay\"></div>
+                            <div class=\"text text-center p-4\">
+                                <span>";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "titre", [], "any", false, false, false, 31), "html", null, true);
+            echo "</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class=\"col-md-4\">
-                    <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(/build/img/project-2.jpg);\">
-                        <div class=\"overlay\"></div>
-                        <div class=\"text text-center p-4\">
-                            <h3><a href=\"#\">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
+                    <!-- Modal -->
+                    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                        <div class=\"modal-dialog\">
+                            <div class=\"modal-content\">
+                                <div class=\"modal-header\">
+                                    <h5 class=\"modal-title\" id=\"exampleModalLabel\"> ";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "titre", [], "any", false, false, false, 40), "html", null, true);
+            echo " </h5>
+                                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                </div>
+                                <div class=\"modal-body\">
+                                    ";
+            // line 44
+            echo twig_get_attribute($this->env, $this->source, $context["realisation"], "description", [], "any", false, false, false, 44);
+            echo "
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['realisation'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 50
+        echo "
 
             </div>
 
-            <div class=\"row mt-5\">
-                <div class=\"col text-center\">
-                    <div class=\"block-27\">
-                        <ul>
-                            <li><a href=\"#\">&lt;</a></li>
-                            <li class=\"active\"><span>1</span></li>
-                            <li><a href=\"#\">2</a></li>
-                            <li><a href=\"#\">3</a></li>
-                            <li><a href=\"#\">4</a></li>
-                            <li><a href=\"#\">5</a></li>
-                            <li><a href=\"#\">&gt;</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            ";
+        // line 54
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["realisations"]) || array_key_exists("realisations", $context) ? $context["realisations"] : (function () { throw new RuntimeError('Variable "realisations" does not exist.', 54, $this->source); })()));
+        echo "
 
         </div>
     </section>
@@ -153,7 +180,7 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
 
     public function getDebugInfo()
     {
-        return array (  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  157 => 54,  151 => 50,  139 => 44,  132 => 40,  120 => 31,  116 => 29,  112 => 27,  106 => 25,  104 => 24,  101 => 23,  97 => 22,  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -179,43 +206,39 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
         <div class=\"container\">
             <div class=\"row\">
 
-                <div class=\"col-md-4\">
-                    <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(/build/img/project-1.jpg);\">
-                        <div class=\"overlay\"></div>
-                        <div class=\"text text-center p-4\">
-                            <h3><a href=\"#\">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
+                {% for realisation in realisations %}
+                    <div class=\"col-md-4\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
+                        {% if realisation.filename != \"empty.jpg\" %}
+                            <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url({{ vich_uploader_asset(realisation,\"images\") }});\">
+                        {% else %}
+                            <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(http://via.placeholder.com/1000x600);\">
+                        {% endif %}
+                            <div class=\"overlay\"></div>
+                            <div class=\"text text-center p-4\">
+                                <span>{{ realisation.titre }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- Modal -->
+                    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                        <div class=\"modal-dialog\">
+                            <div class=\"modal-content\">
+                                <div class=\"modal-header\">
+                                    <h5 class=\"modal-title\" id=\"exampleModalLabel\"> {{ realisation.titre }} </h5>
+                                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                </div>
+                                <div class=\"modal-body\">
+                                    {{ realisation.description | raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
 
-                <div class=\"col-md-4\">
-                    <div class=\"project img ftco-animate d-flex justify-content-center align-items-center\" style=\"background-image: url(/build/img/project-2.jpg);\">
-                        <div class=\"overlay\"></div>
-                        <div class=\"text text-center p-4\">
-                            <h3><a href=\"#\">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
-            <div class=\"row mt-5\">
-                <div class=\"col text-center\">
-                    <div class=\"block-27\">
-                        <ul>
-                            <li><a href=\"#\">&lt;</a></li>
-                            <li class=\"active\"><span>1</span></li>
-                            <li><a href=\"#\">2</a></li>
-                            <li><a href=\"#\">3</a></li>
-                            <li><a href=\"#\">4</a></li>
-                            <li><a href=\"#\">5</a></li>
-                            <li><a href=\"#\">&gt;</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {{ knp_pagination_render(realisations) }}
 
         </div>
     </section>
