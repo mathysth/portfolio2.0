@@ -29,8 +29,7 @@ class ExperienceController extends AbstractController
             1
         );
 
-        dump($realisationRepository->findAll());
-        return $this->render('pages/experience/realisation.html.twig', [
+        return $this->render('pages/experience.html.twig', [
             'experiences' => $experience,
         ]);
     }

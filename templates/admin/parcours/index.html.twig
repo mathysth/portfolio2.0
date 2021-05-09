@@ -21,7 +21,7 @@
             <tr>
                 <td>{{ parcour.id }}</td>
                 <td>{{ parcour.diplome }}</td>
-                <td>{{ parcour.annee }}</td>
+                <td>{{ parcour.annee | date("m/d/Y")}}</td>
                 <td>{{ parcour.etablissement }}</td>
                 <td>{{ parcour.commune }}</td>
                 <td>

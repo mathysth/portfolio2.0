@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* pages/realisation.html.twig */
+/* pages/experience.html.twig */
 class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa46784c extends Template
 {
     private $source;
@@ -39,12 +39,12 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pages/realisation.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pages/experience.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pages/realisation.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pages/experience.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "pages/realisation.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "pages/experience.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -142,11 +142,19 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
             echo " </h5>
                                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                                 </div>
-                                <div class=\"modal-body\">
+                                <div class=\"modal-body\" style=\"display: block\">
                                     ";
             // line 44
             echo twig_get_attribute($this->env, $this->source, $context["realisation"], "description", [], "any", false, false, false, 44);
             echo "
+                                </div>
+                                <div class=\"modal-footer\" style=\"display: block;text-align: center\">
+                                    <a href=\"";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "lien", [], "any", false, false, false, 47), "html", null, true);
+            echo "\" target=\"_blank\"><span style=\"color: #d5c455;font-weight: bold\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "lien", [], "any", false, false, false, 47), "html", null, true);
+            echo "</span></a>
                                 </div>
                             </div>
                         </div>
@@ -156,14 +164,14 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['realisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
+        // line 53
         echo "
 
             </div>
 
             ";
-        // line 54
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["realisations"]) || array_key_exists("realisations", $context) ? $context["realisations"] : (function () { throw new RuntimeError('Variable "realisations" does not exist.', 54, $this->source); })()));
+        // line 57
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["realisations"]) || array_key_exists("realisations", $context) ? $context["realisations"] : (function () { throw new RuntimeError('Variable "realisations" does not exist.', 57, $this->source); })()));
         echo "
 
         </div>
@@ -179,7 +187,7 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
 
     public function getTemplateName()
     {
-        return "pages/realisation.html.twig";
+        return "pages/experience.html.twig";
     }
 
     public function isTraitable()
@@ -189,7 +197,7 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
 
     public function getDebugInfo()
     {
-        return array (  166 => 54,  160 => 50,  148 => 44,  139 => 40,  130 => 36,  122 => 31,  118 => 29,  114 => 27,  108 => 25,  106 => 24,  101 => 23,  97 => 22,  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  174 => 57,  168 => 53,  154 => 47,  148 => 44,  139 => 40,  130 => 36,  122 => 31,  118 => 29,  114 => 27,  108 => 25,  106 => 24,  101 => 23,  97 => 22,  84 => 12,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -236,8 +244,11 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
                                     <h5 class=\"modal-title\" id=\"modal_{{ realisation.id}}Label\"> {{ realisation.titre }} </h5>
                                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                                 </div>
-                                <div class=\"modal-body\">
+                                <div class=\"modal-body\" style=\"display: block\">
                                     {{ realisation.description | raw }}
+                                </div>
+                                <div class=\"modal-footer\" style=\"display: block;text-align: center\">
+                                    <a href=\"{{ realisation.lien }}\" target=\"_blank\"><span style=\"color: #d5c455;font-weight: bold\">{{ realisation.lien }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -251,6 +262,6 @@ class __TwigTemplate_3b2618beecf10c83c1d797cb8073d9c17e97cef0e455c0d0476a2c7eaa4
 
         </div>
     </section>
-{% endblock %}", "pages/realisation.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\pages\\realisation.html.twig");
+{% endblock %}", "pages/experience.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\pages\\experience.html.twig");
     }
 }

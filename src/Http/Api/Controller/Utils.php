@@ -10,14 +10,5 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class Utils{
 
-    /**
-     * @Route("/ajax", name="ajax_request")
-     */
-    public function ajaxAction(Request $request)
-    {
-        if ($request->isXMLHttpRequest()) {
-            return (new ParseResponse(array('data' => 'this is a json response')))->returnApiJsonResponse();
-        }
-        return (new ParseResponse('This is not ajax!'))->returnApiResponse(400);
-    }
+
 }

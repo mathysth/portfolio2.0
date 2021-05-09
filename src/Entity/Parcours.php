@@ -23,7 +23,7 @@ class Parcours
     private $diplome;
 
     /**
-     * @ORM\Column(type="string", length=15)
+     * @ORM\Column(type="date")
      */
     private $annee;
 
@@ -54,17 +54,23 @@ class Parcours
         return $this;
     }
 
-    public function getAnnee(): ?string
+    /**
+     * @return mixed
+     */
+    public function getAnnee()
     {
         return $this->annee;
     }
 
-    public function setAnnee(string $annee): self
+    /**
+     * @param mixed $annee
+     */
+    public function setAnnee($annee): void
     {
         $this->annee = $annee;
-
-        return $this;
     }
+
+    
 
     public function getEtablissement(): ?string
     {

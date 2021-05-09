@@ -117,7 +117,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
             echo "</td>
                 <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "annee", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "annee", [], "any", false, false, false, 24), "m/d/Y"), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
@@ -204,7 +204,7 @@ class __TwigTemplate_e2f42339fbbcd031b03795ba447d9151efc7bf8d62067d94a7243452691
             <tr>
                 <td>{{ parcour.id }}</td>
                 <td>{{ parcour.diplome }}</td>
-                <td>{{ parcour.annee }}</td>
+                <td>{{ parcour.annee | date(\"m/d/Y\")}}</td>
                 <td>{{ parcour.etablissement }}</td>
                 <td>{{ parcour.commune }}</td>
                 <td>

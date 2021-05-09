@@ -21,7 +21,6 @@ return [
         '/admin/competences/new' => [[['_route' => 'admin_competences_new', '_controller' => 'App\\Controller\\Admin\\CompetencesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/experience' => [[['_route' => 'admin_experience_index', '_controller' => 'App\\Controller\\Admin\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/experience/new' => [[['_route' => 'admin_experience_new', '_controller' => 'App\\Controller\\Admin\\ExperienceController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/admin/parcours' => [[['_route' => 'admin_parcours_index', '_controller' => 'App\\Controller\\Admin\\ParcoursController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/parcours/new' => [[['_route' => 'admin_parcours_new', '_controller' => 'App\\Controller\\Admin\\ParcoursController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/presentation' => [[['_route' => 'admin_presentation_index', '_controller' => 'App\\Controller\\Admin\\PresentationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/presentation/new' => [[['_route' => 'admin_presentation_new', '_controller' => 'App\\Controller\\Admin\\PresentationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -31,12 +30,12 @@ return [
         '/admin/realisations/new' => [[['_route' => 'admin_realisation_new', '_controller' => 'App\\Controller\\Admin\\RealisationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/experience' => [[['_route' => 'experience', '_controller' => 'App\\Controller\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/parcours' => [[['_route' => 'admin_parcours_index', '_controller' => 'App\\Controller\\ParcoursController::index'], null, ['GET' => 0], null, true, false, null]],
         '/presentation' => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], null, ['GET' => 0], null, true, false, null]],
         '/realisations' => [[['_route' => 'realisation', '_controller' => 'App\\Controller\\RealisationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/api/http/checkDns' => [[['_route' => 'api_dnsChecker', '_controller' => 'App\\Http\\Api\\Controller\\DnsController::checkDns'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/get' => [[['_route' => 'api_Lang_get', '_controller' => 'App\\Http\\Api\\Controller\\LangController::getCurrentLang'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/set' => [[['_route' => 'api_Lang_set', '_controller' => 'App\\Http\\Api\\Controller\\LangController::setCurrentLang'], null, ['POST' => 0], null, false, false, null]],
-        '/api/http/utils/ajax' => [[['_route' => 'api_ajax_request', '_controller' => 'App\\Http\\Api\\Controller\\Utils::ajaxAction'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
