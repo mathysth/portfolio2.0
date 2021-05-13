@@ -488,6 +488,13 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\PresentationController"/>
       </call>
     </service>
+    <service id="App\Controller\ProduitsController" class="App\Controller\ProduitsController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\ProduitsController"/>
+      </call>
+    </service>
     <service id="App\Controller\RealisationController" class="App\Controller\RealisationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5974,6 +5981,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProduitsController" class="App\Controller\ProduitsController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RealisationController" class="App\Controller\RealisationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6454,6 +6464,13 @@
         <argument key="competencesRepository" type="service" id="App\Repository\CompetencesRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.KrJrL8m" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginator" type="service" id="knp_paginator"/>
+        <argument key="produitsRepository" type="service" id="App\Repository\ProduitsRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.F8KYUgn" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6461,7 +6478,7 @@
         <argument key="realisationRepository" type="service" id="App\Repository\RealisationRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.qN3CPOn" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.a7o6dzZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategorieController::delete" type="service" id=".service_locator.Z8xh0Z9"/>
@@ -6491,6 +6508,7 @@
         <argument key="App\Controller\ExperienceController::index" type="service" id=".service_locator.GGPduTW"/>
         <argument key="App\Controller\ParcoursController::index" type="service" id=".service_locator.Mup1Q1k"/>
         <argument key="App\Controller\PresentationController::show" type="service" id=".service_locator.ti.lzZi"/>
+        <argument key="App\Controller\ProduitsController::index" type="service" id=".service_locator.KrJrL8m"/>
         <argument key="App\Controller\RealisationController::index" type="service" id=".service_locator.F8KYUgn"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
@@ -6525,6 +6543,7 @@
         <argument key="App\Controller\ExperienceController:index" type="service" id=".service_locator.GGPduTW"/>
         <argument key="App\Controller\ParcoursController:index" type="service" id=".service_locator.Mup1Q1k"/>
         <argument key="App\Controller\PresentationController:show" type="service" id=".service_locator.ti.lzZi"/>
+        <argument key="App\Controller\ProduitsController:index" type="service" id=".service_locator.KrJrL8m"/>
         <argument key="App\Controller\RealisationController:index" type="service" id=".service_locator.F8KYUgn"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
@@ -6930,6 +6949,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\ProduitsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitsController"/>
+      <argument>App\Controller\ProduitsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\RealisationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\RealisationController"/>
       <argument>App\Controller\RealisationController</argument>
@@ -7113,12 +7138,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.qN3CPOn"/>
+      <argument type="service" id=".service_locator.a7o6dzZ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.qN3CPOn"/>
+      <argument type="service" id=".service_locator.a7o6dzZ"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -7578,7 +7603,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.qN3CPOn"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.a7o6dzZ"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

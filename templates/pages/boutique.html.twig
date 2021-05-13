@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <section class="hero-wrap hero-wrap-2">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 pt-4 text-center">
+                    <p class="breadcrumbs"><span class="me-2"><a
+                                    href="{{ path('home',{"lang": app.request.get("lang")}) }}">{{ translate('nav_homePage',app.request.get('lang')) }} <i
+                                        class="fa fa-chevron-right"></i></a></p>
+                    <h1 class="mb-0 bread">{{ translate('nav_realisation',app.request.get('lang')) }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-project">
+        <div class="container">
+            <div class="row">
+
+                {% for produit in produits %}
+                <div class="col-md-4">
+                    {% if produit.filename != "empty.jpg" %}
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ vich_uploader_asset(produit,"imageFile") }});">
+                        {% else %}
+                        <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(http://via.placeholder.com/1000x600);">
+                            {% endif %}
+                            <div class="overlay"></div>
+                            <div class="text text-center p-4">
+                                <h3><a href="#">{{ produit.nom }}</a></h3>
+                                <span>{{ produit.prix }} €</span>
+                                <form action="{{ path('api_addToBasket') }}" method="post">
+                                    <input type="hidden" name="productId" value="{{ produit.id }}">
+                                    <input type="submit" value="Ajouter au panier">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+
+                {{ knp_pagination_render(produits) }}
+
+            </div>
+    </section>
+{% endblock %}

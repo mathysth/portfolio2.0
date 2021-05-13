@@ -11,7 +11,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 '/',
             ],
             'name' => [
-                'admin_parcours_index',
+                'parcours',
             ],
             'methods' => [
                 [

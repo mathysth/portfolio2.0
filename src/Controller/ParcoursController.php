@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ParcoursController extends AbstractController
 {
     /**
-     * @Route("/", name="admin_parcours_index", methods={"GET"})
+     * @Route("/", name="parcours", methods={"GET"})
      */
     public function index(ParcoursRepository $parcoursRepository,PaginatorInterface $paginator,Request $request): Response
     {

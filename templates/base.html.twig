@@ -61,7 +61,7 @@
                 <li class="nav-item"><a class="nav-link active" href="{{ path('presentation') }}">{{ translate('nav_aboutPage') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('realisation') }}">{{ translate('nav_realisation') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('experience') }}">{{ translate('nav_experiencePage') }}</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_parcour') }}</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path('parcours') }}">{{ translate('nav_parcour') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_blogPage') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="{{ path('home') }}">{{ translate('nav_shopPage') }}</a></li>
                 <li class="nav-item"><a class="nav-link active" href="mailto:{{ translate('email') }}">{{ translate('contactMe') }}</a></li>
@@ -73,16 +73,16 @@
     {% block body %} {%  endblock %}
 
 <!-- Button trigger modal -->
-<button type="button" class="changeLang" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="changeLang" data-bs-toggle="modal" data-bs-target="#langChange">
     <i class="fas fa-language fa-3x"></i>
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="langChange" tabindex="-1" aria-labelledby="langChangeLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Changement de Langue</h5>
+                <h5 class="modal-title" id="langChangeLabel">Changement de Langue</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
