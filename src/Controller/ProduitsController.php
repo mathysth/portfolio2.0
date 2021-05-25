@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProduitsController extends AbstractController
 {
     /**
-     * @Route("/", name="admin_produits_index", methods={"GET"})
+     * @Route("/", name="boutique", methods={"GET"})
      */
     public function index(ProduitsRepository $produitsRepository, Request $request, PaginatorInterface $paginator): Response
     {
@@ -29,6 +29,7 @@ class ProduitsController extends AbstractController
 
         return $this->render('pages/boutique.html.twig', [
             'produits' => $produit,
+            'current_menu' => "boutique"
         ]);
     }
 

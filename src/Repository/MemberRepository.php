@@ -19,6 +19,20 @@ class MemberRepository extends ServiceEntityRepository
         parent::__construct($registry, Member::class);
     }
 
+    public function resetMemberPassword(string $password, Member $member)
+    {
+        try {
+            $conn = $this->getEntityManager()->getConnection();
+            $sql = 'UPDATE member SET member.password = :password WHERE member.id = :memberid';
+
+            $stmt = $conn->prepare($sql);
+            $res = $stmt->execute(['password' => $password, 'memberid' => $member->getId()]);
+            return $res;
+        } catch (\Exception $e) {
+            return $e;
+        }
+    }
+
     // /**
     //  * @return Member[] Returns an array of Member objects
     //  */
@@ -47,4 +61,5 @@ class MemberRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }

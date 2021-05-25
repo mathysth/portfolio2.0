@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for message in app.flashes('info') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <div class="col-lg-12">
+                <!--author box-->
+                <div class="author-bio mb-50 p-30 border-radius-10 bg-grey mt-50 pb-50">
+                    <div class="author-image mb-30">
+                        <a href="#"><img src="/build/assets/imgs/thumb.png" alt="" class="avatar"></a>
+                    </div>
+                    <div class="author-info">
+                        <h3 class="font-weight-900"><span class="vcard author"><span class="fn"><a href="#"
+                                                                                                   title="Pseudo"
+                                                                                                   rel="author">{{ app.user.pseudo | capitalize }}</a></span></span>
+                        </h3>
+                        <h5 class="text-muted">Informations</h5>
+                        <div class="author-description text-muted">
+                            <div class="row">
+                                <div class="col-lg-4 pb-20">
+                                    <strong>Email :</strong> <small> {{ app.user.email }} </small><br/>
+                                    <strong>Role :</strong> <small> <code> Admin </code> </small>
+                                </div>
+                                <div class="col-lg-4" id="passwordAsker">
+                                    <strong style="text-decoration: underline"><a onclick="showResetForm()" style="color: black !important;">Changer votre mot de passe</a></strong><br/>
+                                </div>
+                                <div class="col-lg-4" id="hidden" style="display: none">
+                                    <form method="post" id="passwordForm" action="{{ path('admin_member_reset', {'id': app.user.id}) }}"
+                                          onsubmit="return confirm('Est-vous sûr de vouloir changer votre mot de passe?');">
+                                        <input type="hidden" name="_method" value="RESET">
+                                        <input type="password" name="_password" id="password" onfocusout="validateFirstPassword()" placeholder="votre nouveau mot de passe" class="form-control mb-10">
+                                        <input type="password" name="_reassword" id="repassword" onfocusout="validatePassword()" placeholder="veuillez repeter votre mot de passe" class="form-control mb-10">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('reset' ~ app.user.id) }}">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        let password = document.getElementById("password");
+        let repassword = document.getElementById("repassword");
+        let form = document.getElementById('passwordForm');
+        let count = 0;
+        function validatePassword(){
+            if (password.value == "" && repassword.value == "" || password.value.length < 6 && repassword.value.length < 6){
+                alert("Merci de rentrer un mot de passe valide, minimum 6 caractères ");
+            }else{
+                if (password.value === repassword.value){
+                    if (count == 0){
+                        count = 1;
+                        let btn = document.createElement("BUTTON");
+                        btn.className = 'btn btn-outline-info';
+                        btn.id = "submitButton";
+                        btn.innerText = "Modifier"
+                        form.append(btn);
+                    }
+                }else{
+                    count = 0;
+                    let button = document.getElementById('submitButton');
+                    try {
+                        form.removeChild(button);
+                    }catch (e){
+                        console.log(e)
+                    }
+                    alert("Vos mots de passe ne corresponde pas");
+                }
+            }
+        }
+
+        function validateFirstPassword(){
+            if (password.value == "" && repassword.value == "" || password.value.length < 6 && repassword.value.length < 6){
+                alert("Merci de rentrer un mot de passe valide, minimum 6 caractères ");
+            }else{
+                if (password.value === repassword.value){
+                    if (count == 0){
+                        count = 1;
+                        let btn = document.createElement("BUTTON");
+                        btn.className = 'btn btn-outline-info';
+                        btn.id = "submitButton";
+                        btn.innerText = "Modifier"
+                        form.append(btn);
+                    }
+                }else{
+                    count = 0;
+                    if (document.getElementById('submitButton')){
+                        let button = document.getElementById('submitButton');
+                        try {
+                            form.removeChild(button);
+                        }catch (e){
+
+                        }
+                    }
+                }
+            }
+        }
+        function showResetForm(){
+            let passwordAsker = document.getElementById("passwordAsker");
+            let hiddenDiv = document.getElementById('hidden');
+            hiddenDiv.style.transition = "all 1s";
+            hiddenDiv.style.display = "block";
+            passwordAsker.style.display = "none";
+        }
+    </script>
+{% endblock %}

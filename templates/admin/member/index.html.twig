@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Member index{% endblock %}
+
+{% block body %}
+    <div class="container single-content">
+        <div class="entry-header entry-header-style-1 mb-50 pt-50">
+            <h1 class="entry-title mb-50 font-weight-900 text-center">
+                Gérer les administrateurs
+            </h1>
+
+            {% for message in app.flashes('info') %}
+                <div class="alert alert-info">
+                    {{ message | raw }}
+                </div>
+            {% endfor %}
+        </div>
+        <article class="entry-wraper mb-50">
+            <div class="entry-main-content">
+                <table class="table table-responsive">
+                    <thead>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Email</th>
+                        <th>Power</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for member in members %}
+                        <tr>
+                            <td>{{ member.pseudo }}</td>
+                            <td>{{ member.email }}</td>
+                            <td>{{ member.currentRole }}</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="btn btn-outline-info"
+                                           href="{{ path('admin_member_edit', {'id': member.id}) }}">edit</a>
+                                    </div>
+                                    <div class="col">
+                                        {% include '/admin/member/_delete_form.html.twig' %}
+                                    </div>
+                                    <div class="col">
+                                        <form method="post" action="{{ path('admin_member_reset', {'id': member.id}) }}"
+                                              onsubmit="return confirm('Are you sure you want to delete this item?');">
+                                            <input type="hidden" name="_method" value="RESET">
+                                            <input type="hidden" name="_token"
+                                                   value="{{ csrf_token('reset' ~ member.id) }}">
+                                            <button class="btn btn-outline-info">Réinitialiser le mot de passe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="7">Aucun membre trouvé</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pagination-area mb-30 wow fadeInUp  animated"
+                         style="visibility: visible; animation-name: fadeInUp;">
+                        {{ knp_pagination_render(members) }}
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="{{ path('admin_member_new') }}" class="btn btn-outline-info">Ajouter un membre</a>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

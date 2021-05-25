@@ -25,7 +25,8 @@ class RealisationController extends AbstractController
             6
         );
         return $this->render('pages/realisation.html.twig', [
-            'realisations' => $realisations
+            'realisations' => $realisations,
+            'current_menu' => "realisation"
         ]);
     }
 

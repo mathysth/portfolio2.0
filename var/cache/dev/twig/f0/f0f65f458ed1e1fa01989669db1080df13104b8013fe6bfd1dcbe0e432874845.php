@@ -115,63 +115,93 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
             <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 60
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 60, $this->source); })()), "home")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 61
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 61, $this->source); })()), "about")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("presentation");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_aboutPage"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 62
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 62, $this->source); })()), "realisation")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("realisation");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_realisation"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 63
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 63, $this->source); })()), "experience")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("experience");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_experiencePage"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 64
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 64, $this->source); })()), "parcour")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("parcours");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_parcour"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+                <li class=\"nav-item\"><a class=\"nav-link ";
         // line 65
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_blogPage"), "html", null, true);
-        echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
-        // line 66
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        if ((array_key_exists("current_menu", $context) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 65, $this->source); })()), "boutique")))) {
+            echo " active ";
+        }
+        echo "\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("boutique");
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_shopPage"), "html", null, true);
         echo "</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"mailto:";
-        // line 67
+                <li class=\"nav-item\"><a class=\"nav-link \" href=\"mailto:";
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("email"), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("contactMe"), "html", null, true);
         echo "</a></li>
-            </ul>
+                ";
+        // line 67
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 67, $this->source); })()), "user", [], "any", false, false, false, 67)) {
+            // line 68
+            echo "                    <li class=\"nav-item\"><a class=\"nav-link active\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_logout"), "html", null, true);
+            echo "</a></li>
+                ";
+        }
+        // line 70
+        echo "            </ul>
         </div>
     </div>
 </nav>
 
     ";
-        // line 73
+        // line 75
         $this->displayBlock('body', $context, $blocks);
-        // line 74
+        // line 76
         echo "
 <!-- Button trigger modal -->
 <button type=\"button\" class=\"changeLang\" data-bs-toggle=\"modal\" data-bs-target=\"#langChange\">
@@ -252,7 +282,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
                 currentLang.setLang();
                 /** Mise en place de la langue au niveau de l'api **/
                 sendAjaxRequest(\"";
-        // line 153
+        // line 155
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_Lang_set")), "html", null, true);
         echo "\", \"html\", {lang: currentLang.getCurrentLang()}).then(function (e) {
                     console.log(\"Changement de langue effectué avec succès\");
@@ -264,7 +294,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         }
 
         sendAjaxRequest(\"";
-        // line 162
+        // line 164
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_Lang_get")), "html", null, true);
         echo "\", \"html\").then(function (data) {
             console.log(data);
@@ -280,9 +310,9 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
     </script>
 
     ";
-        // line 175
+        // line 177
         $this->displayBlock('script', $context, $blocks);
-        // line 176
+        // line 178
         echo "</div>
 </body>
 </html>
@@ -334,7 +364,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     }
 
-    // line 73
+    // line 75
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -353,7 +383,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     }
 
-    // line 175
+    // line 177
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -383,7 +413,7 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
 
     public function getDebugInfo()
     {
-        return array (  357 => 175,  338 => 73,  317 => 45,  299 => 43,  286 => 176,  284 => 175,  268 => 162,  256 => 153,  175 => 74,  173 => 73,  162 => 67,  156 => 66,  150 => 65,  144 => 64,  138 => 63,  132 => 62,  126 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
+        return array (  387 => 177,  368 => 75,  347 => 45,  329 => 43,  316 => 178,  314 => 177,  298 => 164,  286 => 155,  205 => 76,  203 => 75,  196 => 70,  188 => 68,  186 => 67,  180 => 66,  170 => 65,  160 => 64,  150 => 63,  140 => 62,  130 => 61,  120 => 60,  110 => 53,  106 => 52,  96 => 45,  93 => 44,  91 => 43,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -447,14 +477,16 @@ class __TwigTemplate_b613a1704b20ada8df46c7387a403b851f71db4ff8d3f4755f4f36fc2a8
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
             <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_homePage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('presentation') }}\">{{ translate('nav_aboutPage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('realisation') }}\">{{ translate('nav_realisation') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('experience') }}\">{{ translate('nav_experiencePage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('parcours') }}\">{{ translate('nav_parcour') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_blogPage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('home') }}\">{{ translate('nav_shopPage') }}</a></li>
-                <li class=\"nav-item\"><a class=\"nav-link active\" href=\"mailto:{{ translate('email') }}\">{{ translate('contactMe') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"home\" %} active {% endif %}\" href=\"{{ path('home') }}\">{{ translate('nav_homePage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"about\" %} active {% endif %}\" href=\"{{ path('presentation') }}\">{{ translate('nav_aboutPage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"realisation\" %} active {% endif %}\" href=\"{{ path('realisation') }}\">{{ translate('nav_realisation') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"experience\" %} active {% endif %}\" href=\"{{ path('experience') }}\">{{ translate('nav_experiencePage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"parcour\" %} active {% endif %}\" href=\"{{ path('parcours') }}\">{{ translate('nav_parcour') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link {% if current_menu is defined and current_menu == \"boutique\" %} active {% endif %}\" href=\"{{ path('boutique') }}\">{{ translate('nav_shopPage') }}</a></li>
+                <li class=\"nav-item\"><a class=\"nav-link \" href=\"mailto:{{ translate('email') }}\">{{ translate('contactMe') }}</a></li>
+                {% if app.user %}
+                    <li class=\"nav-item\"><a class=\"nav-link active\" href=\"{{ path('logout') }}\">{{ translate('nav_logout') }}</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>

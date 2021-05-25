@@ -26,29 +26,6 @@ class TranslationsUtils
 
 
     /**
-     * @return bool
-     */
-    public function verifyIsLangSupported()
-    {
-        $isSupported = true;
-        for ($i = 0; $i < count($this->supportedLang); $i++) {
-            if (self::getCurrentLang() == $this->supportedLang[$i]) {
-                $isSupported = true;
-                break;
-            } else {
-                $isSupported = false;
-            }
-        }
-
-
-        if (!$isSupported) {
-            return false;
-        }else{
-            return true;
-        }
-    }
-
-    /**
      * @return array
      */
     private function getJsonOfFilesInFolder(): array
@@ -81,6 +58,8 @@ class TranslationsUtils
     }
 
     /**
+     * Retourne la chaine de caractères liée à la clé demandée
+     *
      * @param $key
      * @param Request $request
      * @return mixed|string

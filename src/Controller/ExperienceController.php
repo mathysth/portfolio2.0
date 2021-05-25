@@ -31,6 +31,7 @@ class ExperienceController extends AbstractController
 
         return $this->render('pages/experience.html.twig', [
             'experiences' => $experience,
+            'current_menu' => "experience"
         ]);
     }
 }

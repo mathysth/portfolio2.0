@@ -4,11 +4,14 @@ namespace App\Entity;
 
 use App\Repository\MemberRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Exception;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * @ORM\Entity(repositoryClass=MemberRepository::class)
  */
-class Member
+class Member implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id
@@ -41,6 +44,11 @@ class Member
      * @ORM\Column(type="boolean")
      */
     private $isAdmin = 0;
+
+    public function __construct()
+    {
+        $this->register_date = new \DateTime();
+    }
 
     public function getId(): ?int
     {
@@ -105,5 +113,49 @@ class Member
         $this->isAdmin = $isAdmin;
 
         return $this;
+    }
+
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->pseudo,
+            $this->email,
+            $this->password,
+            $this->register_date,
+            $this->isAdmin
+        ]);
+    }
+
+    public function unserialize($data)
+    {
+        list(
+            $this->id,
+            $this->pseudo,
+            $this->email,
+            $this->password,
+            $this->register_date,
+            $this->isAdmin
+            ) = unserialize($data, ['allow_classes' => true]);
+    }
+
+    public function getRoles(): array
+    {
+        return ['ROLE_ADMIN'];
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getUsername()
+    {
+        // TODO: Implement getUsername() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }

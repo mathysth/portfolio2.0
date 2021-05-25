@@ -78,7 +78,7 @@ class __TwigTemplate_124ce179d9b8623dc17f688eed65842e23ee0b531d15c9245c9ab9c8163
         echo "</span>
                         <h1 class=\"mb-4\">";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("Hello"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("ownerFullName"), "html", null, true);
         echo "</h1>
                         <p>
                             <a href=\"";
@@ -174,7 +174,7 @@ class __TwigTemplate_124ce179d9b8623dc17f688eed65842e23ee0b531d15c9245c9ab9c8163
                 <div class=\"col-lg-6 text d-flex align-items-start align-items-sm-center\">
                     <div class=\"desc mt-4 mt-md-0\">
                         <span class=\"subheading\">{{ translate('desiredProfession') }}</span>
-                        <h1 class=\"mb-4\">{{ translate('Hello') }}</h1>
+                        <h1 class=\"mb-4\">{{ translate('ownerFullName') }}</h1>
                         <p>
                             <a href=\"{{ path('presentation') }}\" class=\"btn btn-primary p-4 py-3\">{{ translate('moreAboutMe') }} <span class=\"ion-ios-arrow-round-forward\"></span></a>
                             <a href=\"mailto:{{ translate('email') }}\" class=\"btn btn-white p-4 py-3\">{{ translate('contactMe') }} <span class=\"ion-ios-arrow-round-forward\"></span></a>

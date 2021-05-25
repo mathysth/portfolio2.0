@@ -28,6 +28,7 @@ class ParcoursController extends AbstractController
         );
         return $this->render('pages/parcours.html.twig', [
             'parcours' => $parcours,
+            'current_menu' => "parcour"
         ]);
     }
 

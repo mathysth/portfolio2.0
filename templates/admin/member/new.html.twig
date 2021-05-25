@@ -1,0 +1,19 @@
+{% extends "/base.html.twig" %}
+{% block title "Ajouter un administrateur" %}
+{% block body %}
+    <div class="container pt-80 pb-50">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="login_wrap widget-taber-content p-30 bg-white border-radius-10">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1 text-center">
+                            <small><strong>Mot de passe par défaut:</strong> AirGuyaneGF97300</small>
+                            <h3 class="mb-30 font-weight-900">Ajouter un administrateur</h3>
+                        </div>
+                        {{ include('admin/member/_form.html.twig', {button_label: "Ajouter l'administrateur"}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

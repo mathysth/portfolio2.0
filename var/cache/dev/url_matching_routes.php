@@ -21,19 +21,20 @@ return [
         '/admin/competences/new' => [[['_route' => 'admin_competences_new', '_controller' => 'App\\Controller\\Admin\\CompetencesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/experience' => [[['_route' => 'admin_experience_index', '_controller' => 'App\\Controller\\Admin\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/experience/new' => [[['_route' => 'admin_experience_new', '_controller' => 'App\\Controller\\Admin\\ExperienceController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/member' => [[['_route' => 'admin_member_index', '_controller' => 'App\\Controller\\Admin\\MemberController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/member/new' => [[['_route' => 'admin_member_new', '_controller' => 'App\\Controller\\Admin\\MemberController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/profil' => [[['_route' => 'admin_member_profil', '_controller' => 'App\\Controller\\Admin\\MemberController::profil'], null, null, null, false, false, null]],
         '/admin/parcours' => [[['_route' => 'admin_parcours_index', '_controller' => 'App\\Controller\\Admin\\ParcoursController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/parcours/new' => [[['_route' => 'admin_parcours_new', '_controller' => 'App\\Controller\\Admin\\ParcoursController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/presentation' => [[['_route' => 'admin_presentation_index', '_controller' => 'App\\Controller\\Admin\\PresentationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/presentation/new' => [[['_route' => 'admin_presentation_new', '_controller' => 'App\\Controller\\Admin\\PresentationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/produits' => [[['_route' => 'admin_produits_index', '_controller' => 'App\\Controller\\Admin\\ProduitsController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/produits/new' => [[['_route' => 'admin_produits_new', '_controller' => 'App\\Controller\\Admin\\ProduitsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/realisations' => [[['_route' => 'admin_realisation_index', '_controller' => 'App\\Controller\\Admin\\RealisationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/realisations/new' => [[['_route' => 'admin_realisation_new', '_controller' => 'App\\Controller\\Admin\\RealisationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/experience' => [[['_route' => 'experience', '_controller' => 'App\\Controller\\ExperienceController::index'], null, ['GET' => 0], null, true, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
-        '/parcours' => [[['_route' => 'parcours', '_controller' => 'App\\Controller\\ParcoursController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/presentation' => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], null, ['GET' => 0], null, true, false, null]],
-        '/boutique' => [[['_route' => 'admin_produits_index', '_controller' => 'App\\Controller\\ProduitsController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/realisations' => [[['_route' => 'realisation', '_controller' => 'App\\Controller\\RealisationController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/api/basket/addBasket' => [[['_route' => 'api_addToBasket', '_controller' => 'App\\Http\\Api\\Controller\\BasketController::addToBasket'], null, ['POST' => 0], null, false, false, null]],
+        '/api/basket/deleteFromBasket' => [[['_route' => 'api_deleteFromBasket', '_controller' => 'App\\Http\\Api\\Controller\\BasketController::deleteFromBasket'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/checkDns' => [[['_route' => 'api_dnsChecker', '_controller' => 'App\\Http\\Api\\Controller\\DnsController::checkDns'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/get' => [[['_route' => 'api_Lang_get', '_controller' => 'App\\Http\\Api\\Controller\\LangController::getCurrentLang'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/set' => [[['_route' => 'api_Lang_set', '_controller' => 'App\\Http\\Api\\Controller\\LangController::setCurrentLang'], null, ['POST' => 0], null, false, false, null]],
@@ -76,26 +77,44 @@ return [
                         .'|/edit(*:345)'
                         .'|(*:353)'
                     .')'
+                    .'|member/edit/([^/]++)(*:382)'
+                .')'
+                .'|/([^/]++)(*:400)'
+                .'|/admin/(?'
+                    .'|re(?'
+                        .'|set/([^/]++)(*:435)'
+                        .'|alisations/([^/]++)(?'
+                            .'|/edit(*:470)'
+                            .'|(*:478)'
+                        .')'
+                    .')'
                     .'|p(?'
                         .'|arcours/([^/]++)(?'
-                            .'|/edit(*:390)'
-                            .'|(*:398)'
+                            .'|/edit(*:516)'
+                            .'|(*:524)'
                         .')'
                         .'|r(?'
                             .'|esentation/([^/]++)(?'
-                                .'|/edit(*:438)'
-                                .'|(*:446)'
+                                .'|/edit(*:564)'
+                                .'|(*:572)'
                             .')'
                             .'|oduits/([^/]++)(?'
-                                .'|/edit(*:478)'
-                                .'|(*:486)'
+                                .'|/edit(*:604)'
+                                .'|(*:612)'
                             .')'
                         .')'
                     .')'
-                    .'|realisations/([^/]++)(?'
-                        .'|/edit(*:526)'
-                        .'|(*:534)'
-                    .')'
+                .')'
+                .'|/experience(*:635)'
+                .'|/p(?'
+                    .'|arcours(*:655)'
+                    .'|resentation(*:674)'
+                .')'
+                .'|/boutique(*:692)'
+                .'|/realisations(*:713)'
+                .'|/log(?'
+                    .'|in(*:730)'
+                    .'|out(*:741)'
                 .')'
             .')/?$}sDu',
     ],
@@ -115,15 +134,25 @@ return [
         307 => [[['_route' => 'admin_competences_delete', '_controller' => 'App\\Controller\\Admin\\CompetencesController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         345 => [[['_route' => 'admin_experience_edit', '_controller' => 'App\\Controller\\Admin\\ExperienceController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         353 => [[['_route' => 'admin_experience_delete', '_controller' => 'App\\Controller\\Admin\\ExperienceController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        390 => [[['_route' => 'admin_parcours_edit', '_controller' => 'App\\Controller\\Admin\\ParcoursController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        398 => [[['_route' => 'admin_parcours_delete', '_controller' => 'App\\Controller\\Admin\\ParcoursController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        438 => [[['_route' => 'admin_presentation_edit', '_controller' => 'App\\Controller\\Admin\\PresentationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        446 => [[['_route' => 'admin_presentation_delete', '_controller' => 'App\\Controller\\Admin\\PresentationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        478 => [[['_route' => 'admin_produits_edit', '_controller' => 'App\\Controller\\Admin\\ProduitsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        486 => [[['_route' => 'admin_produits_delete', '_controller' => 'App\\Controller\\Admin\\ProduitsController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        526 => [[['_route' => 'admin_realisation_edit', '_controller' => 'App\\Controller\\Admin\\RealisationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        534 => [
-            [['_route' => 'admin_realisation_delete', '_controller' => 'App\\Controller\\Admin\\RealisationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        382 => [[['_route' => 'admin_member_edit', '_controller' => 'App\\Controller\\Admin\\MemberController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        400 => [[['_route' => 'admin_member_delete', '_controller' => 'App\\Controller\\Admin\\MemberController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        435 => [[['_route' => 'admin_member_reset', '_controller' => 'App\\Controller\\Admin\\MemberController::resetPassword'], ['id'], ['RESET' => 0], null, false, true, null]],
+        470 => [[['_route' => 'admin_realisation_edit', '_controller' => 'App\\Controller\\Admin\\RealisationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        478 => [[['_route' => 'admin_realisation_delete', '_controller' => 'App\\Controller\\Admin\\RealisationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        516 => [[['_route' => 'admin_parcours_edit', '_controller' => 'App\\Controller\\Admin\\ParcoursController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        524 => [[['_route' => 'admin_parcours_delete', '_controller' => 'App\\Controller\\Admin\\ParcoursController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        564 => [[['_route' => 'admin_presentation_edit', '_controller' => 'App\\Controller\\Admin\\PresentationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        572 => [[['_route' => 'admin_presentation_delete', '_controller' => 'App\\Controller\\Admin\\PresentationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        604 => [[['_route' => 'admin_produits_edit', '_controller' => 'App\\Controller\\Admin\\ProduitsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        612 => [[['_route' => 'admin_produits_delete', '_controller' => 'App\\Controller\\Admin\\ProduitsController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        635 => [[['_route' => 'experience', '_controller' => 'App\\Controller\\ExperienceController::index'], [], ['GET' => 0], null, true, false, null]],
+        655 => [[['_route' => 'parcours', '_controller' => 'App\\Controller\\ParcoursController::index'], [], ['GET' => 0], null, true, false, null]],
+        674 => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], [], ['GET' => 0], null, true, false, null]],
+        692 => [[['_route' => 'boutique', '_controller' => 'App\\Controller\\ProduitsController::index'], [], ['GET' => 0], null, true, false, null]],
+        713 => [[['_route' => 'realisation', '_controller' => 'App\\Controller\\RealisationController::index'], [], ['GET' => 0], null, true, false, null]],
+        730 => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], [], null, null, false, false, null]],
+        741 => [
+            [['_route' => 'logout'], [], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

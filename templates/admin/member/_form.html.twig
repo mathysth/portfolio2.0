@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+{% if "Modifier" in button_label %}
+    {% set row_attr = {'attr': {
+        'class': 'form-control',
+        "readonly" : true
+    }} %}
+{% else %}
+    {% set row_attr = {'attr': {
+        'class': 'form-control'
+    }} %}
+{% endif %}
+
+<div class="form-group col">
+    {{ form_row(form.pseudo,row_attr) }}
+</div>
+<div class="form-group col">
+    {{ form_row(form.email,row_attr ) }}
+</div>
+<div class="form-group col">
+    {{ form_row(form.power) }}
+</div>
+<button type="submit" class="button button-contactForm btn-block">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

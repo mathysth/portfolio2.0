@@ -30,10 +30,8 @@
                             <div class="text text-center p-4">
                                 <h3><a href="#">{{ produit.nom }}</a></h3>
                                 <span>{{ produit.prix }} €</span>
-                                <form action="{{ path('api_addToBasket') }}" method="post">
-                                    <input type="hidden" name="productId" value="{{ produit.id }}">
-                                    <input type="submit" value="Ajouter au panier">
-                                </form>
+                                <a class="btn btn-primary d-block px-2 py-3" onclick="addToBasket({{ produit.id }})">Ajouter au panier</a>
+
                             </div>
                         </div>
                     </div>
@@ -46,4 +44,24 @@
 
             </div>
     </section>
+{% endblock %}
+{% block script %}
+    <script>
+        async function addToBasket(productId){
+            const value = await swal("Veuillez entrer une quantité", {
+                content: "input",
+            });
+
+            if (value > 0 && Number.isInteger(parseInt(value)) && Number.isInteger(parseInt(productId))){
+                swal(`You typed: ${value}`);
+                let data = {
+                    productId,
+                    value
+                };
+                sendAjaxRequest("{{ path('api_addToBasket') | setApiCorrectLinkFormat }}","html",data)
+            }else{
+                swal('veuillez entrer une valeur positif');
+            }
+        }
+    </script>
 {% endblock %}

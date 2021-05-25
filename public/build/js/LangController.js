@@ -34,6 +34,7 @@ class LangController{
     }
 
     isLangSupported(){
+        /*
         let error = false;
         for (let i = 0; i < this.supportedLang.length; i++){
             if (this.currentLang === this.supportedLang[i]){
@@ -46,6 +47,9 @@ class LangController{
         if (error){
             return false;
         }
+        */
+        return this.supportedLang.includes(this.currentLang);
+
     }
 }
 

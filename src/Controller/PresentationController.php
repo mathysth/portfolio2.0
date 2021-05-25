@@ -23,7 +23,8 @@ class PresentationController extends AbstractController
     {
         return $this->render('pages/presentation.html.twig',[
             'categoryCompetence' => $categoriesRepository->findAll(),
-            'competence' => $competencesRepository->findAll()
+            'competence' => $competencesRepository->findAll(),
+            'current_menu' => "about"
         ]);
     }
 }
