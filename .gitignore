@@ -18,3 +18,5 @@
 
 # Upload
 public/build/upload/
+vendor/
+var/
