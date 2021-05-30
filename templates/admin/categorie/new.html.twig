@@ -3,9 +3,13 @@
 {% block title %}New Categorie{% endblock %}
 
 {% block body %}
-    <h1>Create new Categorie</h1>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <h1>Créer une categorie</h1>
 
-    {{ include('admin/categorie/_form.html.twig') }}
+            {{ include('admin/categorie/_form.html.twig') }}
 
-    <a href="{{ path('admin_categorie_index') }}">back to list</a>
+            <a href="{{ path('admin_categorie_index') }}">Retourner à la liste</a>
+        </div>
+    </section>
 {% endblock %}

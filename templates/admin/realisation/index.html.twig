@@ -3,15 +3,15 @@
 {% block title %}Realisation index{% endblock %}
 
 {% block body %}
-    <h1>Realisation index</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Realisation</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>Images</th>
-                <th>Description</th>
                 <th>Lien</th>
                 <th>actions</th>
             </tr>
@@ -21,8 +21,6 @@
             <tr>
                 <td>{{ realisation.id }}</td>
                 <td>{{ realisation.titre }}</td>
-                <td>{{ realisation.images }}</td>
-                <td>{{ realisation.description }}</td>
                 <td>{{ realisation.lien }}</td>
                 <td>
                     <a href="{{ path('admin_realisation_edit', {'id': realisation.id}) }}">edit</a>
@@ -36,5 +34,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_realisation_new') }}">Create new</a>
+    <a href="{{ path('admin_realisation_new') }}">Créer une nouvelle réalisation</a>
+    </div>
+</section>
 {% endblock %}

@@ -85,17 +85,21 @@ class __TwigTemplate_d8552bd3a487ce736c3ff821bcdac2889f6722170a55bf51d91c548eeff
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Realisation</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Créer une nouvelle réalisation</h1>
 
     ";
-        // line 8
-        echo twig_include($this->env, $context, "admin/experience/_form.html.twig");
+        // line 10
+        echo twig_include($this->env, $context, "admin/realisation/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_index");
         echo "\">back to list</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +121,7 @@ class __TwigTemplate_d8552bd3a487ce736c3ff821bcdac2889f6722170a55bf51d91c548eeff
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +131,15 @@ class __TwigTemplate_d8552bd3a487ce736c3ff821bcdac2889f6722170a55bf51d91c548eeff
 {% block title %}New Realisation{% endblock %}
 
 {% block body %}
-    <h1>Create new Realisation</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Créer une nouvelle réalisation</h1>
 
-    {{ include('admin/experience/_form.html.twig') }}
+    {{ include('admin/realisation/_form.html.twig') }}
 
     <a href=\"{{ path('admin_realisation_index') }}\">back to list</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/realisation/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\new.html.twig");
     }

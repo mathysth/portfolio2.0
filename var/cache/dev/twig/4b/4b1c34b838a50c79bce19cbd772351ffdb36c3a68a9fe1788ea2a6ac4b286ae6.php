@@ -85,7 +85,9 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Experience index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Experience</h1>
 
     <table class=\"table\">
         <thead>
@@ -103,49 +105,49 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
         </thead>
         <tbody>
         ";
-        // line 23
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["experiences"]) || array_key_exists("experiences", $context) ? $context["experiences"] : (function () { throw new RuntimeError('Variable "experiences" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["experiences"]) || array_key_exists("experiences", $context) ? $context["experiences"] : (function () { throw new RuntimeError('Variable "experiences" does not exist.', 25, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["experience"]) {
-            // line 24
+            // line 26
             echo "            <tr>
                 <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "libelle", [], "any", false, false, false, 26), "html", null, true);
-            echo "</td>
-                <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "societe", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "typeContrat", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "libelle", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>";
             // line 29
-            ((twig_get_attribute($this->env, $this->source, $context["experience"], "startDate", [], "any", false, false, false, 29)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "startDate", [], "any", false, false, false, 29), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "societe", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                 <td>";
             // line 30
-            ((twig_get_attribute($this->env, $this->source, $context["experience"], "endDate", [], "any", false, false, false, 30)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "endDate", [], "any", false, false, false, 30), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "typeContrat", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
                 <td>";
             // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "description", [], "any", false, false, false, 31), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["experience"], "startDate", [], "any", false, false, false, 31)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "startDate", [], "any", false, false, false, 31), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
             // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "location", [], "any", false, false, false, 32), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["experience"], "endDate", [], "any", false, false, false, 32)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "endDate", [], "any", false, false, false, 32), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</td>
+                <td>";
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "description", [], "any", false, false, false, 33), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["experience"], "location", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["experience"], "id", [], "any", false, false, false, 36)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -153,7 +155,7 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 38
+            // line 40
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -162,14 +164,16 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['experience'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 44
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 45
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_new");
         echo "\">Create new</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -191,7 +195,7 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
 
     public function getDebugInfo()
     {
-        return array (  171 => 45,  166 => 42,  157 => 38,  148 => 34,  143 => 32,  139 => 31,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  173 => 47,  168 => 44,  159 => 40,  150 => 36,  145 => 34,  141 => 33,  137 => 32,  133 => 31,  129 => 30,  125 => 29,  121 => 28,  117 => 27,  114 => 26,  109 => 25,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -201,7 +205,9 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
 {% block title %}Experience index{% endblock %}
 
 {% block body %}
-    <h1>Experience index</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Experience</h1>
 
     <table class=\"table\">
         <thead>
@@ -241,6 +247,8 @@ class __TwigTemplate_cddcd359212e10af209ba1ceae603340a95bea462dba1d70220c724fdd0
     </table>
 
     <a href=\"{{ path('admin_experience_new') }}\">Create new</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/experience/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\experience\\index.html.twig");
     }

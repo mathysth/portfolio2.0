@@ -85,17 +85,21 @@ class __TwigTemplate_51ab2e94b3b7b1775966b08d010bf74c7617ae21e485313073ec630beba
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Categorie</h1>
+        echo "    <section class=\"ftco-section bg-light\">
+        <div class=\"container\">
+            <h1>Créer une categorie</h1>
 
-    ";
-        // line 8
+            ";
+        // line 10
         echo twig_include($this->env, $context, "admin/categorie/_form.html.twig");
         echo "
 
-    <a href=\"";
-        // line 10
+            <a href=\"";
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_index");
-        echo "\">back to list</a>
+        echo "\">Retourner à la liste</a>
+        </div>
+    </section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +121,7 @@ class __TwigTemplate_51ab2e94b3b7b1775966b08d010bf74c7617ae21e485313073ec630beba
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +131,15 @@ class __TwigTemplate_51ab2e94b3b7b1775966b08d010bf74c7617ae21e485313073ec630beba
 {% block title %}New Categorie{% endblock %}
 
 {% block body %}
-    <h1>Create new Categorie</h1>
+    <section class=\"ftco-section bg-light\">
+        <div class=\"container\">
+            <h1>Créer une categorie</h1>
 
-    {{ include('admin/categorie/_form.html.twig') }}
+            {{ include('admin/categorie/_form.html.twig') }}
 
-    <a href=\"{{ path('admin_categorie_index') }}\">back to list</a>
+            <a href=\"{{ path('admin_categorie_index') }}\">Retourner à la liste</a>
+        </div>
+    </section>
 {% endblock %}", "admin/categorie/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\new.html.twig");
     }
 }

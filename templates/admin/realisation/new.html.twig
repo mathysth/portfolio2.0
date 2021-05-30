@@ -3,9 +3,13 @@
 {% block title %}New Realisation{% endblock %}
 
 {% block body %}
-    <h1>Create new Realisation</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Créer une nouvelle réalisation</h1>
 
-    {{ include('admin/experience/_form.html.twig') }}
+    {{ include('admin/realisation/_form.html.twig') }}
 
     <a href="{{ path('admin_realisation_index') }}">back to list</a>
+    </div>
+</section>
 {% endblock %}

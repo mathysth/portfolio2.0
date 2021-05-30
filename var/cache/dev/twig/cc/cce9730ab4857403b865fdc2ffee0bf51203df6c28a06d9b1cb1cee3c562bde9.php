@@ -85,7 +85,9 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>CompetencesCategories index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Compétences Categorie</h1>
 
     <table class=\"table\">
         <thead>
@@ -97,25 +99,25 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
         </thead>
         <tbody>
         ";
-        // line 17
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["competences_categories"]) || array_key_exists("competences_categories", $context) ? $context["competences_categories"] : (function () { throw new RuntimeError('Variable "competences_categories" does not exist.', 17, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["competences_categories"]) || array_key_exists("competences_categories", $context) ? $context["competences_categories"] : (function () { throw new RuntimeError('Variable "competences_categories" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["competences_category"]) {
-            // line 18
+            // line 20
             echo "            <tr>
                 <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 19), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competences_category"], "nom", [], "any", false, false, false, 20), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competences_category"], "nom", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competences_category"], "id", [], "any", false, false, false, 24)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -123,7 +125,7 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 26
+            // line 28
             echo "            <tr>
                 <td colspan=\"3\">no records found</td>
             </tr>
@@ -132,14 +134,16 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['competences_category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 32
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 33
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_new");
         echo "\">Create new</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -161,7 +165,7 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
 
     public function getDebugInfo()
     {
-        return array (  141 => 33,  136 => 30,  127 => 26,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  143 => 35,  138 => 32,  129 => 28,  120 => 24,  115 => 22,  111 => 21,  108 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -171,7 +175,9 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
 {% block title %}CompetencesCategories index{% endblock %}
 
 {% block body %}
-    <h1>CompetencesCategories index</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Compétences Categorie</h1>
 
     <table class=\"table\">
         <thead>
@@ -199,6 +205,8 @@ class __TwigTemplate_5a0a9268b78eac869224a540a3a9936a8e4800e237d770808d6f846e89c
     </table>
 
     <a href=\"{{ path('admin_competences_categories_new') }}\">Create new</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/competences_categories/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences_categories\\index.html.twig");
     }

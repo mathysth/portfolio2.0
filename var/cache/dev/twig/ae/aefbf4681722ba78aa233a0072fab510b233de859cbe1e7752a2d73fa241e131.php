@@ -48,7 +48,7 @@ class __TwigTemplate_788be448db8140b133e5dd0f5ce47d43d051adc726ee424d403ea3e060e
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["competences_category"]) || array_key_exists("competences_category", $context) ? $context["competences_category"] : (function () { throw new RuntimeError('Variable "competences_category" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ";
         
@@ -79,7 +79,7 @@ class __TwigTemplate_788be448db8140b133e5dd0f5ce47d43d051adc726ee424d403ea3e060e
         return new Source("<form method=\"post\" action=\"{{ path('admin_competences_categories_delete', {'id': competences_category.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ competences_category.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ", "admin/competences_categories/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences_categories\\_delete_form.html.twig");
     }

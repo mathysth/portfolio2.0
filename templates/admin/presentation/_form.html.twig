@@ -1,4 +1,43 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group mb-2">
+        <label>Travail : </label>
+        {{ form_widget(form.job) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Ville d'origine : </label>
+        {{ form_widget(form.nativeCountry) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Email</label>
+        {{ form_widget(form.email) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Cv :</label>
+        {{ form_widget(form.cv) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Anniversaire : </label>
+        {{ form_widget(form.birthday) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Texte de présentation</label>
+        {{ form_widget(form.presentationText) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Lettre de motivation : </label>
+        {{ form_widget(form.coverLetter) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Centre d'intérêts :</label>
+        {{ form_widget(form.centerOfInterest) }}
+    </div>
+
+    <button class="btn btn-primary mb-3 mt-3" style="border-radius: 5px;">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

@@ -85,7 +85,9 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Produits index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Produits index</h1>
 
     <table class=\"table\">
         <thead>
@@ -101,41 +103,41 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
         </thead>
         <tbody>
         ";
-        // line 21
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 21, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 23, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 22
+            // line 24
             echo "            <tr>
                 <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "filename", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            ((twig_get_attribute($this->env, $this->source, $context["produit"], "updatedAt", [], "any", false, false, false, 28)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "updatedAt", [], "any", false, false, false, 28), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 28), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "filename", [], "any", false, false, false, 29), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 30
+            ((twig_get_attribute($this->env, $this->source, $context["produit"], "updatedAt", [], "any", false, false, false, 30)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "updatedAt", [], "any", false, false, false, 30), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 30)]), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -143,7 +145,7 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 34
+            // line 36
             echo "            <tr>
                 <td colspan=\"7\">no records found</td>
             </tr>
@@ -152,14 +154,16 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 40
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 41
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_produits_new");
         echo "\">Create new</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -181,7 +185,7 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
 
     public function getDebugInfo()
     {
-        return array (  161 => 41,  156 => 38,  147 => 34,  138 => 30,  133 => 28,  129 => 27,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 43,  158 => 40,  149 => 36,  140 => 32,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -191,6 +195,8 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
 {% block title %}Produits index{% endblock %}
 
 {% block body %}
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
     <h1>Produits index</h1>
 
     <table class=\"table\">
@@ -227,6 +233,8 @@ class __TwigTemplate_2496199378baf839ef07f3a65b30680cb8f89789e92da005f07f588a92d
     </table>
 
     <a href=\"{{ path('admin_produits_new') }}\">Create new</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/produits/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\produits\\index.html.twig");
     }

@@ -65,7 +65,7 @@ class __TwigTemplate_c442870bccc1895b3c54fe91f6a33496dbaf95cb8fbeb8d00facee6865e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Categorie index";
+        echo "Categorie";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,61 +85,66 @@ class __TwigTemplate_c442870bccc1895b3c54fe91f6a33496dbaf95cb8fbeb8d00facee6865e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Categorie index</h1>
+        echo "
+    <section class=\"ftco-section bg-light\">
+        <div class=\"container\">
+            <h1>Categorie</h1>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Libelle</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 17
+            <table class=\"table\">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Libelle</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                ";
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 17, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 20, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 18
-            echo "            <tr>
-                <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 19), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "libelle", [], "any", false, false, false, 20), "html", null, true);
-            echo "</td>
-                <td>
-                    <a href=\"";
+            // line 21
+            echo "                    <tr>
+                        <td>";
             // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "libelle", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                        <td>
+                            <a href=\"";
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\">edit</a>
-                </td>
-            </tr>
-        ";
+                        </td>
+                    </tr>
+                ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 26
-            echo "            <tr>
-                <td colspan=\"3\">no records found</td>
-            </tr>
-        ";
+            // line 29
+            echo "                    <tr>
+                        <td colspan=\"3\">no records found</td>
+                    </tr>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
-        echo "        </tbody>
-    </table>
-
-    <a href=\"";
         // line 33
+        echo "                </tbody>
+            </table>
+
+            <a href=\"";
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorie_new");
         echo "\">Create new</a>
+        </div>
+    </section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -161,44 +166,49 @@ class __TwigTemplate_c442870bccc1895b3c54fe91f6a33496dbaf95cb8fbeb8d00facee6865e
 
     public function getDebugInfo()
     {
-        return array (  141 => 33,  136 => 30,  127 => 26,  118 => 22,  113 => 20,  109 => 19,  106 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  144 => 36,  139 => 33,  130 => 29,  121 => 25,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Categorie index{% endblock %}
+{% block title %}Categorie{% endblock %}
 
 {% block body %}
-    <h1>Categorie index</h1>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Libelle</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for categorie in categories %}
-            <tr>
-                <td>{{ categorie.id }}</td>
-                <td>{{ categorie.libelle }}</td>
-                <td>
-                    <a href=\"{{ path('admin_categorie_edit', {'id': categorie.id}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"3\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <section class=\"ftco-section bg-light\">
+        <div class=\"container\">
+            <h1>Categorie</h1>
 
-    <a href=\"{{ path('admin_categorie_new') }}\">Create new</a>
+            <table class=\"table\">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Libelle</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for categorie in categories %}
+                    <tr>
+                        <td>{{ categorie.id }}</td>
+                        <td>{{ categorie.libelle }}</td>
+                        <td>
+                            <a href=\"{{ path('admin_categorie_edit', {'id': categorie.id}) }}\">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan=\"3\">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href=\"{{ path('admin_categorie_new') }}\">Create new</a>
+        </div>
+    </section>
 {% endblock %}
 ", "admin/categorie/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\categorie\\index.html.twig");
     }

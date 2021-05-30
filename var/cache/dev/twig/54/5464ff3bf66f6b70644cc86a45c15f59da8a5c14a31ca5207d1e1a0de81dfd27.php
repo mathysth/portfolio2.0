@@ -85,22 +85,25 @@ class __TwigTemplate_ec7de8d7045a351370f38a588e93a598a20d42ede3a8c67193a30c6aeff
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Realisation</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Modifier une réalisation</h1>
 
     ";
-        // line 8
-        echo twig_include($this->env, $context, "admin/experience/_form.html.twig", ["button_label" => "Update"]);
+        // line 10
+        echo twig_include($this->env, $context, "admin/realisation/_form.html.twig", ["button_label" => "Update"]);
+        echo "
+    ";
+        // line 11
+        echo twig_include($this->env, $context, "admin/realisation/_delete_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_index");
         echo "\">back to list</a>
-
-    ";
-        // line 12
-        echo twig_include($this->env, $context, "admin/experience/_delete_form.html.twig");
-        echo "
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +125,7 @@ class __TwigTemplate_ec7de8d7045a351370f38a588e93a598a20d42ede3a8c67193a30c6aeff
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +135,16 @@ class __TwigTemplate_ec7de8d7045a351370f38a588e93a598a20d42ede3a8c67193a30c6aeff
 {% block title %}Edit Realisation{% endblock %}
 
 {% block body %}
-    <h1>Edit Realisation</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Modifier une réalisation</h1>
 
-    {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_delete_form.html.twig') }}
 
     <a href=\"{{ path('admin_realisation_index') }}\">back to list</a>
-
-    {{ include('admin/experience/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}
 ", "admin/realisation/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\edit.html.twig");
     }

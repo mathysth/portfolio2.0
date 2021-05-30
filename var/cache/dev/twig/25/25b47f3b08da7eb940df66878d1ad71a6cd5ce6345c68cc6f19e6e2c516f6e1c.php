@@ -65,7 +65,7 @@ class __TwigTemplate_fcdcb38213a2f6cb85fc7a1b3ec9b4b619e8b277d53de369355830bed0f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Edit Parcours";
+        echo "Éditer le parcours";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,22 +85,25 @@ class __TwigTemplate_fcdcb38213a2f6cb85fc7a1b3ec9b4b619e8b277d53de369355830bed0f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Parcours</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Éditer le parcours</h1>
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "admin/parcours/_form.html.twig", ["button_label" => "Update"]);
+        echo "
+    ";
+        // line 11
+        echo twig_include($this->env, $context, "admin/parcours/_delete_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_index");
         echo "\">back to list</a>
-
-    ";
-        // line 12
-        echo twig_include($this->env, $context, "admin/parcours/_delete_form.html.twig");
-        echo "
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,23 +125,26 @@ class __TwigTemplate_fcdcb38213a2f6cb85fc7a1b3ec9b4b619e8b277d53de369355830bed0f
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Edit Parcours{% endblock %}
+{% block title %}Éditer le parcours{% endblock %}
 
 {% block body %}
-    <h1>Edit Parcours</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Éditer le parcours</h1>
 
     {{ include('admin/parcours/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/parcours/_delete_form.html.twig') }}
 
     <a href=\"{{ path('admin_parcours_index') }}\">back to list</a>
-
-    {{ include('admin/parcours/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}
 ", "admin/parcours/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\parcours\\edit.html.twig");
     }

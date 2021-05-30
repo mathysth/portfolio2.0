@@ -85,15 +85,15 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Realisation index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Realisation</h1>
 
     <table class=\"table\">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>Images</th>
-                <th>Description</th>
                 <th>Lien</th>
                 <th>actions</th>
             </tr>
@@ -117,20 +117,12 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
             echo "</td>
                 <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "images", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "description", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "lien", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["realisation"], "lien", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["realisation"], "id", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -138,7 +130,7 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 32
+            // line 30
             echo "            <tr>
                 <td colspan=\"6\">no records found</td>
             </tr>
@@ -147,14 +139,16 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['realisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 34
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 39
+        // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_realisation_new");
-        echo "\">Create new</a>
+        echo "\">Créer une nouvelle réalisation</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -176,7 +170,7 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
 
     public function getDebugInfo()
     {
-        return array (  156 => 39,  151 => 36,  142 => 32,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  148 => 37,  143 => 34,  134 => 30,  125 => 26,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -186,15 +180,15 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
 {% block title %}Realisation index{% endblock %}
 
 {% block body %}
-    <h1>Realisation index</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Realisation</h1>
 
     <table class=\"table\">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>Images</th>
-                <th>Description</th>
                 <th>Lien</th>
                 <th>actions</th>
             </tr>
@@ -204,8 +198,6 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
             <tr>
                 <td>{{ realisation.id }}</td>
                 <td>{{ realisation.titre }}</td>
-                <td>{{ realisation.images }}</td>
-                <td>{{ realisation.description }}</td>
                 <td>{{ realisation.lien }}</td>
                 <td>
                     <a href=\"{{ path('admin_realisation_edit', {'id': realisation.id}) }}\">edit</a>
@@ -219,7 +211,9 @@ class __TwigTemplate_ed9596ea5712fb805844ac64f478db3b2393f66e879da9c6f4e7c9be6af
         </tbody>
     </table>
 
-    <a href=\"{{ path('admin_realisation_new') }}\">Create new</a>
+    <a href=\"{{ path('admin_realisation_new') }}\">Créer une nouvelle réalisation</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/realisation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\realisation\\index.html.twig");
     }

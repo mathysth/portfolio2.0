@@ -34,10 +34,21 @@ use Doctrine\Persistence\ObjectManager;
 /**
  * EntityManager interface
  *
- * @method Mapping\ClassMetadata getClassMetadata($className)
+ * @method Mapping\ClassMetadataFactory getMetadataFactory()
  */
 interface EntityManagerInterface extends ObjectManager
 {
+    /**
+     * {@inheritdoc}
+     *
+     * @psalm-param class-string<T> $className
+     *
+     * @psalm-return EntityRepository<T>
+     *
+     * @template T
+     */
+    public function getRepository($className);
+
     /**
      * Returns the cache API for managing the second level cache regions or NULL if the cache is not enabled.
      *
@@ -155,14 +166,14 @@ interface EntityManagerInterface extends ObjectManager
      *
      * @param string $entityName The name of the entity type.
      * @param mixed  $id         The entity identifier.
+     * @psalm-param class-string<T> $entityName
      *
      * @return object|null The entity reference.
+     * @psalm-return ?T
      *
      * @throws ORMException
      *
      * @template T
-     * @psalm-param class-string<T> $entityName
-     * @psalm-return ?T
      */
     public function getReference($entityName, $id);
 
@@ -305,4 +316,16 @@ interface EntityManagerInterface extends ObjectManager
      * @return bool True, if the EM has a filter collection.
      */
     public function hasFilters();
+
+    /**
+     * {@inheritDoc}
+     *
+     * @psalm-param string|class-string<T> $className
+     *
+     * @return Mapping\ClassMetadata
+     * @psalm-return Mapping\ClassMetadata<T>
+     *
+     * @template T of object
+     */
+    public function getClassMetadata($className);
 }

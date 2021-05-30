@@ -85,7 +85,9 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Parcours index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Parcours index</h1>
 
     <table class=\"table\">
         <thead>
@@ -100,37 +102,37 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["parcours"]) || array_key_exists("parcours", $context) ? $context["parcours"] : (function () { throw new RuntimeError('Variable "parcours" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["parcours"]) || array_key_exists("parcours", $context) ? $context["parcours"] : (function () { throw new RuntimeError('Variable "parcours" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["parcour"]) {
-            // line 21
+            // line 23
             echo "            <tr>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "diplome", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "annee", [], "any", false, false, false, 24), "m/d/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "etablissement", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "diplome", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "commune", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "annee", [], "any", false, false, false, 26), "m/d/Y"), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "etablissement", [], "any", false, false, false, 27), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parcour"], "commune", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["parcour"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -138,7 +140,7 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 32
+            // line 34
             echo "            <tr>
                 <td colspan=\"6\">no records found</td>
             </tr>
@@ -147,14 +149,16 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['parcour'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 38
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 39
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parcours_new");
         echo "\">Create new</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -176,7 +180,7 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
 
     public function getDebugInfo()
     {
-        return array (  156 => 39,  151 => 36,  142 => 32,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 41,  153 => 38,  144 => 34,  135 => 30,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -186,6 +190,8 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
 {% block title %}Parcours index{% endblock %}
 
 {% block body %}
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
     <h1>Parcours index</h1>
 
     <table class=\"table\">
@@ -220,6 +226,8 @@ class __TwigTemplate_a74121ed33e5856aac372d9fa36f9ca9efaef70c4feeca7f3d1a16b6749
     </table>
 
     <a href=\"{{ path('admin_parcours_new') }}\">Create new</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/parcours/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\parcours\\index.html.twig");
     }

@@ -3,11 +3,14 @@
 {% block title %}Edit Experience{% endblock %}
 
 {% block body %}
-    <h1>Edit Experience</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Modifier une experience</h1>
 
     {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/experience/_delete_form.html.twig') }}
 
     <a href="{{ path('admin_experience_index',{"lang": app.request.get('lang')}) }}">back to list</a>
-
-    {{ include('admin/experience/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}

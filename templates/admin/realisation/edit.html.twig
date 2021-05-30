@@ -3,11 +3,14 @@
 {% block title %}Edit Realisation{% endblock %}
 
 {% block body %}
-    <h1>Edit Realisation</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Modifier une réalisation</h1>
 
-    {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/realisation/_delete_form.html.twig') }}
 
     <a href="{{ path('admin_realisation_index') }}">back to list</a>
-
-    {{ include('admin/experience/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}

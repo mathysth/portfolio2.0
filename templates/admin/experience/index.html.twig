@@ -3,7 +3,9 @@
 {% block title %}Experience index{% endblock %}
 
 {% block body %}
-    <h1>Experience index</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Experience</h1>
 
     <table class="table">
         <thead>
@@ -43,4 +45,6 @@
     </table>
 
     <a href="{{ path('admin_experience_new') }}">Create new</a>
+    </div>
+</section>
 {% endblock %}

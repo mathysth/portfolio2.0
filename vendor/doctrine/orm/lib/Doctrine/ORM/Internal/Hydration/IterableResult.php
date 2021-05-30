@@ -39,7 +39,7 @@ class IterableResult implements Iterator
     /** @var int */
     private $_key = -1;
 
-    /** @var object|null */
+    /** @var mixed[]|null */
     private $_current = null;
 
     /**

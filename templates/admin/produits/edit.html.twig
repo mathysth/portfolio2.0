@@ -3,11 +3,14 @@
 {% block title %}Edit Produits{% endblock %}
 
 {% block body %}
-    <h1>Edit Produits</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Editer produits</h1>
 
     {{ include('admin/produits/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/produits/_delete_form.html.twig') }}
 
     <a href="{{ path('admin_produits_index') }}">back to list</a>
-
-    {{ include('admin/produits/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}

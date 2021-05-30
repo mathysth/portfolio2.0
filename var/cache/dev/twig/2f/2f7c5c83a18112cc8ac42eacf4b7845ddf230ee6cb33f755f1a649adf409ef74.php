@@ -48,7 +48,7 @@ class __TwigTemplate_7cce75b220a1d1cf9e996b5745dd8a774268b73f7cb5a716ca1f20a4155
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["experience"]) || array_key_exists("experience", $context) ? $context["experience"] : (function () { throw new RuntimeError('Variable "experience" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ";
         
@@ -79,7 +79,7 @@ class __TwigTemplate_7cce75b220a1d1cf9e996b5745dd8a774268b73f7cb5a716ca1f20a4155
         return new Source("<form method=\"post\" action=\"{{ path('admin_experience_delete', {'id': experience.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ experience.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ", "admin/experience/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\experience\\_delete_form.html.twig");
     }

@@ -1,13 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Parcours{% endblock %}
+{% block title %}Éditer le parcours{% endblock %}
 
 {% block body %}
-    <h1>Edit Parcours</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Éditer le parcours</h1>
 
     {{ include('admin/parcours/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/parcours/_delete_form.html.twig') }}
 
     <a href="{{ path('admin_parcours_index') }}">back to list</a>
-
-    {{ include('admin/parcours/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}

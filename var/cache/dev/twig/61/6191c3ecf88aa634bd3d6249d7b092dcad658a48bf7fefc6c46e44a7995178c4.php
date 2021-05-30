@@ -85,47 +85,74 @@ class __TwigTemplate_b8e40ed4685a37013cddb570312b351a11998e9d564e4be395bdb5912f2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"container pt-80 pb-50\">
-        <div class=\"row justify-content-center\">
-            <div class=\"col-xl-6 col-md-10\">
-                <div class=\"login_wrap widget-taber-content p-30 bg-white border-radius-10\">
-                    <div class=\"padding_eight_all bg-white\">
-                        <div class=\"heading_s1 text-center\">
-                            <h3 class=\"mb-30 font-weight-900\">Connexion</h3>
-                            ";
+        echo "
+
+    <section class=\"hero-wrap hero-wrap-2\">
+        <div class=\"overlay\"></div>
+        <div class=\"container\">
+            <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
+                <div class=\"col-md-9 pt-5 text-center\">
+                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"";
         // line 13
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 13, $this->source); })())) {
-            // line 14
-            echo "                                <div class=\"alert alert-danger\">
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">Home <i class=\"fa fa-chevron-right\"></i></a></span> <span>Security <i class=\"fa fa-chevron-right\"></i></span></p>
+                    <h1 class=\"mb-0 bread\">Connexion</h1>
+                </div>
+            </div>
+        </div>
+    </section>-
+
+    <section class=\"ftco-section bg-light\">
+        <div class=\"d-flex justify-content-center\">
+            <div class=\"row no-gutters justify-content-center\">
+                <div class=\"col-md-12\">
+                    <div class=\"wrapper\">
+                        <div class=\"row g-0\">
+                            <div class=\"col-lg-12\">
+                                <div class=\"contact-wrap w-100 p-md-5 p-4\">
                                     ";
-            // line 15
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })()), "messageKey", [], "any", false, false, false, 15), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })()), "messagedata", [], "any", false, false, false, 15), "security"), "html", null, true);
-            echo "
-                                </div>
-                            ";
+        // line 28
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 28, $this->source); })())) {
+            // line 29
+            echo "                                        <p class=\"mb-4 alert alert-danger\">";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 29, $this->source); })()), "messageKey", [], "any", false, false, false, 29), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 29, $this->source); })()), "messagedata", [], "any", false, false, false, 29), "security"), "html", null, true);
+            echo "</p>
+                                    ";
         }
-        // line 18
-        echo "                        </div>
-                        <form action=\"";
-        // line 19
+        // line 31
+        echo "
+                                    <form action=\"";
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\" method=\"post\">
-                            <div class=\"form-group\">
-                                <input type=\"text\" required=\"\" class=\"form-control\" name=\"_username\" placeholder=\"Nom d'utilisateur\">
-                            </div>
-                            <div class=\"form-group\">
-                                <input class=\"form-control\" required=\"\" type=\"password\" name=\"_password\" placeholder=\"Password\">
-                            </div>
-                            <div class=\"form-group\">
-                                <button type=\"submit\" class=\"button button-contactForm btn-block\">Connexion</button>
-                            </div>
-                        </form>
+                                        <div class=\"row\">
+                                            <div class=\"col-md-12 mb-2\">
+                                                <div class=\"form-group\">
+                                                    <input type=\"text\" required style=\"border-radius: 10px;\"  class=\"form-control\" name=\"_username\" placeholder=\"Nom d'utilisateur\">
+                                                </div>
+                                            </div>
+                                            <div class=\"col-md-12 mb-3\">
+                                                <div class=\"form-group\">
+                                                    <input class=\"form-control\" required style=\"border-radius: 10px;\" type=\"password\" name=\"_password\" placeholder=\"Password\">
+                                                </div>
+                                            </div>
+                                            <div class=\"col-md-12\">
+                                                <div class=\"form-group\">
+                                                    <button type=\"submit\" style=\"border-radius: 5px;\" class=\"btn btn-primary\">Connexion</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -147,7 +174,7 @@ class __TwigTemplate_b8e40ed4685a37013cddb570312b351a11998e9d564e4be395bdb5912f2
 
     public function getDebugInfo()
     {
-        return array (  111 => 19,  108 => 18,  102 => 15,  99 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 32,  123 => 31,  117 => 29,  115 => 28,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -157,36 +184,61 @@ class __TwigTemplate_b8e40ed4685a37013cddb570312b351a11998e9d564e4be395bdb5912f2
 {% block title 'Se connecter' %}
 
 {% block body %}
-    <div class=\"container pt-80 pb-50\">
-        <div class=\"row justify-content-center\">
-            <div class=\"col-xl-6 col-md-10\">
-                <div class=\"login_wrap widget-taber-content p-30 bg-white border-radius-10\">
-                    <div class=\"padding_eight_all bg-white\">
-                        <div class=\"heading_s1 text-center\">
-                            <h3 class=\"mb-30 font-weight-900\">Connexion</h3>
-                            {% if error %}
-                                <div class=\"alert alert-danger\">
-                                    {{ error.messageKey | trans(error.messagedata, 'security') }}
-                                </div>
-                            {% endif %}
-                        </div>
-                        <form action=\"{{ path('login') }}\" method=\"post\">
-                            <div class=\"form-group\">
-                                <input type=\"text\" required=\"\" class=\"form-control\" name=\"_username\" placeholder=\"Nom d'utilisateur\">
-                            </div>
-                            <div class=\"form-group\">
-                                <input class=\"form-control\" required=\"\" type=\"password\" name=\"_password\" placeholder=\"Password\">
-                            </div>
-                            <div class=\"form-group\">
-                                <button type=\"submit\" class=\"button button-contactForm btn-block\">Connexion</button>
-                            </div>
-                        </form>
 
+
+    <section class=\"hero-wrap hero-wrap-2\">
+        <div class=\"overlay\"></div>
+        <div class=\"container\">
+            <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
+                <div class=\"col-md-9 pt-5 text-center\">
+                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home') }}\">Home <i class=\"fa fa-chevron-right\"></i></a></span> <span>Security <i class=\"fa fa-chevron-right\"></i></span></p>
+                    <h1 class=\"mb-0 bread\">Connexion</h1>
+                </div>
+            </div>
+        </div>
+    </section>-
+
+    <section class=\"ftco-section bg-light\">
+        <div class=\"d-flex justify-content-center\">
+            <div class=\"row no-gutters justify-content-center\">
+                <div class=\"col-md-12\">
+                    <div class=\"wrapper\">
+                        <div class=\"row g-0\">
+                            <div class=\"col-lg-12\">
+                                <div class=\"contact-wrap w-100 p-md-5 p-4\">
+                                    {% if error %}
+                                        <p class=\"mb-4 alert alert-danger\">{{ error.messageKey | trans(error.messagedata, 'security') }}</p>
+                                    {% endif %}
+
+                                    <form action=\"{{ path('login') }}\" method=\"post\">
+                                        <div class=\"row\">
+                                            <div class=\"col-md-12 mb-2\">
+                                                <div class=\"form-group\">
+                                                    <input type=\"text\" required style=\"border-radius: 10px;\"  class=\"form-control\" name=\"_username\" placeholder=\"Nom d'utilisateur\">
+                                                </div>
+                                            </div>
+                                            <div class=\"col-md-12 mb-3\">
+                                                <div class=\"form-group\">
+                                                    <input class=\"form-control\" required style=\"border-radius: 10px;\" type=\"password\" name=\"_password\" placeholder=\"Password\">
+                                                </div>
+                                            </div>
+                                            <div class=\"col-md-12\">
+                                                <div class=\"form-group\">
+                                                    <button type=\"submit\" style=\"border-radius: 5px;\" class=\"btn btn-primary\">Connexion</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 {% endblock %}
 ", "security/login.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\security\\login.html.twig");
     }

@@ -1,4 +1,23 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group mb-2">
+        <label> Diplome :  </label>
+        {{ form_widget(form.diplome) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Année : </label>
+        {{ form_widget(form.annee) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Établissement </label>
+        {{ form_widget(form.etablissement) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Commune : </label>
+        {{ form_widget(form.commune) }}
+    </div>
+
+    <button class="btn btn-primary  mb-3 mt-3" style="border-radius: 5px;">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

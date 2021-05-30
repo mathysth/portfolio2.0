@@ -1,13 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Categorie{% endblock %}
+{% block title %}Modifié Categorie{% endblock %}
 
 {% block body %}
-    <h1>Edit Categorie</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+        <h1>Modifier une Categorie</h1>
 
-    {{ include('admin/categorie/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('admin/categorie/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('admin/categorie/_delete_form.html.twig') }}
 
-    <a href="{{ path('admin_categorie_index') }}">back to list</a>
-
-    {{ include('admin/categorie/_delete_form.html.twig') }}
+        <a href="{{ path('admin_categorie_index') }}">Retourner à la liste</a>
+    </div>
+</section>
 {% endblock %}

@@ -85,7 +85,9 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "    <h1>Competences index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Competences</h1>
 
     <table class=\"table\">
         <thead>
@@ -99,33 +101,33 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["competences"]) || array_key_exists("competences", $context) ? $context["competences"] : (function () { throw new RuntimeError('Variable "competences" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["competences"]) || array_key_exists("competences", $context) ? $context["competences"] : (function () { throw new RuntimeError('Variable "competences" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["competence"]) {
-            // line 21
+            // line 23
             echo "            <tr>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "nom", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "filename", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "niveauCompetence", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "nom", [], "any", false, false, false, 25), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "filename", [], "any", false, false, false, 26), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["competence"], "niveauCompetence", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["competence"], "id", [], "any", false, false, false, 29)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -133,7 +135,7 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 31
+            // line 33
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -142,14 +144,16 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['competence'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 37
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 38
+        // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_new");
-        echo "\">Create new</a>
+        echo "\">Créer un nouveau</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -171,7 +175,7 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
 
     public function getDebugInfo()
     {
-        return array (  151 => 38,  146 => 35,  137 => 31,  128 => 27,  123 => 25,  119 => 24,  115 => 23,  111 => 22,  108 => 21,  103 => 20,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  153 => 40,  148 => 37,  139 => 33,  130 => 29,  125 => 27,  121 => 26,  117 => 25,  113 => 24,  110 => 23,  105 => 22,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -182,7 +186,9 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
 
 
 {% block body %}
-    <h1>Competences index</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Competences</h1>
 
     <table class=\"table\">
         <thead>
@@ -213,7 +219,9 @@ class __TwigTemplate_d515b3da75b9f0bf393cb0c52640651cdb83a5340ef7e5a6ddc99e9f85f
         </tbody>
     </table>
 
-    <a href=\"{{ path('admin_competences_new') }}\">Create new</a>
+    <a href=\"{{ path('admin_competences_new') }}\">Créer un nouveau</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/competences/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences\\index.html.twig");
     }

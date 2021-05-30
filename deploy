@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -av ./ mathysy@ssh.cluster030.hosting.ovh.net:~/www --include=public/build --include=public/.htaccess --exclude-from=".gitignore"  --exclude=".*"

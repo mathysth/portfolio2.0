@@ -85,22 +85,25 @@ class __TwigTemplate_532e2dc0126a206d339318207bf40c9e62ec4fbf0eb6cb47a00818b3b7f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Experience</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Modifier une experience</h1>
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "admin/experience/_form.html.twig", ["button_label" => "Update"]);
+        echo "
+    ";
+        // line 11
+        echo twig_include($this->env, $context, "admin/experience/_delete_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "request", [], "any", false, false, false, 13), "get", [0 => "lang"], "method", false, false, false, 13)]), "html", null, true);
         echo "\">back to list</a>
-
-    ";
-        // line 12
-        echo twig_include($this->env, $context, "admin/experience/_delete_form.html.twig");
-        echo "
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +125,7 @@ class __TwigTemplate_532e2dc0126a206d339318207bf40c9e62ec4fbf0eb6cb47a00818b3b7f
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +135,16 @@ class __TwigTemplate_532e2dc0126a206d339318207bf40c9e62ec4fbf0eb6cb47a00818b3b7f
 {% block title %}Edit Experience{% endblock %}
 
 {% block body %}
-    <h1>Edit Experience</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Modifier une experience</h1>
 
     {{ include('admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/experience/_delete_form.html.twig') }}
 
     <a href=\"{{ path('admin_experience_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
-
-    {{ include('admin/experience/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}
 ", "admin/experience/edit.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\experience\\edit.html.twig");
     }

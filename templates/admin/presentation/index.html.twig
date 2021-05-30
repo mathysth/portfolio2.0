@@ -3,7 +3,9 @@
 {% block title %}Presentation index{% endblock %}
 
 {% block body %}
-    <h1>Presentation index</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Presentation</h1>
 
     <table class="table">
         <thead>
@@ -13,9 +15,6 @@
                 <th>Job</th>
                 <th>NativeCountry</th>
                 <th>Email</th>
-                <th>PresentationText</th>
-                <th>Cv</th>
-                <th>CoverLetter</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -27,9 +26,6 @@
                 <td>{{ presentation.job }}</td>
                 <td>{{ presentation.nativeCountry }}</td>
                 <td>{{ presentation.email }}</td>
-                <td>{{ presentation.presentationText }}</td>
-                <td>{{ presentation.cv }}</td>
-                <td>{{ presentation.coverLetter }}</td>
                 <td>
                     <a href="{{ path('admin_presentation_edit', {'id': presentation.id}) }}">edit</a>
                 </td>
@@ -42,5 +38,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_presentation_new') }}">Create new</a>
+    <a href="{{ path('admin_presentation_new') }}">Créer un nouveau</a>
+    </div>
+</section>
 {% endblock %}

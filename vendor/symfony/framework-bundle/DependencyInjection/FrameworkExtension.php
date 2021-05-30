@@ -12,6 +12,7 @@
 namespace Symfony\Bundle\FrameworkBundle\DependencyInjection;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
+use Doctrine\Common\Annotations\PsrCachedReader;
 use Doctrine\Common\Annotations\Reader;
 use Http\Client\HttpClient;
 use Psr\Cache\CacheItemPoolInterface;
@@ -166,12 +167,8 @@ use Symfony\Contracts\Service\ServiceSubscriberInterface;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
 
 /**
- * FrameworkExtension.
- *
- * @author Fabien Potencier <fabien@symfony.com>
- * @author Jeremy Mikola <jmikola@gmail.com>
- * @author Kévin Dunglas <dunglas@gmail.com>
- * @author Grégoire Pineau <lyrixx@lyrixx.info>
+ * Process the configuration and prepare the dependency injection container with
+ * parameters and services.
  */
 class FrameworkExtension extends Extension
 {
@@ -392,7 +389,7 @@ class FrameworkExtension extends Extension
 
         $propertyInfoEnabled = $this->isConfigEnabled($container, $config['property_info']);
         $this->registerValidationConfiguration($config['validation'], $container, $loader, $propertyInfoEnabled);
-        $this->registerHttpCacheConfiguration($config['http_cache'], $container);
+        $this->registerHttpCacheConfiguration($config['http_cache'], $container, $config['http_method_override']);
         $this->registerEsiConfiguration($config['esi'], $container, $loader);
         $this->registerSsiConfiguration($config['ssi'], $container, $loader);
         $this->registerFragmentsConfiguration($config['fragments'], $container, $loader);
@@ -580,7 +577,7 @@ class FrameworkExtension extends Extension
         }
     }
 
-    private function registerHttpCacheConfiguration(array $config, ContainerBuilder $container)
+    private function registerHttpCacheConfiguration(array $config, ContainerBuilder $container, bool $httpMethodOverride)
     {
         $options = $config;
         unset($options['enabled']);
@@ -592,6 +589,13 @@ class FrameworkExtension extends Extension
         $container->getDefinition('http_cache')
             ->setPublic($config['enabled'])
             ->replaceArgument(3, $options);
+
+        if ($httpMethodOverride) {
+            $container->getDefinition('http_cache')
+                  ->addArgument((new Definition('void'))
+                      ->setFactory([Request::class, 'enableHttpMethodParameterOverride'])
+                  );
+        }
     }
 
     private function registerEsiConfiguration(array $config, ContainerBuilder $container, PhpFileLoader $loader)
@@ -791,10 +795,6 @@ class FrameworkExtension extends Extension
             $definitionDefinition->addArgument($transitions);
             $definitionDefinition->addArgument($initialMarking);
             $definitionDefinition->addArgument(new Reference(sprintf('%s.metadata_store', $workflowId)));
-            $definitionDefinition->addTag('workflow.definition', [
-                'name' => $name,
-                'type' => $type,
-            ]);
 
             // Create MarkingStore
             if (isset($workflow['marking_store']['type'])) {
@@ -1312,7 +1312,7 @@ class FrameworkExtension extends Extension
 
         if (\array_key_exists('enable_annotations', $config) && $config['enable_annotations']) {
             if (!$this->annotationsConfigEnabled && \PHP_VERSION_ID < 80000) {
-                throw new \LogicException('"enable_annotations" on the validator cannot be set as Doctrine Annotations support is disabled.');
+                throw new \LogicException('"enable_annotations" on the validator cannot be set as the PHP version is lower than 8 and Doctrine Annotations support is disabled. Consider upgrading PHP.');
             }
 
             $validatorBuilder->addMethodCall('enableAnnotationMapping', [true]);
@@ -1423,14 +1423,20 @@ class FrameworkExtension extends Extension
         }
 
         if ('none' !== $config['cache']) {
-            if (!class_exists(\Doctrine\Common\Cache\CacheProvider::class)) {
+            if (class_exists(PsrCachedReader::class)) {
+                $container
+                    ->getDefinition('annotations.cached_reader')
+                    ->setClass(PsrCachedReader::class)
+                    ->replaceArgument(1, new Definition(ArrayAdapter::class))
+                ;
+            } elseif (!class_exists(\Doctrine\Common\Cache\CacheProvider::class)) {
                 throw new LogicException('Annotations cannot be enabled as the Doctrine Cache library is not installed.');
             }
 
             $cacheService = $config['cache'];
 
             if ('php_array' === $config['cache']) {
-                $cacheService = 'annotations.cache';
+                $cacheService = class_exists(PsrCachedReader::class) ? 'annotations.cache_adapter' : 'annotations.cache';
 
                 // Enable warmer only if PHP array is used for cache
                 $definition = $container->findDefinition('annotations.cache_warmer');
@@ -1447,7 +1453,7 @@ class FrameworkExtension extends Extension
                     ->replaceArgument(2, $cacheDir)
                 ;
 
-                $cacheService = 'annotations.filesystem_cache';
+                $cacheService = class_exists(PsrCachedReader::class) ? 'annotations.filesystem_cache_adapter' : 'annotations.filesystem_cache';
             }
 
             $container
@@ -1576,7 +1582,7 @@ class FrameworkExtension extends Extension
         $serializerLoaders = [];
         if (isset($config['enable_annotations']) && $config['enable_annotations']) {
             if (\PHP_VERSION_ID < 80000 && !$this->annotationsConfigEnabled) {
-                throw new \LogicException('"enable_annotations" on the serializer cannot be set as Annotations support is disabled.');
+                throw new \LogicException('"enable_annotations" on the serializer cannot be set as the PHP version is lower than 8 and Annotations support is disabled. Consider upgrading PHP.');
             }
 
             $annotationLoader = new Definition(
@@ -1967,6 +1973,12 @@ class FrameworkExtension extends Extension
                     ->addArgument(true !== $pool['tags'] ? new Reference($pool['tags']) : null)
                     ->setPublic($pool['public'])
                 ;
+
+                if (method_exists(TagAwareAdapter::class, 'setLogger')) {
+                    $container
+                        ->getDefinition($name)
+                        ->addMethodCall('setLogger', [new Reference('logger', ContainerInterface::IGNORE_ON_INVALID_REFERENCE)]);
+                }
 
                 $pool['name'] = $tagAwareId = $name;
                 $pool['public'] = false;

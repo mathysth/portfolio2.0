@@ -85,17 +85,21 @@ class __TwigTemplate_000317e61b118b6a4fa8752be54e5a74ce5bb7e318a627f5dcc31f1993f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Experience</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Create une nouvelle experience</h1>
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "admin/experience/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_experience_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "request", [], "any", false, false, false, 12), "get", [0 => "lang"], "method", false, false, false, 12)]), "html", null, true);
         echo "\">back to list</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +121,7 @@ class __TwigTemplate_000317e61b118b6a4fa8752be54e5a74ce5bb7e318a627f5dcc31f1993f
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +131,15 @@ class __TwigTemplate_000317e61b118b6a4fa8752be54e5a74ce5bb7e318a627f5dcc31f1993f
 {% block title %}New Experience{% endblock %}
 
 {% block body %}
-    <h1>Create new Experience</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Create une nouvelle experience</h1>
 
     {{ include('admin/experience/_form.html.twig') }}
 
     <a href=\"{{ path('admin_experience_index',{\"lang\": app.request.get('lang')}) }}\">back to list</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/experience/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\experience\\new.html.twig");
     }

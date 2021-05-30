@@ -1,4 +1,23 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group mb-2">
+        <label>Titre</label>
+        {{ form_widget(form.titre) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label>Images : </label>
+        {{ form_widget(form.images) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Lien : </label>
+        {{ form_widget(form.lien) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Description : </label>
+        {{ form_widget(form.description) }}
+    </div>
+
+    <button class="btn btn-primary mb-3 mt-3" style="border-radius: 5px">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

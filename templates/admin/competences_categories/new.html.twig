@@ -3,9 +3,13 @@
 {% block title %}New CompetencesCategories{% endblock %}
 
 {% block body %}
-    <h1>Create new CompetencesCategories</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Créer une nouvelle Compétence Catégorie</h1>
 
     {{ include('admin/competences_categories/_form.html.twig') }}
 
     <a href="{{ path('admin_competences_categories_index') }}">back to list</a>
+    </div>
+</section>
 {% endblock %}

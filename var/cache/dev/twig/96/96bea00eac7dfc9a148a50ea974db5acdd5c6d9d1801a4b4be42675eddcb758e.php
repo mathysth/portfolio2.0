@@ -85,7 +85,9 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Presentation index</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Presentation</h1>
 
     <table class=\"table\">
         <thead>
@@ -95,57 +97,42 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
                 <th>Job</th>
                 <th>NativeCountry</th>
                 <th>Email</th>
-                <th>PresentationText</th>
-                <th>Cv</th>
-                <th>CoverLetter</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 23
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["presentations"]) || array_key_exists("presentations", $context) ? $context["presentations"] : (function () { throw new RuntimeError('Variable "presentations" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["presentations"]) || array_key_exists("presentations", $context) ? $context["presentations"] : (function () { throw new RuntimeError('Variable "presentations" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["presentation"]) {
-            // line 24
+            // line 23
             echo "            <tr>
                 <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo "</td>
+                <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "birthday", [], "any", false, false, false, 25), "m/d/Y"), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "birthday", [], "any", false, false, false, 26), "m/d/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "job", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "job", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "nativeCountry", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "nativeCountry", [], "any", false, false, false, 28), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "email", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "presentationText", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "cv", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "coverLetter", [], "any", false, false, false, 32), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presentation"], "email", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["presentation"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -153,7 +140,7 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 38
+            // line 34
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -162,14 +149,16 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['presentation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 38
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 45
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_new");
-        echo "\">Create new</a>
+        echo "\">Créer un nouveau</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -191,7 +180,7 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
 
     public function getDebugInfo()
     {
-        return array (  171 => 45,  166 => 42,  157 => 38,  148 => 34,  143 => 32,  139 => 31,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 41,  153 => 38,  144 => 34,  135 => 30,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -201,7 +190,9 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
 {% block title %}Presentation index{% endblock %}
 
 {% block body %}
-    <h1>Presentation index</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Presentation</h1>
 
     <table class=\"table\">
         <thead>
@@ -211,9 +202,6 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
                 <th>Job</th>
                 <th>NativeCountry</th>
                 <th>Email</th>
-                <th>PresentationText</th>
-                <th>Cv</th>
-                <th>CoverLetter</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -225,9 +213,6 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
                 <td>{{ presentation.job }}</td>
                 <td>{{ presentation.nativeCountry }}</td>
                 <td>{{ presentation.email }}</td>
-                <td>{{ presentation.presentationText }}</td>
-                <td>{{ presentation.cv }}</td>
-                <td>{{ presentation.coverLetter }}</td>
                 <td>
                     <a href=\"{{ path('admin_presentation_edit', {'id': presentation.id}) }}\">edit</a>
                 </td>
@@ -240,7 +225,9 @@ class __TwigTemplate_bce7eb4986d12fef0925c3ef612cef79afb0d179f53f2ab7e6b29cf6008
         </tbody>
     </table>
 
-    <a href=\"{{ path('admin_presentation_new') }}\">Create new</a>
+    <a href=\"{{ path('admin_presentation_new') }}\">Créer un nouveau</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/presentation/index.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\index.html.twig");
     }

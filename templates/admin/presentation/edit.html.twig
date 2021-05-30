@@ -3,11 +3,14 @@
 {% block title %}Edit Presentation{% endblock %}
 
 {% block body %}
+<section class="ftco-section bg-light">
+    <div class="container">
     <h1>Edit Presentation</h1>
 
     {{ include('admin/presentation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/presentation/_delete_form.html.twig') }}
 
     <a href="{{ path('admin_presentation_index') }}">back to list</a>
-
-    {{ include('admin/presentation/_delete_form.html.twig') }}
+    </div>
+</section>
 {% endblock %}

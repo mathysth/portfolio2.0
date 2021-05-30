@@ -85,17 +85,21 @@ class __TwigTemplate_4840cd59e091a65269dc80a90da263c902fa300281e13f1f8e5c9eed0bb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Presentation</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Create new Presentation</h1>
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "admin/presentation/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_presentation_index");
         echo "\">back to list</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +121,7 @@ class __TwigTemplate_4840cd59e091a65269dc80a90da263c902fa300281e13f1f8e5c9eed0bb
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +131,15 @@ class __TwigTemplate_4840cd59e091a65269dc80a90da263c902fa300281e13f1f8e5c9eed0bb
 {% block title %}New Presentation{% endblock %}
 
 {% block body %}
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
     <h1>Create new Presentation</h1>
 
     {{ include('admin/presentation/_form.html.twig') }}
 
     <a href=\"{{ path('admin_presentation_index') }}\">back to list</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/presentation/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\new.html.twig");
     }

@@ -2,7 +2,7 @@
 
 Friendly Symfony paginator to paginate everything
 
-[![Build Status](https://travis-ci.org/KnpLabs/KnpPaginatorBundle.svg?branch=master)](https://travis-ci.org/KnpLabs/KnpPaginatorBundle)
+[![Build Status](https://github.com/KnpLabs/KnpPaginatorBundle/workflows/Build/badge.svg)](https://github.com/KnpLabs/KnpPaginatorBundle/actions)
 
 Generally this bundle is based on [Knp Pager component][knp_component_pager]. This
 component introduces a different way of pagination handling. You can read more about the
@@ -125,6 +125,7 @@ That could be used out of the box in `knp_paginator.template.pagination` key:
 * `@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig`
 * `@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig`
 * `@KnpPaginator/Pagination/twitter_bootstrap_pagination.html.twig`
+* `@KnpPaginator/Pagination/foundation_v6_pagination.html.twig`
 * `@KnpPaginator/Pagination/foundation_v5_pagination.html.twig`
 * `@KnpPaginator/Pagination/bulma_pagination.html.twig`
 * `@KnpPaginator/Pagination/semantic_ui_pagination.html.twig`

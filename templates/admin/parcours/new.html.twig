@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Parcours{% endblock %}
+{% block title %}Nouveau Parcour{% endblock %}
 
 {% block body %}
-    <h1>Create new Parcours</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Créer une nouveau parcour</h1>
 
     {{ include('admin/parcours/_form.html.twig') }}
 
     <a href="{{ path('admin_parcours_index') }}">back to list</a>
+    </div>
+</section>
 {% endblock %}

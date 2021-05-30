@@ -20,17 +20,22 @@
 
 namespace Doctrine\ORM\Mapping;
 
+use Attribute;
+use Doctrine\Common\Annotations\Annotation\NamedArgumentConstructor;
+
 /**
  * @Annotation
+ * @NamedArgumentConstructor()
  * @Target({"PROPERTY","ANNOTATION"})
  */
+#[Attribute(Attribute::TARGET_PROPERTY)]
 final class Column implements Annotation
 {
     /** @var string */
     public $name;
 
     /** @var mixed */
-    public $type = 'string';
+    public $type;
 
     /** @var int */
     public $length;
@@ -52,12 +57,37 @@ final class Column implements Annotation
     /** @var bool */
     public $unique = false;
 
-    /** @var bool */
-    public $nullable = false;
+    /** @var bool|null */
+    public $nullable;
 
-    /** @var array */
+    /** @var array<string,mixed> */
     public $options = [];
 
     /** @var string */
     public $columnDefinition;
+
+    /**
+     * @param array<string,mixed> $options
+     */
+    public function __construct(
+        ?string $name = null,
+        ?string $type = null,
+        ?int $length = null,
+        ?int $precision = null,
+        ?int $scale = null,
+        bool $unique = false,
+        ?bool $nullable = null,
+        array $options = [],
+        ?string $columnDefinition = null
+    ) {
+        $this->name             = $name;
+        $this->type             = $type;
+        $this->length           = $length;
+        $this->precision        = $precision;
+        $this->scale            = $scale;
+        $this->unique           = $unique;
+        $this->nullable         = $nullable;
+        $this->options          = $options;
+        $this->columnDefinition = $columnDefinition;
+    }
 }

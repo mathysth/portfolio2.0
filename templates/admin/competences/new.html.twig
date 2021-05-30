@@ -3,9 +3,13 @@
 {% block title %}New Competences{% endblock %}
 
 {% block body %}
-    <h1>Create new Competences</h1>
+<section class="ftco-section bg-light">
+    <div class="container">
+    <h1>Créer une nouvelle compétence</h1>
 
     {{ include('admin/competences/_form.html.twig') }}
 
     <a href="{{ path('admin_competences_index',{"lang": app.request.get('lang')}) }}">back to list</a>
+    </div>
+</section>
 {% endblock %}

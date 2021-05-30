@@ -48,7 +48,7 @@ class __TwigTemplate_999eb55c15d53ddf89d066763b337da1ee4931faa11008ff5bedd70346c
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["presentation"]) || array_key_exists("presentation", $context) ? $context["presentation"] : (function () { throw new RuntimeError('Variable "presentation" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ";
         
@@ -79,7 +79,7 @@ class __TwigTemplate_999eb55c15d53ddf89d066763b337da1ee4931faa11008ff5bedd70346c
         return new Source("<form method=\"post\" action=\"{{ path('admin_presentation_delete', {'id': presentation.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ presentation.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger\" style=\"border-radius: 5px\">Delete</button>
 </form>
 ", "admin/presentation/_delete_form.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\presentation\\_delete_form.html.twig");
     }

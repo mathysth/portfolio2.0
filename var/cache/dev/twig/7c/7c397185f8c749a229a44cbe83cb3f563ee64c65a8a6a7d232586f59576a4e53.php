@@ -85,17 +85,21 @@ class __TwigTemplate_b8f4c701d5b640c8a5784d5d2d2798bcc2c77244531e517fefa3e488bc1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new CompetencesCategories</h1>
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Créer une nouvelle Compétence Catégorie</h1>
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "admin/competences_categories/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_categories_index");
         echo "\">back to list</a>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +121,7 @@ class __TwigTemplate_b8f4c701d5b640c8a5784d5d2d2798bcc2c77244531e517fefa3e488bc1
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -127,11 +131,15 @@ class __TwigTemplate_b8f4c701d5b640c8a5784d5d2d2798bcc2c77244531e517fefa3e488bc1
 {% block title %}New CompetencesCategories{% endblock %}
 
 {% block body %}
-    <h1>Create new CompetencesCategories</h1>
+<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
+    <h1>Créer une nouvelle Compétence Catégorie</h1>
 
     {{ include('admin/competences_categories/_form.html.twig') }}
 
     <a href=\"{{ path('admin_competences_categories_index') }}\">back to list</a>
+    </div>
+</section>
 {% endblock %}
 ", "admin/competences_categories/new.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\admin\\competences_categories\\new.html.twig");
     }

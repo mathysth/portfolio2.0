@@ -1,4 +1,10 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group">
+        <label>Libellé : </label>
+        {{ form_widget(form.libelle) }}
+    </div>
+
+    <button class="btn btn-primary mb-3 mt-3" style="border-radius: 5px">{{ button_label|default('Save') }}</button>
+
+
 {{ form_end(form) }}

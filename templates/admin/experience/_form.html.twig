@@ -1,4 +1,38 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group mb-2">
+        <label> Libelle : </label>
+        {{ form_widget(form.libelle) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Societe : </label>
+        {{ form_widget(form.societe) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Type contrat : </label>
+        {{ form_widget(form.typeContrat) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Début d'experience : </label>
+        {{ form_widget(form.startDate) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Fin d'experience : </label>
+        {{ form_widget(form.endDate) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Localisation : </label>
+        {{ form_widget(form.location) }}
+    </div>
+
+    <div class="form-group mb-2">
+        <label> Description : </label>
+        {{ form_widget(form.description) }}
+    </div>
+
+    <button class="btn btn-primary mb-3 mt-3" style="border-radius: 5px">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
