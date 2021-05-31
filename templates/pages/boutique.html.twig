@@ -30,7 +30,7 @@
                             <div class="text text-center p-4">
                                 <h3><a href="#">{{ produit.nom }}</a></h3>
                                 <span>{{ produit.prix }} €</span>
-                                <a class="btn btn-primary d-block px-2 py-3" onclick="addToBasket({{ produit.id }})">Ajouter au panier</a>
+                                <a class="btn btn-primary d-block px-2 py-3" onclick="addToBasket({{ produit.id }})">{{ translate('addToBasket') }}</a>
 
                             </div>
                         </div>
@@ -48,19 +48,18 @@
 {% block script %}
     <script>
         async function addToBasket(productId){
-            const value = await swal("Veuillez entrer une quantité", {
+            const value = await swal("{{ translate('enterQuantity') }}", {
                 content: "input",
             });
 
             if (value > 0 && Number.isInteger(parseInt(value)) && Number.isInteger(parseInt(productId))){
-                swal(`You typed: ${value}`);
                 let data = {
                     productId,
                     value
                 };
                 sendAjaxRequest("{{ path('api_addToBasket') | setApiCorrectLinkFormat }}","html",data)
             }else{
-                swal('veuillez entrer une valeur positif');
+                swal('{{ translate("EnterPositiveValue") }}');
             }
         }
     </script>

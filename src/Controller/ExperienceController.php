@@ -26,7 +26,7 @@ class ExperienceController extends AbstractController
         $experience = $paginator->paginate(
             $realisationRepository->findAll(),
             $request->query->get('page',1),
-            1
+            6
         );
 
         return $this->render('pages/experience.html.twig', [

@@ -6639,19 +6639,6 @@
         <argument key="experience" type="service_closure" id=".errored..service_locator.Gk_44A0.App\Entity\Experience"/>
       </argument>
     </service>
-    <service id=".service_locator.GkXnqK9" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="memberRepository" type="service_closure" id="App\Repository\MemberRepository"/>
-        <argument key="paginator" type="service_closure" id="knp_paginator"/>
-      </argument>
-    </service>
-    <service id=".service_locator.GjLTXhJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="member" type="service_closure" id=".errored..service_locator.GjLTXhJ.App\Entity\Member"/>
-      </argument>
-    </service>
     <service id=".service_locator..9.rL3d" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6767,7 +6754,7 @@
         <argument key="session" type="service_closure" id="session"/>
       </argument>
     </service>
-    <service id=".service_locator._5UF7Ao" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.7_9A8CF" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategorieController::delete" type="service_closure" id=".service_locator.Z8xh0Z9"/>
@@ -6782,9 +6769,6 @@
         <argument key="App\Controller\Admin\ExperienceController::delete" type="service_closure" id=".service_locator.Gk_44A0"/>
         <argument key="App\Controller\Admin\ExperienceController::edit" type="service_closure" id=".service_locator.Gk_44A0"/>
         <argument key="App\Controller\Admin\ExperienceController::index" type="service_closure" id=".service_locator.BCSOUec"/>
-        <argument key="App\Controller\Admin\MemberController::delete" type="service_closure" id=".service_locator.GjLTXhJ"/>
-        <argument key="App\Controller\Admin\MemberController::edit" type="service_closure" id=".service_locator.GjLTXhJ"/>
-        <argument key="App\Controller\Admin\MemberController::index" type="service_closure" id=".service_locator.GkXnqK9"/>
         <argument key="App\Controller\Admin\MemberController::resetPassword" type="service_closure" id=".service_locator..9.rL3d"/>
         <argument key="App\Controller\Admin\ParcoursController::delete" type="service_closure" id=".service_locator.qcUgbUp"/>
         <argument key="App\Controller\Admin\ParcoursController::edit" type="service_closure" id=".service_locator.qcUgbUp"/>
@@ -6829,9 +6813,6 @@
         <argument key="App\Controller\Admin\ExperienceController:delete" type="service_closure" id=".service_locator.Gk_44A0"/>
         <argument key="App\Controller\Admin\ExperienceController:edit" type="service_closure" id=".service_locator.Gk_44A0"/>
         <argument key="App\Controller\Admin\ExperienceController:index" type="service_closure" id=".service_locator.BCSOUec"/>
-        <argument key="App\Controller\Admin\MemberController:delete" type="service_closure" id=".service_locator.GjLTXhJ"/>
-        <argument key="App\Controller\Admin\MemberController:edit" type="service_closure" id=".service_locator.GjLTXhJ"/>
-        <argument key="App\Controller\Admin\MemberController:index" type="service_closure" id=".service_locator.GkXnqK9"/>
         <argument key="App\Controller\Admin\MemberController:resetPassword" type="service_closure" id=".service_locator..9.rL3d"/>
         <argument key="App\Controller\Admin\ParcoursController:delete" type="service_closure" id=".service_locator.qcUgbUp"/>
         <argument key="App\Controller\Admin\ParcoursController:edit" type="service_closure" id=".service_locator.qcUgbUp"/>
@@ -7476,12 +7457,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator._5UF7Ao"/>
+      <argument type="service" id=".service_locator.7_9A8CF"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator._5UF7Ao"/>
+      <argument type="service" id=".service_locator.7_9A8CF"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -7511,7 +7492,6 @@
     <service id=".errored..service_locator.yvIznsy.App\Entity\CompetencesCategories" class="App\Entity\CompetencesCategories"/>
     <service id=".errored..service_locator.kvkaJ38.App\Entity\Competences" class="App\Entity\Competences"/>
     <service id=".errored..service_locator.Gk_44A0.App\Entity\Experience" class="App\Entity\Experience"/>
-    <service id=".errored..service_locator.GjLTXhJ.App\Entity\Member" class="App\Entity\Member"/>
     <service id=".errored..service_locator..9.rL3d.App\Entity\Member" class="App\Entity\Member"/>
     <service id=".errored..service_locator.qcUgbUp.App\Entity\Parcours" class="App\Entity\Parcours"/>
     <service id=".errored..service_locator.sIQEE3..App\Entity\Presentation" class="App\Entity\Presentation"/>
@@ -7946,7 +7926,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._5UF7Ao"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.7_9A8CF"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

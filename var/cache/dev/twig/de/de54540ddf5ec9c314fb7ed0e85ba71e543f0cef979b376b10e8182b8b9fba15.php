@@ -127,7 +127,9 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
                                 <a class=\"btn btn-primary d-block px-2 py-3\" onclick=\"addToBasket(";
             // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 33), "html", null, true);
-            echo ")\">Ajouter au panier</a>
+            echo ")\">";
+            echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("addToBasket"), "html", null, true);
+            echo "</a>
 
                             </div>
                         </div>
@@ -171,22 +173,27 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
         // line 49
         echo "    <script>
         async function addToBasket(productId){
-            const value = await swal(\"Veuillez entrer une quantité\", {
+            const value = await swal(\"";
+        // line 51
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("enterQuantity"), "html", null, true);
+        echo "\", {
                 content: \"input\",
             });
 
             if (value > 0 && Number.isInteger(parseInt(value)) && Number.isInteger(parseInt(productId))){
-                swal(`You typed: \${value}`);
                 let data = {
                     productId,
                     value
                 };
                 sendAjaxRequest(\"";
-        // line 61
+        // line 60
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_addToBasket")), "html", null, true);
         echo "\",\"html\",data)
             }else{
-                swal('veuillez entrer une valeur positif');
+                swal('";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("EnterPositiveValue"), "html", null, true);
+        echo "');
             }
         }
     </script>
@@ -211,7 +218,7 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
 
     public function getDebugInfo()
     {
-        return array (  186 => 61,  172 => 49,  162 => 48,  147 => 43,  141 => 39,  129 => 33,  125 => 32,  121 => 31,  117 => 29,  113 => 27,  107 => 25,  105 => 24,  102 => 23,  98 => 22,  85 => 12,  78 => 10,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  195 => 62,  190 => 60,  178 => 51,  174 => 49,  164 => 48,  149 => 43,  143 => 39,  129 => 33,  125 => 32,  121 => 31,  117 => 29,  113 => 27,  107 => 25,  105 => 24,  102 => 23,  98 => 22,  85 => 12,  78 => 10,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -248,7 +255,7 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
                             <div class=\"text text-center p-4\">
                                 <h3><a href=\"#\">{{ produit.nom }}</a></h3>
                                 <span>{{ produit.prix }} €</span>
-                                <a class=\"btn btn-primary d-block px-2 py-3\" onclick=\"addToBasket({{ produit.id }})\">Ajouter au panier</a>
+                                <a class=\"btn btn-primary d-block px-2 py-3\" onclick=\"addToBasket({{ produit.id }})\">{{ translate('addToBasket') }}</a>
 
                             </div>
                         </div>
@@ -266,19 +273,18 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
 {% block script %}
     <script>
         async function addToBasket(productId){
-            const value = await swal(\"Veuillez entrer une quantité\", {
+            const value = await swal(\"{{ translate('enterQuantity') }}\", {
                 content: \"input\",
             });
 
             if (value > 0 && Number.isInteger(parseInt(value)) && Number.isInteger(parseInt(productId))){
-                swal(`You typed: \${value}`);
                 let data = {
                     productId,
                     value
                 };
                 sendAjaxRequest(\"{{ path('api_addToBasket') | setApiCorrectLinkFormat }}\",\"html\",data)
             }else{
-                swal('veuillez entrer une valeur positif');
+                swal('{{ translate(\"EnterPositiveValue\") }}');
             }
         }
     </script>

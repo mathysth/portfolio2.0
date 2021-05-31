@@ -1,7 +1,11 @@
 {
-  "nav_homePage": "Accueil",
-  "nav_aboutPage": "About me",
-  "nav_experiencePage": "Expérience",
+  "nav_homePage": "Home",
+  "nav_aboutPage": "About us",
+  "nav_experiencePage": "Experience",
+  "nav_realisation": "Achievements",
   "nav_blogPage": "Blog",
-  "nav_shopPage": "Boutique"
+  "nav_shopPage": "Store",
+  "nav_parcour": "Tour",
+  "nav_Basket": "Basket",
+  "nav_logout": "Disconnect"
 }

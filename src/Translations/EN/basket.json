@@ -1,0 +1,13 @@
+{
+  "product": "Product",
+  "price": "Price",
+  "quantity": "Quantity",
+  "total": "Total",
+  "AreYouSure": "Are you sure?",
+  "SureDeleteProduct" : "Do you really want to remove the product",
+  "productDeleteSuccess": "Product successfully removed",
+  "paymentError": "Payment error",
+  "paymentNotValid": "The payment has not been validated. Please retry the payment. If the payment still does not work, please contact support",
+  "paymentSuccess": "Successful Payment",
+  "paymentValid": ""
+}

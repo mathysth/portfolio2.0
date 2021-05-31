@@ -26,7 +26,6 @@ class __TwigTemplate_aa71d7cf3d2f917436059b95e5b953c164dd0b0fc6ee6c542d3728dbd68
 
         $this->blocks = [
             'body' => [$this, 'block_body'],
-            'inline_css' => [$this, 'block_inline_css'],
         ];
     }
 
@@ -123,31 +122,6 @@ class __TwigTemplate_aa71d7cf3d2f917436059b95e5b953c164dd0b0fc6ee6c542d3728dbd68
 
     }
 
-    // line 36
-    public function block_inline_css($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "inline_css"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "inline_css"));
-
-        // line 37
-        echo "<style>
-    .hero-wrap .overlay{
-
-    }
-</style>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "pages/home.html.twig";
@@ -160,7 +134,7 @@ class __TwigTemplate_aa71d7cf3d2f917436059b95e5b953c164dd0b0fc6ee6c542d3728dbd68
 
     public function getDebugInfo()
     {
-        return array (  137 => 37,  127 => 36,  92 => 13,  86 => 12,  81 => 10,  77 => 9,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  91 => 13,  85 => 12,  80 => 10,  76 => 9,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -199,13 +173,6 @@ class __TwigTemplate_aa71d7cf3d2f917436059b95e5b953c164dd0b0fc6ee6c542d3728dbd68
             </div>
         </div>
     </section>
-{% endblock %}
-{% block inline_css %}
-<style>
-    .hero-wrap .overlay{
-
-    }
-</style>
 {% endblock %}", "pages/home.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\pages\\home.html.twig");
     }
 }

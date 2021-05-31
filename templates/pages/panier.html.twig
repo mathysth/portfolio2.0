@@ -18,13 +18,18 @@
     <section class="ftco-section ftco-project">
         <div class="container">
             <div class="row">
+                <strong>
+                    {{ translate('identifiant') }} : <br/>
+                    Email : sb-safa23533798@business.example.com <br/>
+                    {{ translate('password') }} : 7/JpV0Oe
+                </strong>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Produit</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Quantité</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">{{ translate("product") }}</th>
+                        <th scope="col">{{ translate("price") }}</th>
+                        <th scope="col">{{ translate("quantity") }}</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,15 +41,15 @@
                             <td>{{ item.item.nom }}</td>
                             <td>{{ item.item.prix }}</td>
                             <td>{{ item.qte }}</td>
-                            <td><button class="btn btn-primary" style="border-radius: 5px;" onclick="alertBeforePush({{ item.item.id }})">Supprimer</button> </td>
+                            <td><button class="btn btn-primary" style="border-radius: 5px;" onclick="alertBeforePush({{ item.item.id }})">{{ translate("delete") }}</button> </td>
                         {% endfor %}
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                Total : {{ total }}
+                <p align="center" style="font-weight: bold;">{{ translate("total") }} : {{ total }} €</p>
                 {% if total > 0 %}
-                <div id="paypal-button" ></div>
+                    <div id="paypal-button" ></div>
                 {% endif %}
             </div>
     </section>
@@ -54,8 +59,8 @@
     <script>
         function alertBeforePush(productId) {
             swal({
-                title: "Etes vous sûr ?",
-                text: "Voulez vous vraiment supprimer le produit",
+                title: "{{ translate("AreYouSure") }}",
+                text: "{{ translate("SureDeleteProduct") }}",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
@@ -74,15 +79,15 @@
                     productId
                 };
                 sendAjaxRequest("{{ path('api_deleteFromBasket') | setApiCorrectLinkFormat }}","html",data).then(function (e){
-                    alertPlugin("Success","Produit supprimé avec succès","success")
+                    alertPlugin("Success","{{translate('productDeleteSuccess')}}","success")
                     setTimeout(function (e){
                         document.location.href = document.location;
                     },1500);
                 }).catch(function(e){
-                    swal('Erreur interne');
+                    swal('{{ translate("internalError") }}');
                 })
             }else{
-                swal('Erreur interne');
+                swal('{{ translate("internalError") }}');
             }
         }
 
@@ -109,14 +114,14 @@
                     payerID: data.payerID
                 }).then(function (data) {
                     if (data === 400) {
-                        alertPlugin("Erreur", "INTERNAL SERVER ERROR : Veuillez contacter le support ", "error");
+                        alertPlugin("Erreur", "{{ translate('internalError') }}", "error");
                     } else {
-                        alertPlugin("Succès Paiement", " Le paiement a été validé. Id de paiement : "+ data.paymentID +". L'id de votre compte Paypal : " + data.payerID, "success");
+                        alertPlugin("{{translate("paymentError")}}", " Le paiement a été validé. Id de paiement : "+ data.paymentID +". L'id de votre compte Paypal : " + data.payerID, "success");
 
                     }
                 }).catch(function (err) {
                     console.log('erreur', err);
-                    alertPlugin("Erreur Paiement", " Le paiement n'a pas été validé. Veuillez retenter le paiement. Si malgré cela le paiement ne fonctionne toujours pas veuillez contacter le support   ", "error");
+                    alertPlugin("{{translate("paymentSuccess")}}", " {{ translate("paymentNotValid") }}", "error");
                 });
             }
         }, '#paypal-button');

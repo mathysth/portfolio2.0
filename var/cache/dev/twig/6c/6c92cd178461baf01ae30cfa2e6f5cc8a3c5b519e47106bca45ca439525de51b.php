@@ -92,77 +92,101 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
     <section class=\"ftco-section ftco-project\">
         <div class=\"container\">
             <div class=\"row\">
+                <strong>
+                    ";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("identifiant"), "html", null, true);
+        echo " : <br/>
+                    Email : sb-safa23533798@business.example.com <br/>
+                    ";
+        // line 24
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("password"), "html", null, true);
+        echo " : 7/JpV0Oe
+                </strong>
                 <table class=\"table\">
                     <thead>
                     <tr>
-                        <th scope=\"col\">Produit</th>
-                        <th scope=\"col\">Prix</th>
-                        <th scope=\"col\">Quantité</th>
-                        <th scope=\"col\">Action</th>
+                        <th scope=\"col\">";
+        // line 29
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("product"), "html", null, true);
+        echo "</th>
+                        <th scope=\"col\">";
+        // line 30
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("price"), "html", null, true);
+        echo "</th>
+                        <th scope=\"col\">";
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("quantity"), "html", null, true);
+        echo "</th>
+                        <th scope=\"col\"></th>
                     </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 31
+        // line 36
         $context["total"] = 0;
-        // line 32
+        // line 37
         echo "                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 32, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 37, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 33
+            // line 38
             echo "                        <tr>
                         ";
-            // line 34
+            // line 39
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["produit"]);
             foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-                // line 35
+                // line 40
                 echo "                            ";
-                $context["total"] = ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 35, $this->source); })()) + (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 35), "prix", [], "any", false, false, false, 35) * twig_get_attribute($this->env, $this->source, $context["item"], "qte", [], "any", false, false, false, 35)));
-                // line 36
+                $context["total"] = ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 40, $this->source); })()) + (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 40), "prix", [], "any", false, false, false, 40) * twig_get_attribute($this->env, $this->source, $context["item"], "qte", [], "any", false, false, false, 40)));
+                // line 41
                 echo "                            <td>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 36), "nom", [], "any", false, false, false, 36), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 41), "nom", [], "any", false, false, false, 41), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 37
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 37), "prix", [], "any", false, false, false, 37), "html", null, true);
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 42), "prix", [], "any", false, false, false, 42), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 38
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "qte", [], "any", false, false, false, 38), "html", null, true);
+                // line 43
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "qte", [], "any", false, false, false, 43), "html", null, true);
                 echo "</td>
                             <td><button class=\"btn btn-primary\" style=\"border-radius: 5px;\" onclick=\"alertBeforePush(";
-                // line 39
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39), "html", null, true);
-                echo ")\">Supprimer</button> </td>
+                // line 44
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item", [], "any", false, false, false, 44), "id", [], "any", false, false, false, 44), "html", null, true);
+                echo ")\">";
+                echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("delete"), "html", null, true);
+                echo "</button> </td>
                         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
+            // line 46
             echo "                        </tr>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 48
         echo "                    </tbody>
                 </table>
-                Total : ";
-        // line 45
-        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 45, $this->source); })()), "html", null, true);
-        echo "
+                <p align=\"center\" style=\"font-weight: bold;\">";
+        // line 50
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("total"), "html", null, true);
+        echo " : ";
+        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 50, $this->source); })()), "html", null, true);
+        echo " €</p>
                 ";
-        // line 46
-        if ((1 === twig_compare((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 46, $this->source); })()), 0))) {
-            // line 47
-            echo "                <div id=\"paypal-button\" ></div>
+        // line 51
+        if ((1 === twig_compare((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 51, $this->source); })()), 0))) {
+            // line 52
+            echo "                    <div id=\"paypal-button\" ></div>
                 ";
         }
-        // line 49
+        // line 54
         echo "            </div>
     </section>
 ";
@@ -174,7 +198,7 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
 
     }
 
-    // line 52
+    // line 57
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -184,13 +208,19 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
 
-        // line 53
+        // line 58
         echo "    <script src=\"https://www.paypalobjects.com/api/checkout.js\"></script>
     <script>
         function alertBeforePush(productId) {
             swal({
-                title: \"Etes vous sûr ?\",
-                text: \"Voulez vous vraiment supprimer le produit\",
+                title: \"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("AreYouSure"), "html", null, true);
+        echo "\",
+                text: \"";
+        // line 63
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("SureDeleteProduct"), "html", null, true);
+        echo "\",
                 icon: \"warning\",
                 buttons: true,
                 dangerMode: true,
@@ -209,18 +239,27 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
                     productId
                 };
                 sendAjaxRequest(\"";
-        // line 76
+        // line 81
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFilterExtension']->setApiCorrectLinkFormat($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_deleteFromBasket")), "html", null, true);
         echo "\",\"html\",data).then(function (e){
-                    alertPlugin(\"Success\",\"Produit supprimé avec succès\",\"success\")
+                    alertPlugin(\"Success\",\"";
+        // line 82
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("productDeleteSuccess"), "html", null, true);
+        echo "\",\"success\")
                     setTimeout(function (e){
                         document.location.href = document.location;
                     },1500);
                 }).catch(function(e){
-                    swal('Erreur interne');
+                    swal('";
+        // line 87
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("internalError"), "html", null, true);
+        echo "');
                 })
             }else{
-                swal('Erreur interne');
+                swal('";
+        // line 90
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("internalError"), "html", null, true);
+        echo "');
             }
         }
 
@@ -238,7 +277,7 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
             },
             payment: function () {
                 return paypal.request.post('";
-        // line 102
+        // line 107
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_paypal_setup");
         echo "').then(function (data) {
                     return data.id;
@@ -246,21 +285,32 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
             },
             onAuthorize: function (data, actions) {
                 return paypal.request.post('";
-        // line 107
+        // line 112
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("api_paypal_confirm");
         echo "', {
                     paymentID: data.paymentID,
                     payerID: data.payerID
                 }).then(function (data) {
                     if (data === 400) {
-                        alertPlugin(\"Erreur\", \"INTERNAL SERVER ERROR : Veuillez contacter le support \", \"error\");
+                        alertPlugin(\"Erreur\", \"";
+        // line 117
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("internalError"), "html", null, true);
+        echo "\", \"error\");
                     } else {
-                        alertPlugin(\"Succès Paiement\", \" Le paiement a été validé. Id de paiement : \"+ data.paymentID +\". L'id de votre compte Paypal : \" + data.payerID, \"success\");
+                        alertPlugin(\"";
+        // line 119
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("paymentError"), "html", null, true);
+        echo "\", \" Le paiement a été validé. Id de paiement : \"+ data.paymentID +\". L'id de votre compte Paypal : \" + data.payerID, \"success\");
 
                     }
                 }).catch(function (err) {
                     console.log('erreur', err);
-                    alertPlugin(\"Erreur Paiement\", \" Le paiement n'a pas été validé. Veuillez retenter le paiement. Si malgré cela le paiement ne fonctionne toujours pas veuillez contacter le support   \", \"error\");
+                    alertPlugin(\"";
+        // line 124
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("paymentSuccess"), "html", null, true);
+        echo "\", \" ";
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("paymentNotValid"), "html", null, true);
+        echo "\", \"error\");
                 });
             }
         }, '#paypal-button');
@@ -286,7 +336,7 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
 
     public function getDebugInfo()
     {
-        return array (  250 => 107,  242 => 102,  213 => 76,  188 => 53,  178 => 52,  166 => 49,  162 => 47,  160 => 46,  156 => 45,  152 => 43,  145 => 41,  137 => 39,  133 => 38,  129 => 37,  124 => 36,  121 => 35,  117 => 34,  114 => 33,  109 => 32,  107 => 31,  85 => 12,  78 => 10,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  310 => 124,  302 => 119,  297 => 117,  289 => 112,  281 => 107,  261 => 90,  255 => 87,  247 => 82,  243 => 81,  222 => 63,  218 => 62,  212 => 58,  202 => 57,  190 => 54,  186 => 52,  184 => 51,  178 => 50,  174 => 48,  167 => 46,  157 => 44,  153 => 43,  149 => 42,  144 => 41,  141 => 40,  137 => 39,  134 => 38,  129 => 37,  127 => 36,  119 => 31,  115 => 30,  111 => 29,  103 => 24,  98 => 22,  85 => 12,  78 => 10,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -311,13 +361,18 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
     <section class=\"ftco-section ftco-project\">
         <div class=\"container\">
             <div class=\"row\">
+                <strong>
+                    {{ translate('identifiant') }} : <br/>
+                    Email : sb-safa23533798@business.example.com <br/>
+                    {{ translate('password') }} : 7/JpV0Oe
+                </strong>
                 <table class=\"table\">
                     <thead>
                     <tr>
-                        <th scope=\"col\">Produit</th>
-                        <th scope=\"col\">Prix</th>
-                        <th scope=\"col\">Quantité</th>
-                        <th scope=\"col\">Action</th>
+                        <th scope=\"col\">{{ translate(\"product\") }}</th>
+                        <th scope=\"col\">{{ translate(\"price\") }}</th>
+                        <th scope=\"col\">{{ translate(\"quantity\") }}</th>
+                        <th scope=\"col\"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -329,15 +384,15 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
                             <td>{{ item.item.nom }}</td>
                             <td>{{ item.item.prix }}</td>
                             <td>{{ item.qte }}</td>
-                            <td><button class=\"btn btn-primary\" style=\"border-radius: 5px;\" onclick=\"alertBeforePush({{ item.item.id }})\">Supprimer</button> </td>
+                            <td><button class=\"btn btn-primary\" style=\"border-radius: 5px;\" onclick=\"alertBeforePush({{ item.item.id }})\">{{ translate(\"delete\") }}</button> </td>
                         {% endfor %}
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                Total : {{ total }}
+                <p align=\"center\" style=\"font-weight: bold;\">{{ translate(\"total\") }} : {{ total }} €</p>
                 {% if total > 0 %}
-                <div id=\"paypal-button\" ></div>
+                    <div id=\"paypal-button\" ></div>
                 {% endif %}
             </div>
     </section>
@@ -347,8 +402,8 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
     <script>
         function alertBeforePush(productId) {
             swal({
-                title: \"Etes vous sûr ?\",
-                text: \"Voulez vous vraiment supprimer le produit\",
+                title: \"{{ translate(\"AreYouSure\") }}\",
+                text: \"{{ translate(\"SureDeleteProduct\") }}\",
                 icon: \"warning\",
                 buttons: true,
                 dangerMode: true,
@@ -367,15 +422,15 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
                     productId
                 };
                 sendAjaxRequest(\"{{ path('api_deleteFromBasket') | setApiCorrectLinkFormat }}\",\"html\",data).then(function (e){
-                    alertPlugin(\"Success\",\"Produit supprimé avec succès\",\"success\")
+                    alertPlugin(\"Success\",\"{{translate('productDeleteSuccess')}}\",\"success\")
                     setTimeout(function (e){
                         document.location.href = document.location;
                     },1500);
                 }).catch(function(e){
-                    swal('Erreur interne');
+                    swal('{{ translate(\"internalError\") }}');
                 })
             }else{
-                swal('Erreur interne');
+                swal('{{ translate(\"internalError\") }}');
             }
         }
 
@@ -402,14 +457,14 @@ class __TwigTemplate_5c3bfaf18edd849b93d77dd916e817d8816d3212181388814ccc6048ee7
                     payerID: data.payerID
                 }).then(function (data) {
                     if (data === 400) {
-                        alertPlugin(\"Erreur\", \"INTERNAL SERVER ERROR : Veuillez contacter le support \", \"error\");
+                        alertPlugin(\"Erreur\", \"{{ translate('internalError') }}\", \"error\");
                     } else {
-                        alertPlugin(\"Succès Paiement\", \" Le paiement a été validé. Id de paiement : \"+ data.paymentID +\". L'id de votre compte Paypal : \" + data.payerID, \"success\");
+                        alertPlugin(\"{{translate(\"paymentError\")}}\", \" Le paiement a été validé. Id de paiement : \"+ data.paymentID +\". L'id de votre compte Paypal : \" + data.payerID, \"success\");
 
                     }
                 }).catch(function (err) {
                     console.log('erreur', err);
-                    alertPlugin(\"Erreur Paiement\", \" Le paiement n'a pas été validé. Veuillez retenter le paiement. Si malgré cela le paiement ne fonctionne toujours pas veuillez contacter le support   \", \"error\");
+                    alertPlugin(\"{{translate(\"paymentSuccess\")}}\", \" {{ translate(\"paymentNotValid\") }}\", \"error\");
                 });
             }
         }, '#paypal-button');

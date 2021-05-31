@@ -1,4 +1,5 @@
 {
+  "nameResult": "Mathys Theolade",
   "nameLabel": "Nom / Prénom",
   "BirthdayLabel": "Date de naissance",
   "BirthdayResult": "29 Octobre 2001",
@@ -8,5 +9,6 @@
   "zipLabel": "Code Postal",
   "zipResult": 34410,
   "skills": "Compétences",
-  "mySkills": "Mes Compétences"
+  "mySkills": "Mes Compétences",
+  "speech": "Bonjour, je m'appel Mathys Theolade j'ai 19 ans et je suis en étude pour devenir développeur DEVOPS"
 }

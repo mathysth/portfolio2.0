@@ -1,0 +1,14 @@
+{
+  "nameResult": "Mathys Theolade",
+  "nameLabel": "Name / First name",
+  "BirthdayLabel": "Date of birth",
+  "BirthdayResult": "October 29, 2001",
+  "AddressLabel": "Address",
+  "AddressResult": "Sérignan",
+  "emailLabel": "Email",
+  "zipLabel": "Postal code",
+  "zipResult": 34410,
+  "skills": "Skills",
+  "mySkills": "My Skills",
+  "speech": "Hello, my name is Mathys Theolade I am 19 years old and I am studying to become a DEVOPS developer"
+}

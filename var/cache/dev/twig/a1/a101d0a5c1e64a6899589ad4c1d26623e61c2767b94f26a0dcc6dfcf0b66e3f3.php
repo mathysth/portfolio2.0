@@ -79,7 +79,10 @@ class __TwigTemplate_5a915d0bb1d916f3e4566fa179a3a7742059e53704c2f466a15d807e898
         echo " <i class=\"fa fa-chevron-right\"></i></a></span> <span>";
         echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("experiencePage"), "html", null, true);
         echo " <i class=\"fa fa-chevron-right\"></i></span></p>
-                    <h1 class=\"mb-0 bread\">Experiences</h1>
+                    <h1 class=\"mb-0 bread\">";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("experiencePage"), "html", null, true);
+        echo "</h1>
                 </div>
             </div>
         </div>
@@ -158,7 +161,7 @@ class __TwigTemplate_5a915d0bb1d916f3e4566fa179a3a7742059e53704c2f466a15d807e898
 
     public function getDebugInfo()
     {
-        return array (  135 => 35,  129 => 31,  119 => 27,  113 => 26,  109 => 25,  103 => 24,  98 => 21,  94 => 20,  76 => 9,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  138 => 35,  132 => 31,  122 => 27,  116 => 26,  112 => 25,  106 => 24,  101 => 21,  97 => 20,  84 => 10,  76 => 9,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -172,7 +175,7 @@ class __TwigTemplate_5a915d0bb1d916f3e4566fa179a3a7742059e53704c2f466a15d807e898
             <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
                 <div class=\"col-md-9 pt-5 text-center\">
                     <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home',{\"lang\": app.request.get('lang')}) }}\"> {{ translate('nav_homePage') }} <i class=\"fa fa-chevron-right\"></i></a></span> <span>{{ translate('experiencePage') }} <i class=\"fa fa-chevron-right\"></i></span></p>
-                    <h1 class=\"mb-0 bread\">Experiences</h1>
+                    <h1 class=\"mb-0 bread\">{{ translate('experiencePage') }}</h1>
                 </div>
             </div>
         </div>

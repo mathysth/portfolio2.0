@@ -32,30 +32,6 @@ class ProduitsRepository extends ServiceEntityRepository
         }
     }
 
-
-    public function getPrixById(int $id)
-    {
-
-        $rawSql = "select prix from produits where id = $id";
-
-        $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
-        $stmt->execute([]);
-
-        return $stmt->fetch();
-    }
-
-    public function getNomById(int $id)
-    {
-
-        $rawSql = "select nom from produits where id = $id";
-
-        $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
-        $stmt->execute([]);
-
-        return $stmt->fetch();
-    }
-
-
     // /**
     //  * @return Produits[] Returns an array of Produits objects
     //  */

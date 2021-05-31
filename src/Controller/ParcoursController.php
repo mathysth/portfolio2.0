@@ -24,7 +24,7 @@ class ParcoursController extends AbstractController
         $parcours = $paginator->paginate(
           $parcoursRepository->findAll(),
           $request->query->get("page",1),
-            1
+            6
         );
         return $this->render('pages/parcours.html.twig', [
             'parcours' => $parcours,
