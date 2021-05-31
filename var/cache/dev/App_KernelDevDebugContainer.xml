@@ -409,6 +409,13 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\Admin\AdminController" class="App\Controller\Admin\AdminController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\Admin\AdminController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -494,6 +501,13 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\HomeController"/>
       </call>
     </service>
+    <service id="App\Controller\PanierController" class="App\Controller\PanierController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\PanierController"/>
+      </call>
+    </service>
     <service id="App\Controller\ParcoursController" class="App\Controller\ParcoursController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -576,6 +590,15 @@
     <service id="App\Http\Api\Controller\LangController" class="App\Http\Api\Controller\LangController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="App\Http\Api\Controller\Payments\Paypal\ConfirmCheckout" class="App\Http\Api\Controller\Payments\Paypal\ConfirmCheckout" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="App\Http\Api\Controller\Payments\Paypal\Payment" class="App\Http\Api\Controller\Payments\Paypal\Payment" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="App\Http\Api\Data\Payments\Paypal\Basket" class="App\Http\Api\Data\Payments\Paypal\Basket" autowire="true" autoconfigure="true"/>
+    <service id="App\Http\Api\Data\Payments\Paypal\Product" class="App\Http\Api\Data\Payments\Paypal\Product" autowire="true" autoconfigure="true"/>
+    <service id="App\Http\Api\Data\Payments\Paypal\TransactionFactory" class="App\Http\Api\Data\Payments\Paypal\TransactionFactory" autowire="true" autoconfigure="true"/>
     <service id="App\Http\Api\Utils\APIUtils" class="App\Http\Api\Utils\APIUtils" autowire="true" autoconfigure="true"/>
     <service id="App\Http\Api\Utils\ParseResponse" class="App\Http\Api\Utils\ParseResponse" autowire="true" autoconfigure="true"/>
     <service id="App\Repository\CategorieRepository" class="App\Repository\CategorieRepository" autowire="true" autoconfigure="true">
@@ -6148,6 +6171,9 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminController" class="App\Controller\Admin\AdminController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminController" class="App\Controller\Admin\AdminController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminController" class="App\Controller\Admin\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\CategorieController" class="App\Controller\Admin\CategorieController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6184,6 +6210,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ParcoursController" class="App\Controller\ParcoursController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6685,6 +6714,12 @@
         <argument key="realisationRepository" type="service_closure" id="App\Repository\ExperienceRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.h9bDyFt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
     <service id=".service_locator.Mup1Q1k" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6719,6 +6754,12 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
+    <service id=".service_locator.LQ80LD8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="session" type="service_closure" id=".errored..service_locator.LQ80LD8.Symfony\Component\HttpFoundation\Session\Session"/>
+      </argument>
+    </service>
     <service id=".service_locator.8dfMDFw" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6726,13 +6767,7 @@
         <argument key="session" type="service_closure" id="session"/>
       </argument>
     </service>
-    <service id=".service_locator.h9bDyFt" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="session" type="service_closure" id="session"/>
-      </argument>
-    </service>
-    <service id=".service_locator.IdP7GPn" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator._5UF7Ao" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategorieController::delete" type="service_closure" id=".service_locator.Z8xh0Z9"/>
@@ -6764,6 +6799,7 @@
         <argument key="App\Controller\Admin\RealisationController::edit" type="service_closure" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\Admin\RealisationController::index" type="service_closure" id=".service_locator.8ZHgH5v"/>
         <argument key="App\Controller\ExperienceController::index" type="service_closure" id=".service_locator.GGPduTW"/>
+        <argument key="App\Controller\PanierController::show" type="service_closure" id=".service_locator.h9bDyFt"/>
         <argument key="App\Controller\ParcoursController::index" type="service_closure" id=".service_locator.Mup1Q1k"/>
         <argument key="App\Controller\PresentationController::show" type="service_closure" id=".service_locator.ti.lzZi"/>
         <argument key="App\Controller\ProduitsController::index" type="service_closure" id=".service_locator.KrJrL8m"/>
@@ -6771,7 +6807,10 @@
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Http\Api\Controller\BasketController::addToBasket" type="service_closure" id=".service_locator.8dfMDFw"/>
         <argument key="App\Http\Api\Controller\BasketController::deleteFromBasket" type="service_closure" id=".service_locator.h9bDyFt"/>
+        <argument key="App\Http\Api\Controller\BasketController::initBasket" type="service_closure" id=".service_locator.LQ80LD8"/>
         <argument key="App\Http\Api\Controller\LangController::setCurrentLang" type="service_closure" id=".service_locator.h9bDyFt"/>
+        <argument key="App\Http\Api\Controller\Payments\Paypal\ConfirmCheckout::executePayment" type="service_closure" id=".service_locator.8dfMDFw"/>
+        <argument key="App\Http\Api\Controller\Payments\Paypal\Payment::setupPayment" type="service_closure" id=".service_locator.8dfMDFw"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -6807,6 +6846,7 @@
         <argument key="App\Controller\Admin\RealisationController:edit" type="service_closure" id=".service_locator.Q6MNAd4"/>
         <argument key="App\Controller\Admin\RealisationController:index" type="service_closure" id=".service_locator.8ZHgH5v"/>
         <argument key="App\Controller\ExperienceController:index" type="service_closure" id=".service_locator.GGPduTW"/>
+        <argument key="App\Controller\PanierController:show" type="service_closure" id=".service_locator.h9bDyFt"/>
         <argument key="App\Controller\ParcoursController:index" type="service_closure" id=".service_locator.Mup1Q1k"/>
         <argument key="App\Controller\PresentationController:show" type="service_closure" id=".service_locator.ti.lzZi"/>
         <argument key="App\Controller\ProduitsController:index" type="service_closure" id=".service_locator.KrJrL8m"/>
@@ -6814,7 +6854,10 @@
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Http\Api\Controller\BasketController:addToBasket" type="service_closure" id=".service_locator.8dfMDFw"/>
         <argument key="App\Http\Api\Controller\BasketController:deleteFromBasket" type="service_closure" id=".service_locator.h9bDyFt"/>
+        <argument key="App\Http\Api\Controller\BasketController:initBasket" type="service_closure" id=".service_locator.LQ80LD8"/>
         <argument key="App\Http\Api\Controller\LangController:setCurrentLang" type="service_closure" id=".service_locator.h9bDyFt"/>
+        <argument key="App\Http\Api\Controller\Payments\Paypal\ConfirmCheckout:executePayment" type="service_closure" id=".service_locator.8dfMDFw"/>
+        <argument key="App\Http\Api\Controller\Payments\Paypal\Payment:setupPayment" type="service_closure" id=".service_locator.8dfMDFw"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -7148,6 +7191,12 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\Admin\AdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminController"/>
+      <argument>App\Controller\Admin\AdminController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\Admin\CategorieController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\CategorieController"/>
       <argument>App\Controller\Admin\CategorieController</argument>
@@ -7217,6 +7266,12 @@
     <service id=".service_locator.5nX7ca3.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
       <argument>App\Controller\HomeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\PanierController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PanierController"/>
+      <argument>App\Controller\PanierController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
@@ -7421,12 +7476,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.IdP7GPn"/>
+      <argument type="service" id=".service_locator._5UF7Ao"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.IdP7GPn"/>
+      <argument type="service" id=".service_locator._5UF7Ao"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection">
@@ -7462,6 +7517,7 @@
     <service id=".errored..service_locator.sIQEE3..App\Entity\Presentation" class="App\Entity\Presentation"/>
     <service id=".errored..service_locator.ZE81RhG.App\Entity\Produits" class="App\Entity\Produits"/>
     <service id=".errored..service_locator.Q6MNAd4.App\Entity\Realisation" class="App\Entity\Realisation"/>
+    <service id=".errored..service_locator.LQ80LD8.Symfony\Component\HttpFoundation\Session\Session" class="Symfony\Component\HttpFoundation\Session\Session"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.kMdLnus"/>
@@ -7890,7 +7946,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.IdP7GPn"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator._5UF7Ao"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

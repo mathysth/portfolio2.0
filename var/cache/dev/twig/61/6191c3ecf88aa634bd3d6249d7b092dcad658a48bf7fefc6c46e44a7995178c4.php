@@ -100,7 +100,7 @@ class __TwigTemplate_b8e40ed4685a37013cddb570312b351a11998e9d564e4be395bdb5912f2
                 </div>
             </div>
         </div>
-    </section>-
+    </section>
 
     <section class=\"ftco-section bg-light\">
         <div class=\"d-flex justify-content-center\">
@@ -196,7 +196,7 @@ class __TwigTemplate_b8e40ed4685a37013cddb570312b351a11998e9d564e4be395bdb5912f2
                 </div>
             </div>
         </div>
-    </section>-
+    </section>
 
     <section class=\"ftco-section bg-light\">
         <div class=\"d-flex justify-content-center\">

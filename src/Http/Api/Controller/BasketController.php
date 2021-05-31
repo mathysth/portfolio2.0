@@ -21,7 +21,7 @@ class BasketController
      * @param Session $session
      * @return Session
      */
-    private function initBasket(Session $session)
+    public function initBasket(Session $session)
     {
         if (!$session->get('basket')) {
             $session->set('basket', []);

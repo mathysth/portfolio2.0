@@ -101,7 +101,7 @@ class __TwigTemplate_b6ae19f22dde97b09d6a4ac78f02e27d83b97ba67d711dd888230edead6
     <a href=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_competences_index", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "request", [], "any", false, false, false, 13), "get", [0 => "lang"], "method", false, false, false, 13)]), "html", null, true);
-        echo "\">back to list</a>
+        echo "\">Retourner à la liste</a>
 
     </div>
 </section>
@@ -143,7 +143,7 @@ class __TwigTemplate_b6ae19f22dde97b09d6a4ac78f02e27d83b97ba67d711dd888230edead6
     {{ include('admin/competences/_form.html.twig', {'button_label': 'Update'}) }}
 
     {{ include('admin/competences/_delete_form.html.twig') }}
-    <a href=\"{{ path('admin_competences_index',{\"lang\": app.request.get(\"lang\")}) }}\">back to list</a>
+    <a href=\"{{ path('admin_competences_index',{\"lang\": app.request.get(\"lang\")}) }}\">Retourner à la liste</a>
 
     </div>
 </section>

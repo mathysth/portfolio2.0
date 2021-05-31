@@ -63,8 +63,10 @@
                 <li class="nav-item"><a class="nav-link {% if current_menu is defined and current_menu == "experience" %} active {% endif %}" href="{{ path('experience') }}">{{ translate('nav_experiencePage') }}</a></li>
                 <li class="nav-item"><a class="nav-link {% if current_menu is defined and current_menu == "parcour" %} active {% endif %}" href="{{ path('parcours') }}">{{ translate('nav_parcour') }}</a></li>
                 <li class="nav-item"><a class="nav-link {% if current_menu is defined and current_menu == "boutique" %} active {% endif %}" href="{{ path('boutique') }}">{{ translate('nav_shopPage') }}</a></li>
+                <li class="nav-item"><a class="nav-link {% if current_menu is defined and current_menu == "panier" %} active {% endif %}" href="{{ path('panier') }}">{{ translate('nav_Basket') }}</a></li>
                 <li class="nav-item"><a class="nav-link " href="mailto:{{ translate('email') }}">{{ translate('contactMe') }}</a></li>
                 {% if app.user %}
+                    <li class="nav-item"><a class="nav-link {% if current_menu is defined and current_menu == "admin" %} active {% endif %}" href="{{ path('admin') }}">Admin</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{{ path('logout') }}">{{ translate('nav_logout') }}</a></li>
                 {% endif %}
             </ul>

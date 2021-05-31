@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Accueil Admin
+{% endblock %}
+{% block body %}
+    <section class="hero-wrap hero-wrap-2">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 pt-5 text-center">
+                    <h1 class="mb-0 bread">SiteMap - Admin</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{{ path('admin_categorie_index') }}">Categories</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_competences_index') }}">Compétences</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_competences_categories_index') }}">Compétences Catégories</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_experience_index') }}">Expérience</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_member_index') }}">Membre</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_parcours_index') }}">Parcours</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_presentation_index') }}">Présentation</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_realisation_index') }}">Réalisation</a>
+            </div>
+            <div class="col">
+                <a href="{{ path('admin_member_profil') }}">Profil</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

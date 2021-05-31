@@ -15,6 +15,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'admin' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminController::index'], [], [['text', '/admin']], [], []],
     'admin_categorie_index' => [[], ['_controller' => 'App\\Controller\\Admin\\CategorieController::index'], [], [['text', '/admin/categorie/']], [], []],
     'admin_categorie_new' => [[], ['_controller' => 'App\\Controller\\Admin\\CategorieController::new'], [], [['text', '/admin/categorie/new']], [], []],
     'admin_categorie_edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\CategorieController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/categorie']], [], []],
@@ -55,6 +56,7 @@ return [
     'admin_realisation_delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\RealisationController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/realisations']], [], []],
     'experience' => [[], ['_controller' => 'App\\Controller\\ExperienceController::index'], [], [['text', '/experience/']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+    'panier' => [[], ['_controller' => 'App\\Controller\\PanierController::show'], [], [['text', '/panier']], [], []],
     'parcours' => [[], ['_controller' => 'App\\Controller\\ParcoursController::index'], [], [['text', '/parcours/']], [], []],
     'presentation' => [[], ['_controller' => 'App\\Controller\\PresentationController::show'], [], [['text', '/presentation/']], [], []],
     'boutique' => [[], ['_controller' => 'App\\Controller\\ProduitsController::index'], [], [['text', '/boutique/']], [], []],
@@ -65,5 +67,7 @@ return [
     'api_dnsChecker' => [[], ['_controller' => 'App\\Http\\Api\\Controller\\DnsController::checkDns'], [], [['text', '/api/http/checkDns']], [], []],
     'api_Lang_get' => [[], ['_controller' => 'App\\Http\\Api\\Controller\\LangController::getCurrentLang'], [], [['text', '/api/http/utils/lang/get']], [], []],
     'api_Lang_set' => [[], ['_controller' => 'App\\Http\\Api\\Controller\\LangController::setCurrentLang'], [], [['text', '/api/http/utils/lang/set']], [], []],
+    'api_paypal_confirm' => [[], ['_controller' => 'App\\Http\\Api\\Controller\\Payments\\Paypal\\ConfirmCheckout::executePayment'], [], [['text', '/api/payment/paypal/confirmPayment']], [], []],
+    'api_paypal_setup' => [[], ['_controller' => 'App\\Http\\Api\\Controller\\Payments\\Paypal\\Payment::setupPayment'], [], [['text', '/api/payment/paypal/setup']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],
 ];

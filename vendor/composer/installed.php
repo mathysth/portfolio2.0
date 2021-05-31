@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '81fe9ee2556cbad5710e6af24a4b1ea824839b77',
+    'reference' => '32cb883207b01ab752e3e3e5fb0b583b4f9ed134',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '81fe9ee2556cbad5710e6af24a4b1ea824839b77',
+      'reference' => '32cb883207b01ab752e3e3e5fb0b583b4f9ed134',
     ),
     'cocur/slugify' => 
     array (
@@ -312,6 +312,15 @@
       array (
         0 => '^2.1',
       ),
+    ),
+    'paypal/rest-api-sdk-php' => 
+    array (
+      'pretty_version' => '1.14.0',
+      'version' => '1.14.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '72e2f2466975bf128a31e02b15110180f059fc04',
     ),
     'php-http/async-client-implementation' => 
     array (

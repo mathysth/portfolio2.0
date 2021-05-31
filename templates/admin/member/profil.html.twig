@@ -3,6 +3,7 @@
 {% block title %}Profil!{% endblock %}
 
 {% block body %}
+<section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
             {% for message in app.flashes('info') %}
@@ -48,6 +49,7 @@
 
         </div>
     </div>
+</section>
 {% endblock %}
 {% block script %}
     <script>

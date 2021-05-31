@@ -75,12 +75,12 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)]), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage"), "html", null, true);
         echo " <i
                                         class=\"fa fa-chevron-right\"></i></a></p>
                     <h1 class=\"mb-0 bread\">";
         // line 11
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("moreAboutMe", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "request", [], "any", false, false, false, 11), "get", [0 => "lang"], "method", false, false, false, 11)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("moreAboutMe"), "html", null, true);
         echo "</h1>
                 </div>
             </div>
@@ -111,11 +111,11 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
                     <div class=\"mt-5 mt-md-0\">
                         <span class=\"subheading\">";
         // line 39
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("moreAboutMe", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "request", [], "any", false, false, false, 39), "get", [0 => "lang"], "method", false, false, false, 39)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("moreAboutMe"), "html", null, true);
         echo "</span>
                         <h2 class=\"mb-4\">";
         // line 40
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("desiredProfession", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "request", [], "any", false, false, false, 40), "get", [0 => "lang"], "method", false, false, false, 40)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("desiredProfession"), "html", null, true);
         echo "</h2>
                         <p class=\"\">Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts.</p>
@@ -125,29 +125,29 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
                                     <li class=\"d-flex\">
                                         <span>";
         // line 47
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nameLabel", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "request", [], "any", false, false, false, 47), "get", [0 => "lang"], "method", false, false, false, 47)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nameLabel"), "html", null, true);
         echo ":</span>
                                         <span> ";
         // line 48
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nameResult", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "request", [], "any", false, false, false, 48), "get", [0 => "lang"], "method", false, false, false, 48)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nameResult"), "html", null, true);
         echo "</span></li>
                                     <li class=\"d-flex\">
                                         <span>";
         // line 50
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("BirthdayLabel", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "request", [], "any", false, false, false, 50), "get", [0 => "lang"], "method", false, false, false, 50)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("BirthdayLabel"), "html", null, true);
         echo ":</span>
                                         <span> ";
         // line 51
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("BirthdayResult", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "request", [], "any", false, false, false, 51), "get", [0 => "lang"], "method", false, false, false, 51)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("BirthdayResult"), "html", null, true);
         echo "</span></li>
                                     <li class=\"d-flex\">
                                         <span>";
         // line 53
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("AddressLabel", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "request", [], "any", false, false, false, 53), "get", [0 => "lang"], "method", false, false, false, 53)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("AddressLabel"), "html", null, true);
         echo ":</span>
                                         <span> ";
         // line 54
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("AddressResult", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 54, $this->source); })()), "request", [], "any", false, false, false, 54), "get", [0 => "lang"], "method", false, false, false, 54)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("AddressResult"), "html", null, true);
         echo "</span></li>
                                 </ul>
                             </div>
@@ -155,20 +155,20 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
                                 <ul class=\"about-info mt-4 px-md-0 px-2\">
                                     <li class=\"d-flex\"><span>";
         // line 59
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("zipLabel", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "request", [], "any", false, false, false, 59), "get", [0 => "lang"], "method", false, false, false, 59)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("zipLabel"), "html", null, true);
         echo ":</span>
                                         <span>";
         // line 60
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("zipResult", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 60, $this->source); })()), "request", [], "any", false, false, false, 60), "get", [0 => "lang"], "method", false, false, false, 60)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("zipResult"), "html", null, true);
         echo "</span></li>
                                     <li class=\"d-flex\">
                                         <span>";
         // line 62
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("emailLabel", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 62, $this->source); })()), "request", [], "any", false, false, false, 62), "get", [0 => "lang"], "method", false, false, false, 62)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("emailLabel"), "html", null, true);
         echo ":</span>
                                         <span>";
         // line 63
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("email", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "request", [], "any", false, false, false, 63), "get", [0 => "lang"], "method", false, false, false, 63)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("email"), "html", null, true);
         echo "</span></li>
                                 </ul>
                             </div>
@@ -186,11 +186,11 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
                 <div class=\"col-md-7 text-center heading-section\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
                     <span class=\"subheading\">";
         // line 78
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("skills", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "request", [], "any", false, false, false, 78), "get", [0 => "lang"], "method", false, false, false, 78)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("skills"), "html", null, true);
         echo "</span>
                     <h2 class=\"mb-5\">";
         // line 79
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("mySkills", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 79, $this->source); })()), "request", [], "any", false, false, false, 79), "get", [0 => "lang"], "method", false, false, false, 79)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("mySkills"), "html", null, true);
         echo "</h2>
                 </div>
             </div>
@@ -316,9 +316,9 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
             <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
                 <div class=\"col-md-9 pt-4 text-center\">
                     <p class=\"breadcrumbs\"><span class=\"me-2\"><a
-                                    href=\"{{ path('home',{\"lang\": app.request.get(\"lang\")}) }}\">{{ translate('nav_homePage',app.request.get('lang')) }} <i
+                                    href=\"{{ path('home',{\"lang\": app.request.get(\"lang\")}) }}\">{{ translate('nav_homePage') }} <i
                                         class=\"fa fa-chevron-right\"></i></a></p>
-                    <h1 class=\"mb-0 bread\">{{ translate('moreAboutMe',app.request.get('lang')) }}</h1>
+                    <h1 class=\"mb-0 bread\">{{ translate('moreAboutMe') }}</h1>
                 </div>
             </div>
         </div>
@@ -346,31 +346,31 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
                 <div class=\"col-md-6 heading-section d-flex align-items-center\" data-aos=\"fade-up\" data-aos-delay=\"500\"
                      data-aos-duration=\"1000\">
                     <div class=\"mt-5 mt-md-0\">
-                        <span class=\"subheading\">{{ translate('moreAboutMe',app.request.get('lang')) }}</span>
-                        <h2 class=\"mb-4\">{{ translate('desiredProfession',app.request.get('lang')) }}</h2>
+                        <span class=\"subheading\">{{ translate('moreAboutMe') }}</span>
+                        <h2 class=\"mb-4\">{{ translate('desiredProfession') }}</h2>
                         <p class=\"\">Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts.</p>
                         <div class=\"row mb-4\">
                             <div class=\"col-lg-6\">
                                 <ul class=\"about-info mt-4 px-md-0 px-2\">
                                     <li class=\"d-flex\">
-                                        <span>{{ translate('nameLabel',app.request.get('lang')) }}:</span>
-                                        <span> {{ translate('nameResult',app.request.get('lang')) }}</span></li>
+                                        <span>{{ translate('nameLabel') }}:</span>
+                                        <span> {{ translate('nameResult') }}</span></li>
                                     <li class=\"d-flex\">
-                                        <span>{{ translate('BirthdayLabel',app.request.get('lang')) }}:</span>
-                                        <span> {{ translate('BirthdayResult',app.request.get('lang')) }}</span></li>
+                                        <span>{{ translate('BirthdayLabel') }}:</span>
+                                        <span> {{ translate('BirthdayResult') }}</span></li>
                                     <li class=\"d-flex\">
-                                        <span>{{ translate('AddressLabel',app.request.get('lang')) }}:</span>
-                                        <span> {{ translate('AddressResult',app.request.get('lang')) }}</span></li>
+                                        <span>{{ translate('AddressLabel') }}:</span>
+                                        <span> {{ translate('AddressResult') }}</span></li>
                                 </ul>
                             </div>
                             <div class=\"col-lg-6\">
                                 <ul class=\"about-info mt-4 px-md-0 px-2\">
-                                    <li class=\"d-flex\"><span>{{ translate('zipLabel',app.request.get('lang')) }}:</span>
-                                        <span>{{ translate('zipResult',app.request.get('lang')) }}</span></li>
+                                    <li class=\"d-flex\"><span>{{ translate('zipLabel') }}:</span>
+                                        <span>{{ translate('zipResult') }}</span></li>
                                     <li class=\"d-flex\">
-                                        <span>{{ translate('emailLabel',app.request.get('lang')) }}:</span>
-                                        <span>{{ translate('email',app.request.get('lang')) }}</span></li>
+                                        <span>{{ translate('emailLabel') }}:</span>
+                                        <span>{{ translate('email') }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -385,8 +385,8 @@ class __TwigTemplate_97147719b7ab448f887b38bc60f9990dd27d9a10bee430f790ccf19cf5b
         <div class=\"container-xl\">
             <div class=\"row justify-content-center pb-5\">
                 <div class=\"col-md-7 text-center heading-section\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
-                    <span class=\"subheading\">{{ translate('skills',app.request.get('lang')) }}</span>
-                    <h2 class=\"mb-5\">{{ translate('mySkills',app.request.get('lang')) }}</h2>
+                    <span class=\"subheading\">{{ translate('skills') }}</span>
+                    <h2 class=\"mb-5\">{{ translate('mySkills') }}</h2>
                 </div>
             </div>
             {% set continue = false %}

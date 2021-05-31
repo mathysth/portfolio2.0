@@ -13,6 +13,7 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\AdminController::index'], null, null, null, false, false, null]],
         '/admin/categorie' => [[['_route' => 'admin_categorie_index', '_controller' => 'App\\Controller\\Admin\\CategorieController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/categorie/new' => [[['_route' => 'admin_categorie_new', '_controller' => 'App\\Controller\\Admin\\CategorieController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/competences/categories' => [[['_route' => 'admin_competences_categories_index', '_controller' => 'App\\Controller\\Admin\\CompetencesCategoriesController::index'], null, ['GET' => 0], null, true, false, null]],
@@ -38,6 +39,8 @@ return [
         '/api/http/checkDns' => [[['_route' => 'api_dnsChecker', '_controller' => 'App\\Http\\Api\\Controller\\DnsController::checkDns'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/get' => [[['_route' => 'api_Lang_get', '_controller' => 'App\\Http\\Api\\Controller\\LangController::getCurrentLang'], null, ['POST' => 0], null, false, false, null]],
         '/api/http/utils/lang/set' => [[['_route' => 'api_Lang_set', '_controller' => 'App\\Http\\Api\\Controller\\LangController::setCurrentLang'], null, ['POST' => 0], null, false, false, null]],
+        '/api/payment/paypal/confirmPayment' => [[['_route' => 'api_paypal_confirm', '_controller' => 'App\\Http\\Api\\Controller\\Payments\\Paypal\\ConfirmCheckout::executePayment'], null, ['POST' => 0], null, false, false, null]],
+        '/api/payment/paypal/setup' => [[['_route' => 'api_paypal_setup', '_controller' => 'App\\Http\\Api\\Controller\\Payments\\Paypal\\Payment::setupPayment'], null, ['POST' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -107,14 +110,17 @@ return [
                 .')'
                 .'|/experience(*:635)'
                 .'|/p(?'
-                    .'|arcours(*:655)'
-                    .'|resentation(*:674)'
+                    .'|a(?'
+                        .'|nier(*:656)'
+                        .'|rcours(*:670)'
+                    .')'
+                    .'|resentation(*:690)'
                 .')'
-                .'|/boutique(*:692)'
-                .'|/realisations(*:713)'
+                .'|/boutique(*:708)'
+                .'|/realisations(*:729)'
                 .'|/log(?'
-                    .'|in(*:730)'
-                    .'|out(*:741)'
+                    .'|in(*:746)'
+                    .'|out(*:757)'
                 .')'
             .')/?$}sDu',
     ],
@@ -146,12 +152,13 @@ return [
         604 => [[['_route' => 'admin_produits_edit', '_controller' => 'App\\Controller\\Admin\\ProduitsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         612 => [[['_route' => 'admin_produits_delete', '_controller' => 'App\\Controller\\Admin\\ProduitsController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         635 => [[['_route' => 'experience', '_controller' => 'App\\Controller\\ExperienceController::index'], [], ['GET' => 0], null, true, false, null]],
-        655 => [[['_route' => 'parcours', '_controller' => 'App\\Controller\\ParcoursController::index'], [], ['GET' => 0], null, true, false, null]],
-        674 => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], [], ['GET' => 0], null, true, false, null]],
-        692 => [[['_route' => 'boutique', '_controller' => 'App\\Controller\\ProduitsController::index'], [], ['GET' => 0], null, true, false, null]],
-        713 => [[['_route' => 'realisation', '_controller' => 'App\\Controller\\RealisationController::index'], [], ['GET' => 0], null, true, false, null]],
-        730 => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], [], null, null, false, false, null]],
-        741 => [
+        656 => [[['_route' => 'panier', '_controller' => 'App\\Controller\\PanierController::show'], [], null, null, false, false, null]],
+        670 => [[['_route' => 'parcours', '_controller' => 'App\\Controller\\ParcoursController::index'], [], ['GET' => 0], null, true, false, null]],
+        690 => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::show'], [], ['GET' => 0], null, true, false, null]],
+        708 => [[['_route' => 'boutique', '_controller' => 'App\\Controller\\ProduitsController::index'], [], ['GET' => 0], null, true, false, null]],
+        729 => [[['_route' => 'realisation', '_controller' => 'App\\Controller\\RealisationController::index'], [], ['GET' => 0], null, true, false, null]],
+        746 => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], [], null, null, false, false, null]],
+        757 => [
             [['_route' => 'logout'], [], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],

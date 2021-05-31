@@ -46,13 +46,13 @@ class __TwigTemplate_2b8aaea78ad4366fdccdcfab091455556c0547e77872f846b55d16cfe63
             <div class=\"col-md-12 text-center\">
                 <p class=\"mb-0 copyright\"> <strong>&copy ";
         // line 5
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("ownerFullName", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 5, $this->source); })()), "request", [], "any", false, false, false, 5), "get", [0 => "lang"], "method", false, false, false, 5)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("ownerFullName"), "html", null, true);
         echo " - ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " - Repository Github :
                         <a href=\"";
         // line 6
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("githubRepo", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 6, $this->source); })()), "request", [], "any", false, false, false, 6), "get", [0 => "lang"], "method", false, false, false, 6)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("githubRepo"), "html", null, true);
         echo "\" target=\"_blank\">Here</a> </strong> </p>            </div>
         </div>
     </div>
@@ -86,8 +86,8 @@ class __TwigTemplate_2b8aaea78ad4366fdccdcfab091455556c0547e77872f846b55d16cfe63
     <div class=\"container-xl\">
         <div class=\"row\">
             <div class=\"col-md-12 text-center\">
-                <p class=\"mb-0 copyright\"> <strong>&copy {{ translate('ownerFullName',app.request.get('lang')) }} - {{ \"now\"|date(\"Y\") }} - Repository Github :
-                        <a href=\"{{ translate('githubRepo',app.request.get('lang')) }}\" target=\"_blank\">Here</a> </strong> </p>            </div>
+                <p class=\"mb-0 copyright\"> <strong>&copy {{ translate('ownerFullName') }} - {{ \"now\"|date(\"Y\") }} - Repository Github :
+                        <a href=\"{{ translate('githubRepo') }}\" target=\"_blank\">Here</a> </strong> </p>            </div>
         </div>
     </div>
 </footer>", "pages/includes/_footer.html.twig", "C:\\xampp\\htdocs\\www\\Sites\\Ecole\\PPE\\mainSite\\templates\\pages\\includes\\_footer.html.twig");

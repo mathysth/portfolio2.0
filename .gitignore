@@ -18,5 +18,6 @@
 
 # Upload
 public/build/upload/
+# Autres
 vendor/
 var/

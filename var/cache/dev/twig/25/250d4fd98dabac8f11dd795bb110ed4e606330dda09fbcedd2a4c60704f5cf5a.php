@@ -86,17 +86,18 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"container\">
+        echo "<section class=\"ftco-section bg-light\">
+    <div class=\"container\">
         <div class=\"row\">
             ";
-        // line 8
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "flashes", [0 => "info"], "method", false, false, false, 8));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "flashes", [0 => "info"], "method", false, false, false, 9));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 9
+            // line 10
             echo "                <div class=\"alert alert-success\">
                     ";
-            // line 10
+            // line 11
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
                 </div>
@@ -105,7 +106,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
+        // line 14
         echo "            <div class=\"col-lg-12\">
                 <!--author box-->
                 <div class=\"author-bio mb-50 p-30 border-radius-10 bg-grey mt-50 pb-50\">
@@ -116,8 +117,8 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
                         <h3 class=\"font-weight-900\"><span class=\"vcard author\"><span class=\"fn\"><a href=\"#\"
                                                                                                    title=\"Pseudo\"
                                                                                                    rel=\"author\">";
-        // line 22
-        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22), "pseudo", [], "any", false, false, false, 22)), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "pseudo", [], "any", false, false, false, 23)), "html", null, true);
         echo "</a></span></span>
                         </h3>
                         <h5 class=\"text-muted\">Informations</h5>
@@ -125,8 +126,8 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
                             <div class=\"row\">
                                 <div class=\"col-lg-4 pb-20\">
                                     <strong>Email :</strong> <small> ";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "email", [], "any", false, false, false, 28), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29), "email", [], "any", false, false, false, 29), "html", null, true);
         echo " </small><br/>
                                     <strong>Role :</strong> <small> <code> Admin </code> </small>
                                 </div>
@@ -135,16 +136,16 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
                                 </div>
                                 <div class=\"col-lg-4\" id=\"hidden\" style=\"display: none\">
                                     <form method=\"post\" id=\"passwordForm\" action=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_member_reset", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "user", [], "any", false, false, false, 35), "id", [], "any", false, false, false, 35)]), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_member_reset", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36)]), "html", null, true);
         echo "\"
                                           onsubmit=\"return confirm('Est-vous sûr de vouloir changer votre mot de passe?');\">
                                         <input type=\"hidden\" name=\"_method\" value=\"RESET\">
                                         <input type=\"password\" name=\"_password\" id=\"password\" onfocusout=\"validateFirstPassword()\" placeholder=\"votre nouveau mot de passe\" class=\"form-control mb-10\">
                                         <input type=\"password\" name=\"_reassword\" id=\"repassword\" onfocusout=\"validatePassword()\" placeholder=\"veuillez repeter votre mot de passe\" class=\"form-control mb-10\">
                                         <input type=\"hidden\" name=\"_token\" value=\"";
-        // line 40
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("reset" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40), "id", [], "any", false, false, false, 40))), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("reset" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41))), "html", null, true);
         echo "\">
                                     </form>
                                 </div>
@@ -156,6 +157,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
 
         </div>
     </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -165,7 +167,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
 
     }
 
-    // line 52
+    // line 54
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -175,7 +177,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
 
-        // line 53
+        // line 55
         echo "    <script>
         let password = document.getElementById(\"password\");
         let repassword = document.getElementById(\"repassword\");
@@ -262,7 +264,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
 
     public function getDebugInfo()
     {
-        return array (  179 => 53,  169 => 52,  147 => 40,  139 => 35,  129 => 28,  120 => 22,  109 => 13,  100 => 10,  97 => 9,  93 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  181 => 55,  171 => 54,  148 => 41,  140 => 36,  130 => 29,  121 => 23,  110 => 14,  101 => 11,  98 => 10,  94 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -272,6 +274,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
 {% block title %}Profil!{% endblock %}
 
 {% block body %}
+<section class=\"ftco-section bg-light\">
     <div class=\"container\">
         <div class=\"row\">
             {% for message in app.flashes('info') %}
@@ -317,6 +320,7 @@ class __TwigTemplate_cbf88aaa2b2e8083e74e9c1616730bea3aa7f21145e8e669f3ade4ade21
 
         </div>
     </div>
+</section>
 {% endblock %}
 {% block script %}
     <script>

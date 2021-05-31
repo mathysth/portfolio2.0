@@ -77,12 +77,12 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
         // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)]), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "request", [], "any", false, false, false, 10), "get", [0 => "lang"], "method", false, false, false, 10)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage"), "html", null, true);
         echo " <i
                                         class=\"fa fa-chevron-right\"></i></a></p>
                     <h1 class=\"mb-0 bread\">";
         // line 12
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_realisation", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "request", [], "any", false, false, false, 12), "get", [0 => "lang"], "method", false, false, false, 12)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_realisation"), "html", null, true);
         echo "</h1>
                 </div>
             </div>
@@ -225,9 +225,9 @@ class __TwigTemplate_eb2f8eb9c453f36b68a33eb7c4abf485c877f2b968bf85c6ecdcfc555fb
             <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
                 <div class=\"col-md-9 pt-4 text-center\">
                     <p class=\"breadcrumbs\"><span class=\"me-2\"><a
-                                    href=\"{{ path('home',{\"lang\": app.request.get(\"lang\")}) }}\">{{ translate('nav_homePage',app.request.get('lang')) }} <i
+                                    href=\"{{ path('home',{\"lang\": app.request.get(\"lang\")}) }}\">{{ translate('nav_homePage') }} <i
                                         class=\"fa fa-chevron-right\"></i></a></p>
-                    <h1 class=\"mb-0 bread\">{{ translate('nav_realisation',app.request.get('lang')) }}</h1>
+                    <h1 class=\"mb-0 bread\">{{ translate('nav_realisation') }}</h1>
                 </div>
             </div>
         </div>

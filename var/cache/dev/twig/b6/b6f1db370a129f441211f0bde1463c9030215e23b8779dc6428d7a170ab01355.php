@@ -75,9 +75,9 @@ class __TwigTemplate_2b20d211b8070004a7d1e0d8f81313fa5c22515650d7131deb0eb067828
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home", ["lang" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)]), "html", null, true);
         echo "\"> ";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("nav_homePage"), "html", null, true);
         echo " <i class=\"fa fa-chevron-right\"></i></a></span> <span>";
-        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("experiencePage", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "request", [], "any", false, false, false, 9), "get", [0 => "lang"], "method", false, false, false, 9)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['App\Twig\AppFunctionExtension']->TranslateTextByKey("experiencePage"), "html", null, true);
         echo " <i class=\"fa fa-chevron-right\"></i></span></p>
                     <h1 class=\"mb-0 bread\">Parcours</h1>
                 </div>
@@ -167,7 +167,7 @@ class __TwigTemplate_2b20d211b8070004a7d1e0d8f81313fa5c22515650d7131deb0eb067828
         <div class=\"container\">
             <div class=\"row no-gutters slider-text align-items-end justify-content-center\">
                 <div class=\"col-md-9 pt-5 text-center\">
-                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home',{\"lang\": app.request.get('lang')}) }}\"> {{ translate('nav_homePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></a></span> <span>{{ translate('experiencePage',app.request.get('lang')) }} <i class=\"fa fa-chevron-right\"></i></span></p>
+                    <p class=\"breadcrumbs\"><span class=\"me-2\"><a href=\"{{ path('home',{\"lang\": app.request.get('lang')}) }}\"> {{ translate('nav_homePage') }} <i class=\"fa fa-chevron-right\"></i></a></span> <span>{{ translate('experiencePage') }} <i class=\"fa fa-chevron-right\"></i></span></p>
                     <h1 class=\"mb-0 bread\">Parcours</h1>
                 </div>
             </div>
