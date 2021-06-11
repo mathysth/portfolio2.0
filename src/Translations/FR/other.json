@@ -1,5 +1,6 @@
 {
   "delete": "Supprimer",
   "internalError": "INTERNAL SERVER ERROR",
-  "soon": "Bientôt"
+  "soon": "Bientôt",
+  "alertTest": "Cette page est destinée à montrer les possibles réalisations et a été faite dans le cadre de mon BTS"
 }

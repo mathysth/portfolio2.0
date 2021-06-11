@@ -1,5 +1,7 @@
 {
   "delete": "Delete",
   "internalError": "INTERNAL SERVER ERROR",
-  "soon": "Coming soon"
+  "soon": "Coming soon",
+  "alertTest": "This page is intended to show the possible achievements and was made in the context of my BTS"
+
 }

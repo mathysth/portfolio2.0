@@ -9,6 +9,7 @@
                     <p class="breadcrumbs"><span class="me-2"><a
                                     href="{{ path('home',{"lang": app.request.get("lang")}) }}">{{ translate('nav_homePage') }} <i
                                         class="fa fa-chevron-right"></i></a></p>
+                    <p style="color: rgba(0, 0, 0, 0.4) !important;"> {{ translate("alertTest")}} </p>
                     <h1 class="mb-0 bread">{{ translate('nav_Basket') }}</h1>
                 </div>
             </div>
@@ -116,12 +117,11 @@
                     if (data === 400) {
                         alertPlugin("Erreur", "{{ translate('internalError') }}", "error");
                     } else {
-                        alertPlugin("{{translate("paymentError")}}", " Le paiement a été validé. Id de paiement : "+ data.paymentID +". L'id de votre compte Paypal : " + data.payerID, "success");
-
+                        alertPlugin("{{translate("paymentSuccess")}}", " Le paiement a été validé. Id de paiement : "+ data.paymentID +". L'id de votre compte Paypal : " + data.payerID, "success");
                     }
                 }).catch(function (err) {
                     console.log('erreur', err);
-                    alertPlugin("{{translate("paymentSuccess")}}", " {{ translate("paymentNotValid") }}", "error");
+                    alertPlugin("{{translate("paymentError")}}", " {{ translate("paymentNotValid") }}", "error");
                 });
             }
         }, '#paypal-button');

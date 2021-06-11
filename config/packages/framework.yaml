@@ -20,4 +20,4 @@ framework:
         default_options:
             max_redirects: 7
 
-    #error_controller: App\Controller\ErrorController::show
+    error_controller: App\Controller\ErrorController::show
