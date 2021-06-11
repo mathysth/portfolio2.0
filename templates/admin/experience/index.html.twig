@@ -16,7 +16,6 @@
                 <th>TypeContrat</th>
                 <th>StartDate</th>
                 <th>EndDate</th>
-                <th>Description</th>
                 <th>Location</th>
                 <th>actions</th>
             </tr>
@@ -30,7 +29,6 @@
                 <td>{{ experience.typeContrat }}</td>
                 <td>{{ experience.startDate ? experience.startDate|date('Y-m-d') : '' }}</td>
                 <td>{{ experience.endDate ? experience.endDate|date('Y-m-d') : '' }}</td>
-                <td>{{ experience.description }}</td>
                 <td>{{ experience.location }}</td>
                 <td>
                     <a href="{{ path('admin_experience_edit', {'id': experience.id}) }}">edit</a>

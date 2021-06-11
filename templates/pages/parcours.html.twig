@@ -21,7 +21,7 @@
                         <div class="resume-wrap d-flex align-item-stretch" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                             <div class="w-100">
                                 <div class="icon"><span class="flaticon-work-from-home"></span></div>
-                                <span class="date">{{ parcour.annee | date('m/d/Y') }}</span>
+                                <span class="date">{{ parcour.annee | date('Y') }}</span>
                                 <h2>{{ parcour.diplome }}</h2>
                                 <span class="position"><i class="ion-ios-pin me-2"></i>{{ parcour.commune }}</span>
                                 <p class="mt-4">{{ parcour.etablissement }}</p>
@@ -35,5 +35,6 @@
             {{ knp_pagination_render(parcours) }}
         </div>
     </section>
+    {% include ("pages/includes/_footer.html.twig") %}
 
 {% endblock %}
