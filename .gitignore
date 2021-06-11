@@ -21,3 +21,4 @@ public/build/upload/
 # Autres
 vendor/
 var/
+deploy
